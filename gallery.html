@@ -484,6 +484,25 @@
             
             .navbar-toggler {
                 border: none;
+                padding: 0;
+            }
+
+            .navbar-toggler i {
+                color: white;
+                font-size: 1rem;  /* Reduced from 1.2rem to 1rem */
+                transition: color 0.3s ease;
+            }
+
+            @media (max-width: 992px) {
+                .navbar-brand {
+                    color: white !important;
+                    font-size: 1.2rem;
+                }
+                
+                .navbar-toggler {
+                    padding: 1px 4px;  /* Further reduced padding */
+                    font-size: 0.7rem;  /* Further reduced font size */
+                }
             }
 
             .navbar-toggler:focus {
@@ -1559,12 +1578,30 @@
 
 .navbar-toggler i {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;  /* Reduced from 1.2rem to 1rem */
     transition: color 0.3s ease;
 }
 
 .navbar-scrolled .navbar-toggler i {
     color: var(--primary-color);
+}
+
+@media (max-width: 992px) {
+    .navbar-brand {
+        color: white !important;
+        font-size: 1.2rem;
+    }
+    
+    .navbar-toggler {
+        padding: 1px 4px;  /* Further reduced padding */
+        font-size: 0.7rem;  /* Further reduced font size */
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
 }
 </style>
 </head>

@@ -114,65 +114,41 @@ body {
     .navbar-scrolled .navbar-brand {
         color: var(--primary-color) !important;
     }
+    
+    .navbar-toggler {
+        padding: 1px 4px;
+        font-size: 0.8rem;
+        color: white;
+    }
+}
 
-    /* Mobile navbar collapse styling with slide animation */
-    .navbar-collapse {
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        max-width: 280px; /* Increased width slightly */
-        margin-left: auto;
-        padding: 15px;
-        position: absolute;
-        top: 100%;
-        right: 15px;
-        width: calc(100% - 30px); /* Responsive width */
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 1000;
+@media (max-width: 400px) {
+    .navbar-brand {
+        font-size: 1rem;
     }
     
-
-    .navbar-collapse.show {
-        transform: translateX(0);
+    .navbar-collapse {
+        max-width: 200px;
+        right: 10px;
     }
-
-    .navbar-collapse.collapsing {
-        height: auto !important;
-        transition: transform 0.3s ease-in-out;
-        transform: translateX(100%);
-    }
-
-    /* Ensure proper spacing in mobile menu */
-    .navbar-nav {
+    
+    .navbar {
         padding: 10px 0;
     }
     
-    .nav-item {
-        margin: 5px 0;
-    }
-    
-    .nav-link {
-        padding: 12px 20px;
-        color: var(--primary-color) !important;
-        border-radius: 5px;
-    }
-    
-    .nav-link:hover {
-        background-color: rgba(22, 5, 96, 0.1);
-    }
-    
-    /* Dropdown adjustments for mobile */
-    .dropdown-menu {
-        border: none;
-        background-color: rgba(22, 5, 96, 0.05);
-        padding: 0;
-        margin: 0;
+    .navbar-toggler {
+        padding: 2px 6px;
+        font-size: 0.9rem;
+        color: white;
     }
 
-    .dropdown-item {
-        padding: 12px 30px;
-        color: var(--primary-color);
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .navbar-brand img {
+        height: 30px !important;
+        margin-right: 8px !important;
     }
 }
 
@@ -985,13 +961,14 @@ footer {
 
 /* Badilisha style ya toggler */
 .navbar-toggler {
-    border: none;
-    padding: 0;
+    padding: 2px 6px;
+    font-size: 0.9rem;
+    color: white;
 }
 
 .navbar-toggler i {
     color: white;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
@@ -1426,7 +1403,7 @@ footer {
                 nav: true,
                 dots: false,
                 autoplay: true,
-                autoplayTimeout: 5000,
+                autoplayTimeout: 8000,
                 autoplayHoverPause: true,
                 navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
                 responsive: {

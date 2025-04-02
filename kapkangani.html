@@ -1196,12 +1196,32 @@
 
         .navbar-toggler i {
             color: white;
-            font-size: 1.5rem;
+            font-size: 1rem;
             transition: color 0.3s ease;
         }
 
         .navbar-scrolled .navbar-toggler i {
             color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            .navbar-toggler {
+                padding: 0;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .navbar-brand {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -1623,7 +1643,7 @@
                 nav: true,
                 dots: true,
                 autoplay: true,
-                autoplayTimeout: 5000,
+                autoplayTimeout: 8000,
                 autoplayHoverPause: true,
                 navText: [
                     "<i class='fas fa-chevron-left'></i>",
@@ -1648,7 +1668,7 @@
                 nav: true,
                 dots: true,
                 autoplay: true,
-                autoplayTimeout: 5000,
+                autoplayTimeout: 8000,
                 autoplayHoverPause: true,
                 navText: [
                     "<i class='fas fa-chevron-left'></i>",
