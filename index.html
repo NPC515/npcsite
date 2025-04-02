@@ -1,626 +1,2088 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preview.colorlib.com/theme/salvation/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Feb 2024 12:44:39 GMT -->
 <head>
-<title>Noble Pentecostal Church</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../../stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owl.theme.default.min.css">
-<link rel="stylesheet" href="css/magnific-popup.css">
-<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-<link rel="stylesheet" href="css/jquery.timepicker.css">
-<link rel="stylesheet" href="css/flaticon.css">
-<link rel="stylesheet" href="css/style.css">
-<script nonce="d7e56281-2688-488c-8f13-cb86aa12d07b">try{(function(w,d){!function(bS,bT,bU,bV){bS[bU]=bS[bU]||{};bS[bU].executed=[];bS.zaraz={deferred:[],listeners:[]};bS.zaraz.q=[];bS.zaraz._f=function(bW){return async function(){var bX=Array.prototype.slice.call(arguments);bS.zaraz.q.push({m:bW,a:bX})}};for(const bY of["track","set","debug"])bS.zaraz[bY]=bS.zaraz._f(bY);bS.zaraz.init=()=>{var bZ=bT.getElementsByTagName(bV)[0],b$=bT.createElement(bV),ca=bT.getElementsByTagName("title")[0];ca&&(bS[bU].t=bT.getElementsByTagName("title")[0].text);bS[bU].x=Math.random();bS[bU].w=bS.screen.width;bS[bU].h=bS.screen.height;bS[bU].j=bS.innerHeight;bS[bU].e=bS.innerWidth;bS[bU].l=bS.location.href;bS[bU].r=bT.referrer;bS[bU].k=bS.screen.colorDepth;bS[bU].n=bT.characterSet;bS[bU].o=(new Date).getTimezoneOffset();if(bS.dataLayer)for(const ce of Object.entries(Object.entries(dataLayer).reduce(((cf,cg)=>({...cf[1],...cg[1]})),{})))zaraz.set(ce[0],ce[1],{scope:"page"});bS[bU].q=[];for(;bS.zaraz.q.length;){const ch=bS.zaraz.q.shift();bS[bU].q.push(ch)}b$.defer=!0;for(const ci of[localStorage,sessionStorage])Object.keys(ci||{}).filter((ck=>ck.startsWith("_zaraz_"))).forEach((cj=>{try{bS[bU]["z_"+cj.slice(7)]=JSON.parse(ci.getItem(cj))}catch{bS[bU]["z_"+cj.slice(7)]=ci.getItem(cj)}}));b$.referrerPolicy="origin";b$.src="../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(bS[bU])));bZ.parentNode.insertBefore(b$,bZ)};["complete","interactive"].includes(bT.readyState)?zaraz.init():bS.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Noble Pentecostal Church</title>
+    <link rel="icon" href="assets/logo5.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        :root {
+            --primary-color: #160560;
+            --secondary-color: #f8f8f8;
+            --accent-color: #e3b04b;
+        }
+
+        body {
+            font-family: 'American Typewriter', serif;
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Updated Navbar Styles */
+        .navbar {
+            transition: all 0.3s ease;
+            padding: 1.2rem 0;
+            background-color: transparent;
+        }
+
+        .navbar-scrolled {
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-scrolled .navbar-brand {
+            color: var(--primary-color);
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            margin: 0 0.2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        /* Remove the underline styles and update hover/active states */
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--accent-color) !important;
+        }
+
+        .navbar-scrolled .nav-link {
+            color: #000000 !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-scrolled .navbar-toggler {
+            color: var(--primary-color);
+        }
+
+        /* Dropdown Styling */
+        .dropdown-menu {
+            border: none;
+            border-radius: 10px;
+            padding: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            min-width: 250px;
+        }
+
+        .dropdown-item {
+            padding: 0.8rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            white-space: normal;
+        }
+
+        .dropdown-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(22, 5, 96, 0.1);
+            transform: translateX(5px);
+        }
+
+        .dropdown-item:hover i {
+            color: var(--accent-color);
+        }
+
+        .dropdown-divider {
+            margin: 0.3rem 0;
+            opacity: 0.1;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 991.98px) {
+            .navbar {
+                background-color: transparent;
+                padding: 1rem 0;
+            }
+
+            .navbar-scrolled {
+                background-color: white;
+            }
+
+            .navbar-scrolled .navbar-brand {
+                color: var(--primary-color);
+            }
+
+            .navbar-scrolled .navbar-toggler {
+                color: var(--primary-color);
+            }
+
+            .navbar-scrolled .nav-link {
+                color: #000000 !important;
+            }
+
+            .navbar-collapse {
+                background-color: white;
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 0.5rem;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-link {
+                color: var(--primary-color) !important;
+                padding: 0.8rem 1rem !important;
+                border-radius: 5px;
+            }
+
+            .nav-link:hover,
+            .nav-link.active {
+                background-color: rgba(227, 176, 75, 0.1);
+                color: var(--accent-color) !important;
+                border-left: 3px solid var(--accent-color);
+            }
+
+            /* Dropdown menu styling */
+            .dropdown-menu {
+                background-color: rgba(22, 5, 96, 0.05);
+                box-shadow: none;
+                margin: 0.5rem 0;
+                padding: 0.5rem;
+            }
+
+            .dropdown-item {
+                color: var(--primary-color);
+                padding: 1rem;
+            }
+
+            .dropdown-item small {
+                color: #6c757d;
+            }
+
+            .dropdown-divider {
+                background-color: rgba(22, 5, 96, 0.1);
+                margin: 0.5rem 0;
+            }
+
+            .nav-item.dropdown {
+                position: relative;
+            }
+
+            .dropdown-toggle::after {
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .dropdown-menu.show {
+                animation: slideDown 0.3s ease forwards;
+            }
+
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .nav-link.active {
+                background-color: rgba(227, 176, 75, 0.1);
+                border-left: 3px solid var(--accent-color);
+            }
+        }
+
+        /* Additional styles for better mobile experience */
+        @media (max-width: 991.98px) {
+            .navbar-brand {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-slide {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-content {
+            color: white;
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            display: block;
+            text-transform: uppercase;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards 0.2s;
+        }
+
+        .hero-description {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards 0.4s;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards 0.6s;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            border: none;
+            color: white;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            background: transparent;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: #c99a43;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Welcome Section */
+        .welcome {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .welcome-subtitle {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: var(--accent-color);
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .divider-line {
+            width: 60px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .divider i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .welcome-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .welcome-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--primary-color), #2a1090);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .welcome-card:hover .welcome-icon {
+            transform: rotate(360deg);
+        }
+
+        .welcome-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .welcome-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .welcome-card p {
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .welcome-stats {
+            justify-content: center;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .welcome {
+                padding: 4rem 0;
+            }
+
+            .welcome-card {
+                padding: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .welcome-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .welcome-icon i {
+                font-size: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .welcome {
+                padding: 3rem 0;
+            }
+
+            .welcome-card {
+                padding: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .welcome-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .welcome-icon i {
+                font-size: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Service Times */
+        .service-times {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+        }
+
+        .service-subtitle {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .title-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .title-divider span {
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .title-divider i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .service-card {
+            perspective: 1500px;
+            height: 400px;
+        }
+
+        .service-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .service-card:hover .service-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .service-front,
+        .service-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .service-front {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-back {
+            background: linear-gradient(45deg, var(--primary-color), #2a1090);
+            color: white;
+            transform: rotateY(180deg);
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-icon-box {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--primary-color), #2a1090);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon-box i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .service-front h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-time {
+            color: #6c757d;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .expand-info {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .service-details h4 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            color: white;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .service-list li:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+        }
+
+        .service-list li i {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                height: 350px;
+            }
+
+            .service-icon-box {
+                width: 60px;
+                height: 60px;
+            }
+
+            .service-icon-box i {
+                font-size: 1.5rem;
+            }
+
+            .service-front h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Upcoming Events */
+        .events {
+            padding: 5rem 0;
+            background-color: var(--secondary-color);
+        }
+
+        .event-card {
+            transition: transform 0.3s ease;
+            margin: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .event-date {
+            background: rgba(22, 5, 96, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        .event-date h4 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .event-date p {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 576px) {
+            .event-date h4 {
+                font-size: 1.5rem;
+            }
+
+            .event-date {
+                padding: 5px;
+            }
+
+            .service-card,
+            .event-card {
+                margin-bottom: 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .service-times,
+            .events,
+            .welcome {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #160560;
+            color: white;
+            padding: 3rem 0 0 0;
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background: var(--accent-color);
+            bottom: -10px;
+            left: 0;
+        }
+
+        .footer-contact a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-contact a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #160560;
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            background-color: #160560;
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        #preloader.fade-out {
+            opacity: 0;
+        }
+
+        #preloader .text {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .spinner-container {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 6px solid #000080;
+            /* Dark blue */
+            border-bottom: 6px solid #FFD700;
+            /* Yellow */
+            animation: spin 1.5s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top-btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .scroll-to-top-btn i {
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 576px) {
+            .scroll-to-top-btn {
+                bottom: 80px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* Owl Carousel Custom Styling */
+        .hero .owl-nav {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            pointer-events: none;
+        }
+
+        .hero .owl-nav button {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2) !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            color: white !important;
+            font-size: 1.5rem !important;
+            transition: all 0.3s ease;
+            pointer-events: auto;
+        }
+
+        .hero .owl-nav button:hover {
+            background: var(--accent-color) !important;
+            transform: scale(1.1);
+        }
+
+        .hero .owl-dots {
+            position: absolute;
+            bottom: 2rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero .owl-dots .owl-dot span {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .hero .owl-dots .owl-dot.active span {
+            background: var(--accent-color);
+            transform: scale(1.5);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero .owl-nav {
+                padding: 0 1rem;
+            }
+
+            .hero .owl-nav button {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* Update these styles */
+        @media (max-width: 991.98px) {
+            .dropdown-toggle {
+                position: relative;
+                cursor: pointer;
+            }
+
+            .dropdown-toggle::after {
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: transform 0.3s ease;
+            }
+
+            .dropdown-toggle.active::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+
+            .dropdown-menu {
+                display: none;
+                background-color: rgba(22, 5, 96, 0.05);
+                border: none;
+                margin: 0;
+                padding: 0.5rem;
+            }
+
+            .dropdown-menu.show {
+                display: block;
+                animation: slideDown 0.3s ease forwards;
+            }
+
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .dropdown-item {
+                padding: 0.8rem 1rem;
+                border-radius: 5px;
+            }
+
+            .dropdown-item:active {
+                background-color: var(--accent-color);
+            }
+
+            .nav-link.active {
+                background-color: rgba(227, 176, 75, 0.1);
+                color: var(--accent-color) !important;
+                border-left: 3px solid var(--accent-color);
+            }
+        }
+
+        /* Off-Canvas Mobile Menu Styling - Updated with white theme */
+        .offcanvas {
+            width: 300px;
+            background: white;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .offcanvas-header {
+            color: var(--primary-color);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1.5rem 1rem;
+        }
+
+        .offcanvas-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+        .btn-close {
+            filter: none;
+        }
+
+        .offcanvas-body {
+            padding: 1.5rem 0;
+        }
+
+        /* Mobile Navigation Menu */
+        .mobile-nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .mobile-nav-link i {
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            min-width: 20px;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: var(--accent-color);
+            background-color: rgba(227, 176, 75, 0.1);
+            border-left-color: var(--accent-color);
+        }
+
+        .mobile-nav-link:hover i,
+        .mobile-nav-link.active i {
+            color: var(--accent-color);
+        }
+
+        /* Mobile Dropdown */
+        .mobile-dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .mobile-dropdown-toggle .fa-chevron-down {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+            color: #999;
+        }
+
+        .mobile-nav-dropdown.open .fa-chevron-down {
+            transform: rotate(180deg);
+            color: var(--accent-color);
+        }
+
+        .mobile-dropdown-menu {
+            display: none;
+            list-style: none;
+            padding: 0.5rem 0;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        .mobile-dropdown-menu.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .mobile-dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.5rem 1rem 3.5rem;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-dropdown-item i {
+            font-size: 1rem;
+            margin-right: 1rem;
+            color: var(--primary-color);
+        }
+
+        .mobile-dropdown-item div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-dropdown-item small {
+            font-size: 0.75rem;
+            color: #6c757d;
+        }
+
+        .mobile-dropdown-item:hover {
+            background-color: rgba(227, 176, 75, 0.1);
+            color: var(--accent-color);
+        }
+
+        .mobile-dropdown-item:hover i {
+            color: var(--accent-color);
+        }
+
+        .mobile-dropdown-item:hover small {
+            color: #555;
+        }
+
+        /* Mobile Contact Info */
+        .mobile-contact-info {
+            padding: 0 1.5rem;
+            color: #333;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 1.5rem;
+        }
+
+        .mobile-contact-title {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .mobile-contact-title:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .mobile-contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .mobile-contact-item i {
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+
+        .mobile-contact-item a {
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-contact-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .mobile-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-social a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
 <body>
-<div class="wrap">
-<div class="container">
-<div class="row">
-<div class="col-md-6 d-flex align-items-center">
-<p class="mb-0 location">
-<span class="fa fa-map-marker mr-2"></span> <strong>NANDI, KENYA</strong>
-</p>
-</div>
-<div class="col-md-6 d-flex justify-content-md-end">
-<div class="social-media">
-<p class="mb-0 d-flex">
-<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
-<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
-<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-<div class="container">
-<a class="navbar-brand" href="index-2.html">Noble Pentecostal Church</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-<span class="oi oi-menu"></span> Menu
-</button>
-<div class="collapse navbar-collapse" id="ftco-nav">
-<ul class="navbar-nav ml-auto">
-<li class="nav-item active"><a href="index-2.html" class="nav-link">Home</a></li>
-<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-<li class="nav-item"><a href="ministries.html" class="nav-link">Ministries</a></li>
-<li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-<li class="nav-item cta"><a href="contact.html" class="nav-link">Donate</a></li>
-</ul>
-</div>
-</div>
-</nav>
-
-<section class="hero-wrap js-fullheight">
-<div class="home-slider js-fullheight owl-carousel">
-<div class="slider-item js-fullheight" style="background-image:url(images/bg_1.png);">
-<div class="overlay"></div>
-<div class="container">
-<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-<div class="col-md-8 ftco-animate">
-<div class="text mt-md-5 w-100 text-center">
-<h2>Transforming Live</h2>
-<h1 class="mb-3">Total Surrender to God</h1>
-<p class="mb-4 pb-3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="slider-item js-fullheight" style="background-image:url(images/bg_2.jpg);">
-<div class="overlay"></div>
-<div class="container">
-<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-<div class="col-md-8 ftco-animate">
-<div class="text mt-md-5 w-100 text-center">
-<h2>Welcome to Noble Pentecostal Church</h2>
-<h1 class="mb-3">Evangelizing Kenya and the rest of the world
-</h1>
-<p class="mb-4 pb-3">Far far away, behind the word mountains, far from the countries Nigeria and Ghana, there live the blind texts. Separated they live in.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="ftco-section ftco-no-pb ftco-no-pt">
-<div class="container">
-<div class="row no-gutters">
-<div class="col-md-8 d-flex">
-<div class="row no-gutters">
-<div class="col-md-4">
-<div class="services-2">
-<div class="icon"><span class="flaticon-church"></span></div>
-<div class="text">
-<h4>Worhip</h4>
-<span class="subheading">What to expect</span>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="services-2">
-<div class="icon"><span class="flaticon-pray"></span></div>
-<div class="text">
-<h4>Connect</h4>
-<span class="subheading">Contact Members</span>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="services-2">
-<div class="icon"><span class="flaticon-love"></span></div>
-<div class="text">
-<h4>God's Love</h4>
-<span class="subheading">Beliefs and History</span>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-4 d-flex">
-<div class="services-2 services-block">
-<div class="text">
-<h4>A Christian should live for the glory of God and the well-being of others.</h4>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
-<div class="container">
-<div class="row d-flex">
-<div class="col-md-6 d-flex">
-<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url(images/about.png);">
-</div>
-</div>
-<div class="col-md-6 pl-md-5 py-md-5">
-<div class="heading-section pt-md-5 mb-4">
-<span class="subheading">Welcome to Noble Pentecostal Church</span>
-<h2 class="mb-5">Connect, Grow and Serve with Us</h2>
-<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-<p><a href="#" class="btn btn-primary">Learn More</a></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="ftco-counter bg-primary" id="section-counter">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 mb-5 mb-md-0 text-center text-md-left">
-        <h2 class="font-weight-bold" style="color: #fff; font-size: 22px; text-transform: uppercase;">We're on a mission to help all your problems</h2>
-      </div>
-      <div class="col-md-9">
-        <div class="row">
-          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="500">0</strong>
-              </div>
-              <div class="text">
-                <span>Members</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="10">0</strong>
-              </div>
-              <div class="text">
-                <span>Our Leaders</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="3">0</strong>
-              </div>
-              <div class="text">
-                <span>Branches</span>
-              </div>
-            </div>
-          </div>
+    <div id="preloader">
+        <div class="spinner-container">
+            <div class="spinner"></div>
         </div>
-      </div>
+        <div class="text"></div>
     </div>
-  </div>
-</section>
-<section class="ftco-section">
-<div class="container">
-<div class="row justify-content-center pb-5 mb-3">
-<div class="col-md-7 heading-section text-center ftco-animate">
-<span class="subheading">Our Sermons</span>
-<h2>Watch and Listen to our Sermons</h2>
-</div>
-</div>
-<div class="row no-gutters d-flex sermon-wrap ftco-animate bg-light">
-<div class="col-md-6 d-flex align-items-stretch js-fullheight ftco-animate">
-<a href="#" class="img" style="background-image: url(images/sermon-1.jpg);"></a>
-</div>
-<div class="col-md-6 py-4 py-md-5 ftco-animate d-flex align-items-center">
-<div class="text p-md-5">
-<h2 class="mb-4"><a href="sermon.html">God Wants To Do A New Thing In Your Life</a></h2>
-<div class="meta">
-<p>
-<span>Speaker: <a href="#" class="ptr">Dr. Rolando Henderson</a></span>
-<span>Categories: <a href="#">God</a>, <a href="#">Pray</a>, <a href="#">Faith</a></span>
-<span><a href="#">On Sunday 13 Jan, 2019</a></span>
-</p>
-</div>
-<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<p class="mt-4 btn-customize">
-<a href="https://vimeo.com/45830194" class="btn btn-primary px-4 py-3 mr-md-2 popup-vimeo"><span class="fa fa-play"></span> Watch Sermons</a> <a href="#" class="btn btn-primary btn-outline-primary px-4 py-3 ml-lg-2"><span class="fa fa-download"></span> Download Sermons</a>
-</p>
-</div>
-</div>
-</div>
-<div class="row no-gutters d-flex sermon-wrap ftco-animate bg-light">
-<div class="col-md-6 d-flex align-items-stretch js-fullheight ftco-animate order-md-last">
-<a href="#" class="img" style="background-image: url(images/sermon-2.jpg);"></a>
-</div>
-<div class="col-md-6 py-4 py-md-5 ftco-animate d-flex align-items-center">
-<div class="text p-md-5">
-<h2 class="mb-4"><a href="sermon.html">God Wants To Do A New Thing In Your Life</a></h2>
-<div class="meta">
-<p>
-<span>Speaker: <a href="#" class="ptr">Dr. Rolando Henderson</a></span>
-<span>Categories: <a href="#">God</a>, <a href="#">Pray</a>, <a href="#">Faith</a></span>
-<span><a href="#">On Sunday 13 Jan, 2019</a></span>
-</p>
-</div>
-<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<p class="mt-4 btn-customize">
-<a href="https://vimeo.com/45830194" class="btn btn-primary px-4 py-3 mr-md-2 popup-vimeo"><span class="fa fa-play"></span> Watch Sermons</a> <a href="#" class="btn btn-primary btn-outline-primary px-4 py-3 ml-lg-2"><span class="fa fa-download"></span> Download Sermons</a>
-</p>
-</div>
-</div>
-</div>
-<div class="row no-gutters d-flex sermon-wrap ftco-animate bg-light">
-<div class="col-md-6 d-flex align-items-stretch js-fullheight ftco-animate">
-<a href="#" class="img" style="background-image: url(images/sermon-3.jpg);"></a>
-</div>
-<div class="col-md-6 py-4 py-md-5 ftco-animate d-flex align-items-center">
-<div class="text p-md-5">
-<h2 class="mb-4"><a href="sermon.html">God Wants To Do A New Thing In Your Life</a></h2>
-<div class="meta">
-<p>
-<span>Speaker: <a href="#" class="ptr">Dr. Rolando Henderson</a></span>
-<span>Categories: <a href="#">God</a>, <a href="#">Pray</a>, <a href="#">Faith</a></span>
-<span><a href="#">On Sunday 13 Jan, 2019</a></span>
-</p>
-</div>
-<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<p class="mt-4 btn-customize">
-<a href="https://vimeo.com/45830194" class="btn btn-primary px-4 py-3 mr-md-2 popup-vimeo"><span class="fa fa-play"></span> Watch Sermons</a> <a href="#" class="btn btn-primary btn-outline-primary px-4 py-3 ml-lg-2"><span class="fa fa-download"></span> Download Sermons</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="ftco-section testimony-section">
-<div class="overlay"></div>
-<div class="container">
-<div class="row justify-content-center pb-5">
-<div class="col-md-7 heading-section heading-section-white text-center ftco-animate">
-<span class="subheading">Testimony</span>
-<h2>Transform Lives</h2>
-</div>
-</div>
-<div class="row ftco-animate">
-<div class="col-md-12">
-<div class="carousel-testimony owl-carousel">
-<div class="item">
-<div class="testimony-wrap d-md-flex">
-<div class="user-img" style="background-image: url(images/person_1.jpg)">
-</div>
-<div class="text pl-md-4">
-<span class="quote d-flex align-items-center justify-content-center">
-<i class="fa fa-quote-left"></i>
-</span>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-<p class="name">Michael Fox</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="testimony-wrap d-md-flex">
-<div class="user-img" style="background-image: url(images/person_2.jpg)">
-</div>
-<div class="text pl-md-4">
-<span class="quote d-flex align-items-center justify-content-center">
-<i class="fa fa-quote-left"></i>
-</span>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-<p class="name">Mike Shawn</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="testimony-wrap d-md-flex">
-<div class="user-img" style="background-image: url(images/person_3.jpg)">
-</div>
-<div class="text pl-md-4">
-<span class="quote d-flex align-items-center justify-content-center">
-<i class="fa fa-quote-left"></i>
-</span>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-<p class="name">Mark Smith</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="testimony-wrap d-md-flex">
-<div class="user-img" style="background-image: url(images/person_4.jpg)">
-</div>
-<div class="text pl-md-4">
-<span class="quote d-flex align-items-center justify-content-center">
-<i class="fa fa-quote-left"></i>
-</span>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-<p class="name">Kyle Meyer</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="testimony-wrap d-md-flex">
-<div class="user-img" style="background-image: url(images/person_1.jpg)">
-</div>
-<div class="text pl-md-4">
-<span class="quote d-flex align-items-center justify-content-center">
-<i class="fa fa-quote-left"></i>
-</span>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-<p class="name">John Doe</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="ftco-section">
-<div class="container">
-<div class="row justify-content-center pb-5 mb-3">
-<div class="col-md-7 heading-section text-center ftco-animate">
-<span class="subheading">Our Blog</span>
-<h2>Latest news from our blog</h2>
-</div>
-</div>
-<div class="row d-flex">
-<div class="col-md-6 col-lg-4 d-flex ftco-animate">
-<div class="blog-entry align-self-stretch">
-<a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-</a>
-<div class="text p-4">
-<div class="meta mb-2">
-<div><a href="#">July 20, 2020</a></div>
-<div><a href="#">Admin</a></div>
-<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-</div>
-<h3 class="heading"><a href="#">Building Holy &amp; Healthy Lives God’s</a></h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-<p><a href="#" class="btn btn-primary">Read more</a></p>
-</div>
-</div>
-</div>
-<div class="col-md-6 col-lg-4 d-flex ftco-animate">
-<div class="blog-entry align-self-stretch">
-<a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-</a>
-<div class="text p-4">
-<div class="meta mb-2">
-<div><a href="#">July 20, 2020</a></div>
-<div><a href="#">Admin</a></div>
-<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-</div>
-<h3 class="heading"><a href="#">Building Holy &amp; Healthy Lives God’s</a></h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-<p><a href="#" class="btn btn-primary">Read more</a></p>
-</div>
-</div>
-</div>
-<div class="col-md-6 col-lg-4 d-flex ftco-animate">
-<div class="blog-entry align-self-stretch">
-<a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-</a>
-<div class="text p-4">
-<div class="meta mb-2">
-<div><a href="#">July 20, 2020</a></div>
-<div><a href="#">Admin</a></div>
-<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-</div>
-<h3 class="heading"><a href="#">Building Holy &amp; Healthy Lives God’s</a></h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-<p><a href="#" class="btn btn-primary">Read more</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="ftco-section ftco-no-pt">
-<div class="container">
-<div class="row justify-content-center pb-5 mb-3">
-<div class="col-md-7 heading-section text-center ftco-animate">
-<span class="subheading">Events</span>
-<h2>Latest Events</h2>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12 event-wrap d-md-flex ftco-animate">
-<div class="img" style="background-image: url(images/event-1.jpg);"></div>
-<div class="text p-4 px-md-5 d-flex align-items-center">
-<div class="desc">
-<h2 class="mb-4"><a href="sermons.html">Giving Hope to Our Spiritual Needs</a></h2>
-<div class="meta">
-<p>
-<span><i class="fa fa-calendar mr-2"></i> Monday, 8:00 Am - Tuesday, 8:00 Pm</span>
-<span><i class="fa fa-map-marker mr-2"></i> <a href="#">Noble Pentecostal Church</a></span>
-<span><i class="fa fa-building mr-2"></i> <strong>NANDI, KENYA</strong></span>
-</p>
-</div>
-<p><a href="sermons.html" class="btn btn-primary">More Details</a></p>
-</div>
-</div>
-</div>
-<div class="col-md-12 event-wrap d-md-flex ftco-animate">
-<div class="img" style="background-image: url(images/event-2.jpg);"></div>
-<div class="text p-4 px-md-5 d-flex align-items-center">
-<div class="desc">
-<h2 class="mb-4"><a href="sermons.html">Giving Hope to Our Spiritual Needs</a></h2>
-<div class="meta">
-<p>
-<span><i class="fa fa-calendar mr-2"></i> Monday, 8:00 Am - Tuesday, 8:00 Pm</span>
-<span><i class="fa fa-map-marker mr-2"></i> <a href="#">Noble Pentecostal Church</a></span>
-<span><i class="fa fa-building mr-2"></i> <strong>NANDI, KENYA</strong></span>
-</p>
-</div>
-<p><a href="sermons.html" class="btn btn-primary">More Details</a></p>
-</div>
-</div>
-</div>
-<div class="col-md-12 event-wrap d-md-flex ftco-animate">
-<div class="img" style="background-image: url(images/event-3.jpg);"></div>
-<div class="text p-4 px-md-5 d-flex align-items-center">
-<div class="desc">
-<h2 class="mb-4"><a href="sermons.html">Giving Hope to Our Spiritual Needs</a></h2>
-<div class="meta">
-<p>
-<span><i class="fa fa-calendar mr-2"></i> Monday, 8:00 Am - Tuesday, 8:00 Pm</span>
-<span><i class="fa fa-map-marker mr-2"></i> <a href="#">Noble Pentecostal Church</a></span>
-<span><i class="fa fa-building mr-2"></i> <strong>NANDI, KENYA</strong></span>
-</p>
-</div>
-<p><a href="sermons.html" class="btn btn-primary">More Details</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="ftco-section ftco-no-pb ftco-no-pt">
-<div class="container-fluid px-md-0">
-<div class="row no-gutters justify-content-center pb-5 mb-3">
-<div class="col-md-7 heading-section text-center ftco-animate">
-<span class="subheading">Gallery</span>
-<h2>Galleries</h2>
-</div>
-</div>
-<div class="row no-gutters">
-<div class="col-md-3">
-<a href="images/gallery-1.jpg" class="image-popup img gallery ftco-animate" style="background-image: url(images/gallery-1.jpg);">
-<span class="overlay"></span>
-</a>
-</div>
-<div class="col-md-3">
-<a href="images/gallery-2.jpg" class="image-popup img gallery ftco-animate" style="background-image: url(images/gallery-2.jpg);">
-<span class="overlay"></span>
-</a>
-</div>
-<div class="col-md-3">
-<a href="images/gallery-3.jpg" class="image-popup img gallery ftco-animate" style="background-image: url(images/gallery-3.jpg);">
-<span class="overlay"></span>
-</a>
-</div>
-<div class="col-md-3">
-<a href="images/gallery-4.jpg" class="image-popup img gallery ftco-animate" style="background-image: url(images/gallery-4.jpg);">
-<span class="overlay"></span>
-</a>
-</div>
-<div class="col-md-6">
-<a href="images/gallery-5.jpg" class="image-popup img gallery ftco-animate" style="background-image: url(images/gallery-5.jpg);">
-<span class="overlay"></span>
-</a>
-</div>
-<div class="col-md-3">
-<a href="images/gallery-6.jpg" class="image-popup img gallery ftco-animate" style="background-image: url(images/gallery-6.jpg);">
-<span class="overlay"></span>
-</a>
-</div>
-<div class="col-md-3">
-<a href="images/gallery-7.jpg" class="image-popup img gallery ftco-animate" style="background-image: url(images/gallery-7.jpg);">
-<span class="overlay"></span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<footer class="footer">
-<div class="container">
-<div class="row">
-<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-<h2 class="footer-heading">Noble Pentecostal Church</h2>
-<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-<ul class="ftco-footer-social p-0">
-<li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>
-<li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
-<li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a></li>
-</ul>
-</div>
-<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-<h2 class="footer-heading">Latest News</h2>
-<div class="block-21 mb-4 d-flex">
-<a class="img mr-4 rounded" style="background-image: url(images/image_1.jpg);"></a>
-<div class="text">
-<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-<div class="meta">
-<div><a href="#">Aug. 10, 2020</a></div>
-<div><a href="#">Admin</a></div>
-<div><a href="#">19</a></div>
-</div>
-</div>
-</div>
-<div class="block-21 mb-4 d-flex">
-<a class="img mr-4 rounded" style="background-image: url(images/image_2.jpg);"></a>
-<div class="text">
-<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-<div class="meta">
-<div><a href="#">Aug. 10, 2020</a></div>
-<div><a href="#">Admin</a></div>
-<div><a href="#">19</a></div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
-<h2 class="footer-heading">Quick Links</h2>
-<ul class="list-unstyled">
-<li><a href="#" class="py-2 d-block">Home</a></li>
-<li><a href="#" class="py-2 d-block">About</a></li>
-<li><a href="#" class="py-2 d-block">Sermons</a></li>
-<li><a href="#" class="py-2 d-block">Events</a></li>
-<li><a href="#" class="py-2 d-block">Blog</a></li>
-<li><a href="#" class="py-2 d-block">Contact</a></li>
-</ul>
-</div>
-<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-<h2 class="footer-heading">Have a Questions?</h2>
-<div class="block-23 mb-3">
-<ul>
-<li><span class="icon fa fa-map"></span><span class="text"><strong>NANDI, KENYA</strong></span></li>
-<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+254723929210</span></a></li>
-<li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text"><span class="__cf_email__" data-cfemail="6900070f062910061c1b0d0604080007470a0604">[email&#160;protected]</span></span></a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="row mt-5">
-<div class="col-md-12 text-center">
-<p class="copyright">
-  &copy;<strong>Copyright Noble Pentecostal Church</strong> <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved 
-</p>
-</div>
-</div>
-</div>
-</footer>
 
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-migrate-3.0.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/jquery.timepicker.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
-<script src="js/google-map.js"></script>
-<script src="js/main.js"></script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo" style="height: 40px; margin-right: 10px;">
+                Noble Pentecostal Church
+            </a>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+            <!-- Desktop menu - visible on lg screens and up -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Our Branches
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="chepsonoi.html">Chepsonoi</a></li>
+                            <li><a class="dropdown-item" href="kitagwa.html">Kitagwa</a></li>
+                            <li><a class="dropdown-item" href="kapkangani.html">Kapkangani</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="give.html">Give</a>
+                    </li>
+                </ul>
+            </div>
 
-			gtag('config', 'UA-23581568-13');
-		</script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"855da4b62f5573ce","b":1,"version":"2024.2.0","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
+            <!-- Mobile menu toggle button - only visible on small screens -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Off-Canvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Noble Pentecostal Church</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="mobile-nav-menu">
+                <li class="mobile-nav-item">
+                    <a href="index.html" class="mobile-nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="about.html" class="mobile-nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item mobile-nav-dropdown">
+                    <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                        <i class="fas fa-church"></i>
+                        <span>Our Branches</span>
+                        <i class="fas fa-chevron-down ms-auto"></i>
+                    </a>
+                    <ul class="mobile-dropdown-menu">
+                        <li>
+                            <a href="chepsonoi.html" class="mobile-dropdown-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span>Chepsonoi</span>
+                                    <small>Main Branch</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kitagwa.html" class="mobile-dropdown-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span>Kitagwa</span>
+                                    <small>Branch Church</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kapkangani.html" class="mobile-dropdown-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span>Kapkangani</span>
+                                    <small>Branch Church</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="gallery.html" class="mobile-nav-link">
+                        <i class="fas fa-images"></i>
+                        <span>Gallery</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="events.html" class="mobile-nav-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="give.html" class="mobile-nav-link">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span>Give</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mobile-contact-info mt-5">
+                <h6 class="mobile-contact-title">Contact Us</h6>
+                <div class="mobile-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+254712345678">+254 712 345 678</a>
+                </div>
+                <div class="mobile-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@noblepentecostal.org">info@noblepentecostal.org</a>
+                </div>
+                <div class="mobile-social mt-3">
+                    <a href="https://www.facebook.com/profile.php?id=100080132673377" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCu5i7w7w20bGltZqXkc4bXw" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="owl-carousel hero-carousel">
+            <!-- Slide 1 -->
+            <div class="hero-slide"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/herotwo.PNG');">
+                <div class="container">
+                    <div class="hero-content" data-aos="fade-up">
+                        <span class="hero-subtitle">WELCOME TO</span>
+                        <h1 class="hero-title">Noble Pentecostal Church</h1>
+                        <p class="hero-description">Evangelizing Kenya and the rest of the world.</p>
+                        <div class="hero-buttons">
+                            <a href="#service-times" class="btn btn-primary">Our Services</a>
+                            <a href="about.html" class="btn btn-outline">About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/herotwo.PNG');">
+                <div class="container">
+                    <div class="hero-content" data-aos="fade-up">
+                        <span class="hero-subtitle">JOIN US IN WORSHIP</span>
+                        <h1 class="hero-title">Experience God's Love</h1>
+                        <p class="hero-description">Where faith meets fellowship in the heart of Kenya.</p>
+                        <div class="hero-buttons">
+                            <a href="#service-times" class="btn btn-primary">Our Services</a>
+                            <a href="about.html" class="btn btn-outline">About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/herotwo.PNG');">
+                <div class="container">
+                    <div class="hero-content" data-aos="fade-up">
+                        <span class="hero-subtitle">SPREADING THE GOSPEL</span>
+                        <h1 class="hero-title">Building God's Kingdom</h1>
+                        <p class="hero-description">Together we can reach the world for Christ.</p>
+                        <div class="hero-buttons">
+                            <a href="#service-times" class="btn btn-primary">Our Services</a>
+                            <a href="about.html" class="btn btn-outline">About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <div class="container">
+            <div class="welcome-wrapper" data-aos="fade-up">
+                <div class="welcome-content">
+                    <div class="welcome-header text-center mb-5">
+                        <span class="welcome-subtitle">WELCOME TO</span>
+                        <h2 class="section-title">Noble Pentecostal Church</h2>
+                        <div class="divider">
+                            <span class="divider-line"></span>
+                            <i class="fas fa-cross"></i>
+                            <span class="divider-line"></span>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="welcome-card">
+                                <div class="welcome-icon">
+                                    <i class="fas fa-church"></i>
+                                </div>
+                                <h3>Our Mission</h3>
+                                <p>Spreading God's word and love through spirited worship, prayer, and community
+                                    service.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="welcome-card">
+                                <div class="welcome-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3>Our Community</h3>
+                                <p>A vibrant family of believers dedicated to supporting each other in faith and life.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="welcome-card">
+                                <div class="welcome-icon">
+                                    <i class="fas fa-hands-helping"></i>
+                                </div>
+                                <h3>Our Values</h3>
+                                <p>Embracing love, compassion, and service as we follow Christ's teachings.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="welcome-stats row g-4 mt-5">
+                        <div class="col-md-4 col-6">
+                            <div class="stat-card">
+                                <div class="stat-number" data-count="25">0</div>
+                                <div class="stat-label">Years of Service</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="stat-card">
+                                <div class="stat-number" data-count="3">0</div>
+                                <div class="stat-label">Church Branches</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="stat-card">
+                                <div class="stat-number" data-count="500">0</div>
+                                <div class="stat-label">Community Members</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Times -->
+    <section class="service-times" id="service-times">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="service-subtitle">JOIN US IN WORSHIP</span>
+                <h2 class="section-title">Our Services</h2>
+                <div class="title-divider">
+                    <span></span>
+                    <i class="fas fa-cross"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Sunday Service -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-card-inner">
+                            <div class="service-front">
+                                <div class="service-icon-box">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <h3>Sunday Service</h3>
+                                <div class="service-time">
+                                    <i class="far fa-clock"></i>
+                                    10:00 AM - 12:30 PM
+                                </div>
+                                <span class="expand-info">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </div>
+
+                            <div class="service-back">
+                                <div class="service-details">
+                                    <h4>What to Expect</h4>
+                                    <ul class="service-list">
+                                        <li>
+                                            <i class="fas fa-music"></i>
+                                            <span>Spirit-filled Worship</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-book-open"></i>
+                                            <span>Biblical Teaching</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-child"></i>
+                                            <span>Children's Ministry</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-hands"></i>
+                                            <span>Prayer Time</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wednesday Bible Study -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-card-inner">
+                            <div class="service-front">
+                                <div class="service-icon-box">
+                                    <i class="fas fa-bible"></i>
+                                </div>
+                                <h3>Bible Study</h3>
+                                <div class="service-time">
+                                    <i class="far fa-clock"></i>
+                                    6:00 PM - 7:30 PM
+                                </div>
+                                <span class="expand-info">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </div>
+
+                            <div class="service-back">
+                                <div class="service-details">
+                                    <h4>What to Expect</h4>
+                                    <ul class="service-list">
+                                        <li>
+                                            <i class="fas fa-book"></i>
+                                            <span>In-depth Bible Study</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-users"></i>
+                                            <span>Group Discussions</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-pray"></i>
+                                            <span>Prayer Session</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-heart"></i>
+                                            <span>Fellowship</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Friday Prayer -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-card-inner">
+                            <div class="service-front">
+                                <div class="service-icon-box">
+                                    <i class="fas fa-hands"></i>
+                                </div>
+                                <h3>Prayer Night</h3>
+                                <div class="service-time">
+                                    <i class="far fa-clock"></i>
+                                    7:00 PM - 9:00 PM
+                                </div>
+                                <span class="expand-info">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </div>
+
+                            <div class="service-back">
+                                <div class="service-details">
+                                    <h4>What to Expect</h4>
+                                    <ul class="service-list">
+                                        <li>
+                                            <i class="fas fa-pray"></i>
+                                            <span>Intercessory Prayer</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-music"></i>
+                                            <span>Worship</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-microphone"></i>
+                                            <span>Testimonies</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-fire"></i>
+                                            <span>Spirit Ministry</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo" style="height: 50px; margin-right: 15px;">
+                        <h3 class="footer-title mb-0">Noble Pentecostal Church</h3>
+                    </div>
+                    <p>Evangelizing Kenya and the rest of the world.</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.facebook.com/profile.php?id=100080132673377" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCu5i7w7w20bGltZqXkc4bXw" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Chepsonoi, Nandi, Kenya</p>
+                        <p><i class="fas fa-phone me-2"></i> <a href="tel:+254712345678">+254 712 345 678</a></p>
+                        <p><i class="fas fa-envelope me-2"></i> <a
+                                href="mailto:info@noblepentecostal.org">info@noblepentecostal.org</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="events.html" class="text-white text-decoration-none">Events</a></li>
+                        <li class="mb-2"><a href="give.html" class="text-white text-decoration-none">Give</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <div class="container">
+                <p class="mb-0">&copy; 2025 Noble Pentecostal Church. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <!-- AOS Animation Library -->
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Scroll to Top Button Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            // Show button when user scrolls down 300px from the top
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+
+            // Smooth scroll to top when button is clicked
+            scrollToTopBtn.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const preloader = document.getElementById("preloader");
+            const body = document.body;
+
+            // Simulate loading time
+            window.addEventListener("load", function () {
+                setTimeout(function () {
+                    preloader.classList.add("fade-out");
+
+                    // Fully remove preloader after transition
+                    setTimeout(function () {
+                        preloader.style.display = "none";
+                        body.style.overflow = "auto";
+                    }, 500);
+                }, 1500);
+            });
+        });
+        // Initialize AOS animations
+        AOS.init();
+
+        // Updated Navbar Scroll Effect
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.querySelector('.navbar');
+
+            function updateNavbar() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            }
+
+            // Initial check
+            updateNavbar();
+
+            // Update on scroll
+            window.addEventListener('scroll', updateNavbar);
+
+            // Add active class to current page link
+            const currentLocation = location.href;
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                if (link.href === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Handle mobile menu
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const isNavbar = event.target.closest('.navbar');
+                if (!isNavbar && navbarCollapse.classList.contains('show')) {
+                    bootstrap.Collapse.getInstance(navbarCollapse).hide();
+                }
+            });
+
+            // Close mobile menu when clicking a nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbarCollapse.classList.contains('show')) {
+                        bootstrap.Collapse.getInstance(navbarCollapse).hide();
+                    }
+                });
+            });
+        });
+
+        // Stats Counter Animation
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 2000; // Animation duration in milliseconds
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+
+                const updateCount = () => {
+                    current += step;
+                    if (current < target) {
+                        // Add + symbol for numbers ending with +
+                        stat.textContent = Math.floor(current) + (target.toString().endsWith('+') ? '+' : '');
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        stat.textContent = target + (target.toString().endsWith('+') ? '+' : '');
+                    }
+                };
+
+                // Start animation when element is in viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCount();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                observer.observe(stat);
+            });
+        }
+
+        // Initialize stats animation when document is loaded
+        document.addEventListener('DOMContentLoaded', animateStats);
+
+        // Add touch support for mobile devices
+        document.addEventListener('DOMContentLoaded', function () {
+            const serviceCards = document.querySelectorAll('.service-card');
+
+            serviceCards.forEach(card => {
+                card.addEventListener('touchstart', function () {
+                    const inner = this.querySelector('.service-card-inner');
+                    inner.style.transform =
+                        inner.style.transform === 'rotateY(180deg)' ?
+                            'rotateY(0deg)' : 'rotateY(180deg)';
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $('.event-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $('.hero-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                smartSpeed: 1000,
+                navText: [
+                    '<i class="fas fa-chevron-left"></i>',
+                    '<i class="fas fa-chevron-right"></i>'
+                ],
+                responsive: {
+                    0: {
+                        nav: false
+                    },
+                    768: {
+                        nav: true
+                    }
+                },
+                onInitialized: function () {
+                    animateHeroContent();
+                },
+                onTranslated: function () {
+                    animateHeroContent();
+                }
+            });
+
+            function animateHeroContent() {
+                $('.owl-item.active .hero-subtitle').css('animation', 'none').offsetHeight;
+                $('.owl-item.active .hero-title').css('animation', 'none').offsetHeight;
+                $('.owl-item.active .hero-description').css('animation', 'none').offsetHeight;
+                $('.owl-item.active .hero-buttons').css('animation', 'none').offsetHeight;
+
+                $('.owl-item.active .hero-subtitle').css('animation', 'fadeInUp 0.5s ease forwards');
+                $('.owl-item.active .hero-title').css('animation', 'fadeInUp 0.5s ease forwards 0.2s');
+                $('.owl-item.active .hero-description').css('animation', 'fadeInUp 0.5s ease forwards 0.4s');
+                $('.owl-item.active .hero-buttons').css('animation', 'fadeInUp 0.5s ease forwards 0.6s');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Remove any existing click handlers
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggles.forEach(toggle => {
+                // Remove Bootstrap's default dropdown behavior
+                toggle.removeAttribute('data-bs-toggle');
+
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    // Toggle dropdown menu
+                    const dropdownMenu = this.nextElementSibling;
+                    const isOpen = dropdownMenu.classList.contains('show');
+
+                    // Close all other dropdowns
+                    document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                        if (menu !== dropdownMenu) {
+                            menu.classList.remove('show');
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    dropdownMenu.classList.toggle('show');
+                    this.classList.toggle('active');
+
+                    // Rotate arrow
+                    const arrow = this.querySelector('.arrow');
+                    if (arrow) {
+                        arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    }
+                });
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        menu.classList.remove('show');
+                    });
+                    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+                        toggle.classList.remove('active');
+                    });
+                }
+            });
+
+            // Prevent dropdown menu clicks from bubbling
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Dropdown Toggle
+            const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const parent = this.parentElement;
+                    const dropdownMenu = this.nextElementSibling;
+
+                    // Toggle active class
+                    parent.classList.toggle('open');
+
+                    // Toggle dropdown visibility
+                    if (dropdownMenu.classList.contains('show')) {
+                        dropdownMenu.classList.remove('show');
+                    } else {
+                        dropdownMenu.classList.add('show');
+                    }
+                });
+            });
+
+            // Close offcanvas when clicking on links (except dropdown toggles)
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link:not(.mobile-dropdown-toggle), .mobile-dropdown-item');
+            const offcanvas = document.getElementById('mobileMenu');
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
+                    if (bsOffcanvas) {
+                        bsOffcanvas.hide();
+                    }
+                });
+            });
+        });
+    </script>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
 </body>
 
-<!-- Mirrored from preview.colorlib.com/theme/salvation/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Feb 2024 12:45:15 GMT -->
 </html>

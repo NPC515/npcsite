@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Noble Pentecostal Church</title>
+    <title>Kitagwa Branch - Noble Pentecostal Church</title>
     <link rel="icon" href="assets/logo5.png" type="image/png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,16 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- AOS Animation Library -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <!-- Add Owl Carousel CSS files after existing CSS links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="owl.css">
-    <link rel="stylesheet" href="animate.css">
-    <link rel="stylesheet" href="jquery-ui.css">
-    <link rel="stylesheet" href="font-awesome.css">
-    <link rel="stylesheet" href="custom-animate.css">
-    <link rel="stylesheet" href="flaticon_kidscamp-icons.css">
-    <link rel="stylesheet" href="odometer-theme-default.css">
 
     <style>
         :root {
@@ -33,29 +25,30 @@
         body {
             font-family: 'American Typewriter', serif;
             overflow-x: hidden;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
         }
 
+        /* Navbar Styling */
         .navbar {
-    transition: all 0.5s ease;
-    padding: 15px 0;
-}
-
-.navbar-scrolled {
-    background-color: white;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-}
-
-.navbar-brand {
-    font-weight: 500;
-    font-size: 1.5rem;
-    color: white;
-    transition: all 0.3s ease;
-}
-
-        .navbar-scrolled .navbar-brand {
-            color: var(--primary-color); /* Changes to blue (#160560) when scrolled */
+            transition: all 0.5s ease;
+            padding: 15px 0;
         }
 
+        .navbar-scrolled {
+            background-color: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-brand {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .navbar-scrolled .navbar-brand,
         .navbar-scrolled .nav-link {
             color: #333;
         }
@@ -70,10 +63,6 @@
 
         .navbar-scrolled .nav-link {
             color: #333 !important;
-        }
-
-        .navbar-nav .nav-link.active {
-            color: var(--accent-color) !important;
         }
 
         .nav-link:after {
@@ -108,18 +97,21 @@
         /* Mobile Navigation */
         @media (max-width: 992px) {
             .navbar {
-                padding: 10px 15px;
+                background-color: transparent;
+                box-shadow: none;
+            }
+
+            .navbar.navbar-scrolled {
+                background-color: white;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
             }
 
             .navbar-brand {
-                display: flex;
-                align-items: center;
-                font-size: 1.2rem;
+                color: white !important;
             }
 
-            .navbar-brand img {
-                height: 35px;
-                margin-right: 8px;
+            .navbar.navbar-scrolled .navbar-brand {
+                color: #160560 !important;
             }
 
             .navbar-toggler {
@@ -129,7 +121,7 @@
             }
 
             .navbar-toggler i {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
                 color: white;
                 transition: all 0.3s ease;
             }
@@ -143,130 +135,9 @@
                 color: var(--primary-color); /* Ensures blue color on mobile too */
             }
 
-            .navbar > .container {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+            .navbar-toggler:focus {
+                box-shadow: none;
             }
-
-            .page-header {
-                min-height: 100vh;
-                padding-top: 80px;
-                padding-bottom: 40px;
-                width: 100%;
-                overflow: hidden;
-            }
-
-            .page-title {
-                font-size: 2.5rem;
-                padding: 15px;
-                margin-bottom: 1.5rem;
-            }
-
-            .lead {
-                font-size: 1.2rem;
-                padding: 0 20px;
-            }
-
-            .container {
-                max-width: 100%;
-                padding-left: 15px;
-                padding-right: 15px;
-                overflow-x: hidden;
-            }
-
-            .vision-mission-section {
-                padding: 50px 0;
-            }
-
-            .vision-box, .mission-box {
-                padding: 25px;
-                margin-bottom: 30px;
-            }
-
-            .timeline::after {
-                left: 31px;
-            }
-
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-
-            .timeline-item::after {
-                left: 18px;
-            }
-
-            .timeline-right {
-                left: 0;
-            }
-
-            .leadership-section {
-                padding: 50px 0;
-            }
-
-            .team-card {
-                margin: 10px;
-                padding: 20px;
-            }
-
-            .team-img-container {
-                width: 150px;
-                height: 150px;
-            }
-
-            footer {
-                padding: 2rem 0 0 0;
-            }
-
-            .footer-title {
-                font-size: 1.3rem;
-                margin-bottom: 1rem;
-            }
-        }
-
-        /* Extra small devices */
-        @media (max-width: 360px) {
-            .navbar-brand {
-                font-size: 1rem;
-            }
-
-            .navbar-brand img {
-                height: 30px;
-                margin-right: 6px;
-            }
-        }
-
-        .page-header {
-            background: linear-gradient(145deg, #160560 70%, #FFC107 30%);
-            position: relative;
-            overflow: hidden;
-            height: 65vh;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin-top: 0;
-            padding-top: 76px;
-        }
-
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>') repeat;
-            opacity: 0.1;
-            animation: rotate 30s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
         }
 
         /* Page Header */
@@ -325,22 +196,18 @@
         }
 
         .team-img {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 25px;
             border: 5px solid var(--accent-color);
-            padding: 5px;
-            background: white;
+            margin-bottom: 1.5rem;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .team-card:hover .team-img {
             transform: scale(1.05);
-            border-color: var(--primary-color);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         .team-name {
@@ -375,72 +242,43 @@
             margin-bottom: 1.5rem;
         }
 
-        /* History Timeline */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: var(--accent-color);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-        }
-
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            background-color: white;
-            border: 4px solid var(--primary-color);
-            top: 18px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .timeline-left {
-            left: 0;
-        }
-
-        .timeline-right {
-            left: 50%;
-        }
-
-        .timeline-left::after {
-            right: -12px;
-        }
-
-        .timeline-right::after {
-            left: -12px;
-        }
-
-        .timeline-content {
-            padding: 20px 30px;
-            background-color: white;
-            position: relative;
-            border-radius: 6px;
+        /* Service Schedule Table */
+        .schedule-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
         }
 
-        .timeline-year {
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+        .schedule-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .schedule-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .schedule-table tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        /* Map Container */
+        .map-container {
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         /* Footer */
@@ -525,6 +363,8 @@
             font-size: 24px;
             font-weight: bold;
             color: var(--primary-color);
+            width: 80%;
+            text-align: center;
         }
 
         .spinner-container {
@@ -559,26 +399,6 @@
             }
         }
 
-        /* Responsive Timeline */
-        @media screen and (max-width: 768px) {
-            .timeline::after {
-                left: 31px;
-            }
-
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-
-            .timeline-item::after {
-                left: 18px;
-            }
-
-            .timeline-right {
-                left: 0;
-            }
-        }
 
 
         .scroll-to-top-btn {
@@ -625,48 +445,16 @@
             }
         }
 
-        .leadership-carousel .owl-nav button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            border-radius: 50% !important;
-            background: var(--primary-color) !important;
-            color: white !important;
+        .navbar-nav .nav-link.active {
+            color: var(--accent-color) !important;
         }
 
-        .leadership-carousel .owl-nav button:hover {
-            background: var(--accent-color) !important;
+        .dropdown-item.active, .dropdown-item:active {
+            background-color: var(--accent-color);
+            color: white;
         }
 
-        .leadership-carousel .owl-prev {
-            left: -50px;
-        }
-
-        .leadership-carousel .owl-next {
-            right: -50px;
-        }
-
-        .leadership-carousel .owl-dots {
-            margin-top: 20px;
-        }
-
-        .leadership-carousel .owl-dot span {
-            background: #ddd !important;
-        }
-
-        .leadership-carousel .owl-dot.active span {
-            background: var(--accent-color) !important;
-        }
-
-        @media (max-width: 768px) {
-            .leadership-carousel .owl-nav button {
-                display: none;
-            }
-        }
-
-        /* Add these new styles */
+        /* Leadership Section */
         .leadership-section {
             padding: 80px 0;
             background: linear-gradient(145deg, #f8f9fa 60%, #e9ecef 40%);
@@ -686,99 +474,6 @@
             transform: translateY(-10px);
         }
 
-        .team-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 0 auto 25px;
-            border: 5px solid var(--accent-color);
-            transition: all 0.3s ease;
-        }
-
-        .team-card:hover .team-img {
-            transform: scale(1.05);
-            border-color: var(--primary-color);
-        }
-
-        .team-name {
-            color: var(--primary-color);
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .team-role {
-            color: var(--accent-color);
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        .team-social {
-            margin-top: 20px;
-        }
-
-        .team-social a {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            line-height: 35px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            margin: 0 5px;
-            transition: all 0.3s ease;
-        }
-
-        .team-social a:hover {
-            background: var(--accent-color);
-            transform: translateY(-3px);
-        }
-
-        .owl-nav button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 45px !important;
-            height: 45px !important;
-            border-radius: 50% !important;
-            background: var(--primary-color) !important;
-            color: white !important;
-            font-size: 24px !important;
-            transition: all 0.3s ease;
-        }
-
-        .owl-nav button:hover {
-            background: var(--accent-color) !important;
-        }
-
-        .owl-prev {
-            left: -60px;
-        }
-
-        .owl-next {
-            right: -60px;
-        }
-
-        .owl-dots {
-            margin-top: 30px;
-        }
-
-        .owl-dot span {
-            background: #ddd !important;
-            transition: all 0.3s ease;
-        }
-
-        .owl-dot.active span {
-            background: var(--accent-color) !important;
-            width: 30px !important;
-        }
-
-        @media (max-width: 768px) {
-            .owl-nav {
-                display: none;
-            }
-        }
-
-        /* Updated styles for circular images */
         .team-img-container {
             position: relative;
             width: 190px;
@@ -831,60 +526,14 @@
             }
         }
 
-        .team-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .team-card:hover {
-            transform: translateY(-10px);
-        }
-
-        /* Update team card styles to adjust spacing after removing social icons */
-        .team-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .team-bio {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 0; /* Adjusted since we removed social icons */
-            line-height: 1.6;
-        }
-
-        /* Remove team-social related styles as they're no longer needed */
-
-        /* Vision & Mission Styles */
-        .vision-mission-section {
-            padding: 100px 0;
+        /* Overview Section */
+        .overview-section {
+            padding: 80px 0;
             background: linear-gradient(145deg, #f8f9fa 60%, #e9ecef 40%);
+            overflow: hidden;
         }
 
-        .vision-box, .mission-box {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            height: 100%;
-            transition: all 0.3s ease;
-        }
-
-        .vision-box:hover, .mission-box:hover {
-            transform: translateY(-10px);
-        }
-
-        .icon-box {
+        .section-icon {
             width: 80px;
             height: 80px;
             background: var(--primary-color);
@@ -895,70 +544,284 @@
             margin-bottom: 25px;
         }
 
-        .icon-box i {
+        .section-icon i {
             font-size: 35px;
             color: white;
         }
 
-        .animated-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin: 20px 0;
+        .overview-content {
+            padding-right: 30px;
         }
 
-        .vision-list ul, .mission-list ul {
-            list-style: none;
-            padding: 0;
+        .overview-cards {
+            margin-top: 30px;
         }
 
-        .vision-list li, .mission-list li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
+        .overview-card {
+            padding: 15px;
         }
 
-        .vision-list i, .mission-list i {
-            color: var(--accent-color);
-            margin-right: 10px;
-        }
-
-        /* Values Section Styles */
-        .values-section {
-            padding: 100px 0;
+        .card-inner {
             background: white;
-        }
-
-        .value-card {
-            background: white;
-            border-radius: 15px;
             padding: 30px;
-            margin: 15px;
+            border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .value-card:hover {
+        .card-inner:hover {
             transform: translateY(-10px);
         }
 
-        .value-card .icon-box {
-            margin: 0 auto 25px;
+        .card-inner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-color);
+            transition: all 0.3s ease;
         }
 
-        .value-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
+        .card-inner:hover::before {
+            width: 100%;
+            opacity: 0.1;
         }
 
-        .value-card p {
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .icon-box i {
+            font-size: 24px;
+            color: white;
+        }
+
+        .card-inner:hover .icon-box {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        /* Contact and Location Section */
+        .contact-location-section {
+            padding: 80px 0;
+            background: linear-gradient(145deg, #f8f9fa 60%, #e9ecef 40%);
+        }
+
+        .contact-card, .map-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card:hover, .map-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .card-icon i {
+            font-size: 30px;
+            color: white;
+        }
+
+        .contact-card:hover .card-icon, .map-card:hover .card-icon {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .info-item:hover {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateX(10px);
+        }
+
+        .info-item i {
+            color: var(--accent-color);
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+
+        .info-item a {
             color: #666;
-            font-size: 1rem;
-            line-height: 1.6;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
-                /* Off-Canvas Mobile Menu Styling - Updated with white theme */
-                .offcanvas {
+
+        .info-item a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Overview Image */
+        .overview-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .overview-image img {
+            width: 100%;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(22, 5, 96, 0.8), rgba(227, 176, 75, 0.4));
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .overview-image:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .overview-image:hover img {
+            transform: scale(1.05);
+        }
+        .page-header {
+            background: linear-gradient(145deg, #160560 70%, #FFC107 30%);
+            position: relative;
+            overflow: hidden;
+            height: 65vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 0;
+            padding-top: 76px;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>') repeat;
+            opacity: 0.1;
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .branch-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .branch-badge span {
+            display: block;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .branch-badge small {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* Carousel Navigation */
+        .owl-nav button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px !important;
+            height: 45px !important;
+            border-radius: 50% !important;
+            background: var(--primary-color) !important;
+            color: white !important;
+            font-size: 24px !important;
+            transition: all 0.3s ease;
+        }
+
+        .owl-nav button:hover {
+            background: var(--accent-color) !important;
+        }
+
+        .owl-prev {
+            left: -60px;
+        }
+
+        .owl-next {
+            right: -60px;
+        }
+
+        .owl-dots {
+            margin-top: 30px;
+        }
+
+        .owl-dot span {
+            background: #ddd !important;
+            transition: all 0.3s ease;
+        }
+
+        .owl-dot.active span {
+            background: var(--accent-color) !important;
+            width: 30px !important;
+        }
+
+        @media (max-width: 768px) {
+            .owl-nav {
+                display: none;
+            }
+        }
+        
+        /* Off-Canvas Mobile Menu Styling - Updated with white theme */
+        .offcanvas {
             width: 300px;
             background: white;
             box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
@@ -1048,11 +911,15 @@
             padding: 0.5rem 0;
             margin: 0;
             background-color: #f8f9fa;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
         }
 
         .mobile-dropdown-menu.show {
             display: block;
-            animation: fadeIn 0.3s ease;
+            max-height: 300px; /* Height ya kutosha kuonyesha vipengee vyote */
+            transition: max-height 0.3s ease-in;
         }
 
         .mobile-dropdown-item {
@@ -1171,6 +1038,74 @@
                 opacity: 1;
             }
         }
+
+        /* Marekebisho ya msingi ya mobile responsiveness */
+        @media (max-width: 768px) {
+            .page-header {
+                height: 100vh;
+                min-height: 600px;
+                padding: 120px 0 70px;
+            }
+
+            .page-title {
+                font-size: 2.8rem;
+                padding: 0 20px;
+                margin-bottom: 1.5rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+                overflow-x: hidden;
+            }
+
+            .overview-image {
+                margin: 0 15px;
+            }
+
+            .team-card {
+                margin: 15px 0;
+            }
+
+            .contact-card, .map-card {
+                margin: 0 15px 30px;
+            }
+        }
+
+        /* Marekebisho ya navigation */
+        @media (max-width: 992px) {
+            .navbar-collapse {
+                max-width: 100%;
+                width: 100%;
+                right: 0;
+                left: 0;
+                top: 100%;
+            }
+        }
+
+        /* Mobile Navigation Menu - Active States */
+        .mobile-dropdown-item.active {
+            background-color: rgba(227, 176, 75, 0.1);
+            color: var(--accent-color);
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .mobile-dropdown-item.active i {
+            color: var(--accent-color);
+        }
+
+        .mobile-dropdown-item.active small {
+            color: var(--accent-color);
+        }
+
+        .mobile-nav-dropdown.open .mobile-nav-link.active {
+            background-color: rgba(227, 176, 75, 0.1);
+            color: var(--accent-color);
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .mobile-nav-dropdown.open .mobile-nav-link.active i {
+            color: var(--accent-color);
+        }
     </style>
 </head>
 
@@ -1196,15 +1131,15 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="about.html">About Us</a>
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown">
                             Our Branches
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="chepsonoi.html">Chepsonoi</a></li>
-                            <li><a class="dropdown-item" href="kitagwa.html">Kitagwa</a></li>
+                            <li><a class="dropdown-item active" href="kitagwa.html">Kitagwa</a></li>
                             <li><a class="dropdown-item" href="kapkangani.html">Kapkangani</a></li>
                         </ul>
                     </li>
@@ -1215,7 +1150,7 @@
                         <a class="nav-link" href="events.html">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="give.html">Give</a>
+                        <a class="nav-link" href="give.html">Give</a>
                     </li>
                 </ul>
             </div>
@@ -1242,18 +1177,18 @@
                     </a>
                 </li>
                 <li class="mobile-nav-item">
-                    <a href="about.html" class="mobile-nav-link active">
+                    <a href="about.html" class="mobile-nav-link">
                         <i class="fas fa-info-circle"></i>
                         <span>About Us</span>
                     </a>
                 </li>
-                <li class="mobile-nav-item mobile-nav-dropdown">
-                    <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                <li class="mobile-nav-item mobile-nav-dropdown open">
+                    <a href="#" class="mobile-nav-link mobile-dropdown-toggle active">
                         <i class="fas fa-church"></i>
                         <span>Our Branches</span>
                         <i class="fas fa-chevron-down ms-auto"></i>
                     </a>
-                    <ul class="mobile-dropdown-menu">
+                    <ul class="mobile-dropdown-menu show">
                         <li>
                             <a href="chepsonoi.html" class="mobile-dropdown-item">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -1264,7 +1199,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="kitagwa.html" class="mobile-dropdown-item">
+                            <a href="kitagwa.html" class="mobile-dropdown-item active">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
                                     <span>Kitagwa</span>
@@ -1296,7 +1231,7 @@
                     </a>
                 </li>
                 <li class="mobile-nav-item">
-                    <a href="give.html" class="mobile-nav-link ">
+                    <a href="give.html" class="mobile-nav-link">
                         <i class="fas fa-hand-holding-heart"></i>
                         <span>Give</span>
                     </a>
@@ -1328,74 +1263,60 @@
     <!-- Page Header -->
     <header class="page-header">
         <div class="container">
-            <h1 class="page-title" data-aos="fade-up">About Our Church</h1>
-            <p class="lead" data-aos="fade-up" data-aos-delay="200">Learn more about our history, mission, and
-                leadership</p>
+            <h1 class="page-title" data-aos="fade-up">Kitagwa Branch</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">Serving the Kitagwa community with the love of Christ
+            </p>
         </div>
     </header>
 
-    <!-- Our Vision & Mission -->
-    <section class="vision-mission-section">
+    <!-- Branch Overview -->
+    <section class="section overview-section">
         <div class="container">
-            <div class="row gx-5">
-                <!-- Vision Section -->
-                <div class="col-lg-6 mb-4" data-aos="fade-right">
-                    <div class="vision-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <i class="fas fa-eye"></i>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="overview-content">
+                        <div class="section-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h2 class="section-title">Branch Overview</h2>
+                        <div class="overview-cards owl-carousel">
+                            <div class="overview-card">
+                                <div class="card-inner">
+                                    <div class="icon-box">
+                                        <i class="fas fa-history"></i>
+                                    </div>
+                                    <h3>Established 2012</h3>
+                                    <p>The Kitagwa branch of Noble Pentecostal Church has been serving the local community since 2012.</p>
+                                </div>
                             </div>
-                            <h2 class="section-title">Our Vision</h2>
-                            <div class="text animated-text">
-                                <p>Committed to fulfilling the great commission by Evangelizing Kenya and the rest of the world.</p>
+                            <div class="overview-card">
+                                <div class="card-inner">
+                                    <div class="icon-box">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h3>Growing Community</h3>
+                                    <p>What started as a small gathering of believers has grown into a vibrant congregation dedicated to spreading God's word.</p>
+                                </div>
                             </div>
-                            <div class="vision-list">
-                                <ul>
-                                    <li class="wow fadeInUp" data-wow-delay="200ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Spreading the Gospel</span>
-                                    </li>
-                                    <li class="wow fadeInUp" data-wow-delay="400ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Building Communities</span>
-                                    </li>
-                                    <li class="wow fadeInUp" data-wow-delay="600ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Global Impact</span>
-                                    </li>
-                                </ul>
+                            <div class="overview-card">
+                                <div class="card-inner">
+                                    <div class="icon-box">
+                                        <i class="fas fa-hands-helping"></i>
+                                    </div>
+                                    <h3>Ministry Operations</h3>
+                                    <p>We welcome everyone to join us for worship and fellowship, regardless of background or experience.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Mission Section -->
-                <div class="col-lg-6 mb-4" data-aos="fade-left">
-                    <div class="mission-box wow fadeInRight animated" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <i class="fas fa-bullseye"></i>
-                            </div>
-                            <h2 class="section-title">Our Mission</h2>
-                            <div class="text animated-text">
-                                <p>Teaching and disciplining people in the true doctrine of the word of God.</p>
-                            </div>
-                            <div class="mission-list">
-                                <ul>
-                                    <li class="wow fadeInUp" data-wow-delay="200ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Biblical Teaching</span>
-                                    </li>
-                                    <li class="wow fadeInUp" data-wow-delay="400ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Discipleship</span>
-                                    </li>
-                                    <li class="wow fadeInUp" data-wow-delay="600ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Spiritual Growth</span>
-                                    </li>
-                                </ul>
-                            </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="overview-image">
+                        <img src="https://source.unsplash.com/random/600x400/?church,rural" alt="Kitagwa Branch" class="img-fluid">
+                        <div class="image-overlay"></div>
+                        <div class="branch-badge">
+                            <span>Kitagwa Branch</span>
+                            <small>Since 2012</small>
                         </div>
                     </div>
                 </div>
@@ -1403,138 +1324,95 @@
         </div>
     </section>
 
-
-    <!-- Our History -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">Our History</h2>
-                <p class="lead">The journey of Noble Pentecostal Church through the years</p>
-            </div>
-            <div class="timeline" data-aos="fade-up">
-                <div class="timeline-item timeline-left">
-                    <div class="timeline-content" data-aos="fade-right">
-                        <h3 class="timeline-year">1993</h3>
-                        <h4>Our Humble Beginnings</h4>
-                        <p>Noble Pentecostal Church began as a small prayer group of 10 families meeting in the home of
-                            Pastor Jonathan Kimutai.</p>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-right">
-                    <div class="timeline-content" data-aos="fade-left">
-                        <h3 class="timeline-year">1998</h3>
-                        <h4>First Church Building</h4>
-                        <p>As the congregation grew, we acquired our first permanent location in Eldoret town,
-                            establishing our presence in the community.</p>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-left">
-                    <div class="timeline-content" data-aos="fade-right">
-                        <h3 class="timeline-year">2005</h3>
-                        <h4>Community Outreach Begins</h4>
-                        <p>We launched our first major outreach programs, including food distribution, medical camps,
-                            and educational support for underprivileged children.</p>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-right">
-                    <div class="timeline-content" data-aos="fade-left">
-                        <h3 class="timeline-year">2012</h3>
-                        <h4>Expansion to Multiple Branches</h4>
-                        <p>The church expanded with new branches in Kitagwa, Chepsonoi, and Kapkangani, extending our
-                            ministry to reach more communities.</p>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-left">
-                    <div class="timeline-content" data-aos="fade-right">
-                        <h3 class="timeline-year">2019</h3>
-                        <h4>New Main Sanctuary</h4>
-                        <p>We dedicated our new main sanctuary in Eldoret, a modern facility to accommodate our growing
-                            congregation and expand our ministries.</p>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-right">
-                    <div class="timeline-content" data-aos="fade-left">
-                        <h3 class="timeline-year">Present Day</h3>
-                        <h4>Continuing Our Mission</h4>
-                        <p>Today, Noble Pentecostal Church continues to grow spiritually and numerically, focusing on
-                            discipleship, community service, and spreading the gospel.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Leadership -->
+    <!-- Branch Leadership -->
     <section class="section leadership-section">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">Our Leadership</h2>
-                <p class="lead">Meet the dedicated servants guiding our church</p>
+                <h2 class="section-title">Our Pastoral Team</h2>
+                <p class="lead">Meet the dedicated team serving at our Kitagwa branch</p>
             </div>
             
-            <div class="owl-carousel leadership-carousel" data-aos="fade-up">
-                <!-- Treasurer -->
+            <div class="owl-carousel leadership-carousel">
                 <div class="team-card">
                     <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?pastor,man" alt="Darlene Mise" class="team-img">
+                        <img src="https://source.unsplash.com/random/400x400/?pastor,african" alt="Pastor Samuel Kiplagat" class="team-img">
                     </div>
-                    <h3 class="team-name">Darlene Mise</h3>
-                    <p class="team-role">Treasurer</p>
-                    <p class="team-bio">Dedicated to managing church resources with integrity and wisdom.</p>
+                    <h3 class="team-name">Pastor Samuel Kiplagat</h3>
+                    <p class="team-role">Branch Pastor</p>
+                    <p class="team-bio">Pastor Samuel has been leading our Kitagwa branch since 2015, bringing spiritual guidance and vision to our community with his compassionate leadership.</p>
                 </div>
 
-                <!-- Bishop -->
                 <div class="team-card">
                     <div class="team-img-container">
-                        <img src="assets/bishop.jpg" alt="Beatrice Mbaya" class="team-img">
+                        <img src="https://source.unsplash.com/random/400x400/?woman,african" alt="Esther Chepkoech" class="team-img">
                     </div>
-                    <h3 class="team-name">Beatrice Mbaya</h3>
-                    <p class="team-role">Bishop</p>
-                    <p class="team-bio">Leading our congregation with vision and spiritual guidance.</p>
+                    <h3 class="team-name">Esther Chepkoech</h3>
+                    <p class="team-role">Women's Ministry Leader</p>
+                    <p class="team-bio">Esther coordinates our women's fellowship, organizing prayer meetings, Bible studies, and community outreach programs for women in the area.</p>
                 </div>
 
-                <!-- Youth Pastor -->
                 <div class="team-card">
                     <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?youth,pastor" alt="Pastor David Kiprono" class="team-img">
+                        <img src="https://source.unsplash.com/random/400x400/?man,worship" alt="Daniel Kibet" class="team-img">
                     </div>
-                    <h3 class="team-name">Pastor David Kiprono</h3>
-                    <p class="team-role">Youth Pastor</p>
-                    <p class="team-bio">Passionate about nurturing and guiding our youth ministry.</p>
-                </div>
-
-                <!-- Head Elder -->
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?elder,man" alt="Elder Stephen Kiprop" class="team-img">
-                    </div>
-                    <h3 class="team-name">Elder Stephen Kiprop</h3>
-                    <p class="team-role">Head Elder</p>
-                    <p class="team-bio">Providing wisdom and guidance to our church community.</p>
-                </div>
-
-                <!-- Worship Director -->
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?worship,leader" alt="Grace Jepchirchir" class="team-img">
-                    </div>
-                    <h3 class="team-name">Grace Jepchirchir</h3>
-                    <p class="team-role">Worship Director</p>
-                    <p class="team-bio">Leading our congregation in spirit-filled worship.</p>
-                </div>
-
-                <!-- Outreach Coordinator -->
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?community,service" alt="James Kiptoo" class="team-img">
-                    </div>
-                    <h3 class="team-name">James Kiptoo</h3>
-                    <p class="team-role">Outreach Coordinator</p>
-                    <p class="team-bio">Coordinating our community outreach and mission programs.</p>
+                    <h3 class="team-name">Daniel Kibet</h3>
+                    <p class="team-role">Worship Leader</p>
+                    <p class="team-bio">Daniel leads our worship team with passion and dedication, creating an atmosphere that welcomes God's presence in our services.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact and Location -->
+    <section class="section contact-location-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Contact & Location</h2>
+                <p class="lead">Find us and reach out to our team</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="contact-card">
+                        <div class="card-icon">
+                            <i class="fas fa-phone-volume"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Contact Information</h3>
+                            <div class="contact-info">
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Kitagwa Village, Off Eldoret-Kitale Road</p>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <p><a href="tel:+254711222333" class="text-decoration-none text-dark">+254 711 222 333</a></p>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <p><a href="mailto:kitagwa@noblepentecostal.org" class="text-decoration-none text-dark">kitagwa@noblepentecostal.org</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="map-card">
+                        <div class="card-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.013261655404!2d35.25658615!3d0.5292311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178127d1514f2999%3A0x710a70ed12a087db!2sEldoret%2C%20Kenya!5e0!3m2!1sen!2sus!4v1679456989773!5m2!1sen!2sus"
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1610,7 +1488,9 @@
                     behavior: 'smooth'
                 });
             });
-        }); document.addEventListener("DOMContentLoaded", function () {
+        }); 
+        
+        document.addEventListener("DOMContentLoaded", function () {
             const preloader = document.getElementById("preloader");
             const body = document.body;
 
@@ -1627,6 +1507,7 @@
                 }, 1500);
             });
         });
+        
         // Initialize AOS animations
         AOS.init();
 
@@ -1665,6 +1546,28 @@
                     }
                 }
             });
+
+            $('.overview-cards').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                navText: [
+                    "<i class='fas fa-chevron-left'></i>",
+                    "<i class='fas fa-chevron-right'></i>"
+                ],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 1
+                    }
+                }
+            });
         });
                 // Mobile menu functionality
                 document.addEventListener('DOMContentLoaded', function() {
@@ -1677,12 +1580,18 @@
                     const parent = this.parentElement;
                     const dropdownMenu = this.nextElementSibling;
                     
+                    // Toggle the open class
                     parent.classList.toggle('open');
                     
+                    // Toggle the show class with animation
                     if (dropdownMenu.classList.contains('show')) {
-                        dropdownMenu.classList.remove('show');
+                        dropdownMenu.style.maxHeight = '0px';
+                        setTimeout(() => {
+                            dropdownMenu.classList.remove('show');
+                        }, 300); // Match transition duration
                     } else {
                         dropdownMenu.classList.add('show');
+                        dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + "px";
                     }
                 });
             });
