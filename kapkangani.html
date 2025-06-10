@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kapkangani Branch - Noble Pentecostal Church</title>
     <link rel="icon" href="assets/logo5.png" type="image/png">
+    <!-- Google Fonts - Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -13,7 +16,8 @@
     <!-- AOS Animation Library -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <style>
         :root {
@@ -23,7 +27,7 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Raleway', sans-serif;
             overflow-x: hidden;
             width: 100%;
             position: relative;
@@ -48,6 +52,10 @@
             font-size: 1.3rem;
             color: white;
             transition: color 0.3s ease;
+        }
+
+        .navbar-brand span {
+            display: none;
         }
 
         .navbar-scrolled .navbar-brand {
@@ -85,6 +93,10 @@
             color: var(--accent-color) !important;
         }
 
+        .navbar-nav {
+            margin: 0 auto;
+        }
+
         .dropdown-menu {
             border: none;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -96,7 +108,7 @@
         }
 
         /* Highlight active dropdown item with gold color instead of blue */
-        .dropdown-item.active, 
+        .dropdown-item.active,
         .dropdown-item:active {
             background-color: var(--accent-color);
             color: white;
@@ -104,7 +116,7 @@
 
         /* Page Header */
         .page-header {
-            background: linear-gradient(145deg, #160560 70%, #FFC107 30%);
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             position: relative;
             overflow: hidden;
             height: 65vh;
@@ -130,8 +142,13 @@
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .page-title {
@@ -266,7 +283,7 @@
 
         /* Footer */
         footer {
-            background-color: #160560;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             color: white;
             padding: 3rem 0 0 0;
         }
@@ -302,7 +319,7 @@
             display: inline-block;
             width: 40px;
             height: 40px;
-            background-color: #160560;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             color: white;
             border-radius: 50%;
             margin-right: 10px;
@@ -317,69 +334,10 @@
         }
 
         .copyright {
-            background-color: #160560;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             padding: 1rem 0;
             margin-top: 1rem;
         }
-
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-
-        #preloader.fade-out {
-            opacity: 0;
-        }
-
-        #preloader .text {
-            margin-top: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .spinner-container {
-            width: 80px;
-            height: 80px;
-            position: relative;
-        }
-
-        .spinner {
-            width: 60px;
-            height: 60px;
-            border: 6px solid rgba(0, 0, 0, 0.1);
-            border-radius: 50%;
-            border-top: 6px solid #000080;
-            /* Dark blue */
-            border-bottom: 6px solid #FFD700;
-            /* Yellow */
-            animation: spin 1.5s linear infinite;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        @keyframes spin {
-            0% {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
-
 
         .scroll-to-top-btn {
             position: fixed;
@@ -491,10 +449,12 @@
                 transform: scale(1);
                 opacity: 1;
             }
+
             50% {
                 transform: scale(1.05);
                 opacity: 0.5;
             }
+
             100% {
                 transform: scale(1);
                 opacity: 1;
@@ -626,7 +586,8 @@
             background: linear-gradient(145deg, #f8f9fa 60%, #e9ecef 40%);
         }
 
-        .contact-card, .map-card {
+        .contact-card,
+        .map-card {
             background: white;
             border-radius: 15px;
             padding: 30px;
@@ -637,7 +598,8 @@
             overflow: hidden;
         }
 
-        .contact-card:hover, .map-card:hover {
+        .contact-card:hover,
+        .map-card:hover {
             transform: translateY(-10px);
         }
 
@@ -658,7 +620,8 @@
             color: white;
         }
 
-        .contact-card:hover .card-icon, .map-card:hover .card-icon {
+        .contact-card:hover .card-icon,
+        .map-card:hover .card-icon {
             background: var(--accent-color);
             transform: scale(1.1);
         }
@@ -744,14 +707,16 @@
 
         /* Responsive Adjustments */
         @media (max-width: 768px) {
-            .contact-card, .map-card {
+
+            .contact-card,
+            .map-card {
                 margin-bottom: 30px;
             }
-            
+
             .info-item {
                 padding: 12px;
             }
-            
+
             .info-item:hover {
                 transform: translateX(5px);
             }
@@ -858,7 +823,7 @@
                 display: none;
             }
         }
-        
+
         /* Off-Canvas Mobile Menu Styling - Updated with white theme */
         .offcanvas {
             width: 300px;
@@ -916,7 +881,7 @@
             color: var(--primary-color);
         }
 
-        .mobile-nav-link:hover, 
+        .mobile-nav-link:hover,
         .mobile-nav-link.active {
             color: var(--accent-color);
             background-color: rgba(227, 176, 75, 0.1);
@@ -1069,6 +1034,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -1084,8 +1050,8 @@
             }
 
             .page-header {
-                height: 100vh;
-                min-height: 100vh;
+                height: 65vh;
+                min-height: 65vh;
                 padding: 76px 15px 30px;
                 width: 100%;
             }
@@ -1223,24 +1189,195 @@
                 font-size: 1rem;
             }
         }
+
+        /* Add fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            animation: fadeIn 1s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 1s ease-out 0.4s forwards;
+            opacity: 0;
+        }
+
+        .fade-in-delay-3 {
+            animation: fadeIn 1s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+
+        /* Menu Toggle Button */
+        .menu-toggle {
+            display: none;
+            border: none;
+            background: none;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            position: relative;
+            z-index: 1002;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 6px auto;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .menu-toggle.active span {
+            background-color: #ffffff;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        .navbar-scrolled .menu-toggle span {
+            background-color: var(--primary-color);
+            box-shadow: none;
+        }
+
+        /* Fullscreen Menu */
+        .fullscreen-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            z-index: 1001;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fullscreen-menu.active {
+            opacity: 1;
+        }
+
+        .menu-content {
+            text-align: center;
+        }
+
+        .menu-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-items li {
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.5s ease;
+        }
+
+        .fullscreen-menu.active .menu-items li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .menu-items li a {
+            color: white;
+            text-decoration: none;
+            font-size: 34px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 10px 20px;
+        }
+
+        .menu-items li a.active {
+            color: white;
+            position: relative;
+        }
+
+        .menu-items li a.active::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 70%;
+            height: 2px;
+            background-color: white;
+            border-radius: 1px;
+        }
+
+        .menu-items li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .menu-items li a:hover::after {
+            width: 70%;
+        }
+
+        /* Add animation delays for menu items */
+        .menu-items li:nth-child(1) { transition-delay: 0.1s; }
+        .menu-items li:nth-child(2) { transition-delay: 0.2s; }
+        .menu-items li:nth-child(3) { transition-delay: 0.3s; }
+        .menu-items li:nth-child(4) { transition-delay: 0.4s; }
+        .menu-items li:nth-child(5) { transition-delay: 0.5s; }
+        .menu-items li:nth-child(6) { transition-delay: 0.6s; }
+
+        @media (max-width: 991.98px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .fullscreen-menu {
+                display: flex;
+            }
+
+            .navbar-collapse {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .menu-items li a {
+                font-size: 32px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div id="preloader">
-        <div class="spinner-container">
-            <div class="spinner"></div>
-        </div>
-        <div class="text"></div>
-    </div>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top fade-in" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo" style="height: 40px; margin-right: 10px;">
-                Noble Pentecostal Church
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo" style="height: 40px;">
             </a>
-            <!-- Desktop menu - visible on lg screens and up -->
+
+            <!-- Desktop menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -1249,15 +1386,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown">
-                            Our Branches
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="chepsonoi.html">Chepsonoi</a></li>
-                            <li><a class="dropdown-item" href="kitagwa.html">Kitagwa</a></li>
-                            <li><a class="dropdown-item active" href="kapkangani.html">Kapkangani</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ourbranches.html">Our Branches</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="gallery.html">Gallery</a>
@@ -1270,111 +1400,30 @@
                     </li>
                 </ul>
             </div>
-            
+
             <!-- Mobile menu toggle button -->
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-                <i class="fas fa-bars"></i>
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+        </div>
+
+        <!-- Fullscreen Mobile Menu -->
+        <div class="fullscreen-menu" role="navigation" aria-label="Mobile menu">
+            <div class="menu-content">
+                <ul class="menu-items">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="ourbranches.html" class="active">Our Branches</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="give.html">Give</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Mobile Off-Canvas Menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Noble Pentecostal Church</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="mobile-nav-menu">
-                <li class="mobile-nav-item">
-                    <a href="index.html" class="mobile-nav-link">
-                        <i class="fas fa-home"></i>
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="about.html" class="mobile-nav-link">
-                        <i class="fas fa-info-circle"></i>
-                        <span>About Us</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item mobile-nav-dropdown">
-                    <a href="#" class="mobile-nav-link mobile-dropdown-toggle active">
-                        <i class="fas fa-church"></i>
-                        <span>Our Branches</span>
-                        <i class="fas fa-chevron-down ms-auto"></i>
-                    </a>
-                    <ul class="mobile-dropdown-menu">
-                        <li>
-                            <a href="chepsonoi.html" class="mobile-dropdown-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>Chepsonoi</span>
-                                    <small>Main Branch</small>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="kitagwa.html" class="mobile-dropdown-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>Kitagwa</span>
-                                    <small>Branch Church</small>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="kapkangani.html" class="mobile-dropdown-item active">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>Kapkangani</span>
-                                    <small>Branch Church</small>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="gallery.html" class="mobile-nav-link">
-                        <i class="fas fa-images"></i>
-                        <span>Gallery</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="events.html" class="mobile-nav-link">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Events</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="give.html" class="mobile-nav-link">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <span>Give</span>
-                    </a>
-                </li>
-            </ul>
-            
-            <div class="mobile-contact-info mt-5">
-                <h6 class="mobile-contact-title">Contact Us</h6>
-                <div class="mobile-contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+254712345678">+254 712 345 678</a>
-                </div>
-                <div class="mobile-contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:info@noblepentecostal.org">info@noblepentecostal.org</a>
-                </div>
-                <div class="mobile-social mt-3">
-                    <a href="https://www.facebook.com/profile.php?id=100080132673377" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCu5i7w7w20bGltZqXkc4bXw" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Page Header -->
     <header class="page-header">
         <div class="container">
@@ -1400,8 +1449,9 @@
                                     <div class="icon-box">
                                         <i class="fas fa-history"></i>
                                     </div>
-                                    <h3>Established 2008</h3>
-                                    <p>The Kapkangani branch has been a beacon of hope and spiritual nourishment in the community since 2008.</p>
+                                    <h3>Established 2016</h3>
+                                    <p>The Kapkangani branch has been a beacon of hope and spiritual nourishment in the
+                                        community since 2008.</p>
                                 </div>
                             </div>
                             <div class="overview-card">
@@ -1410,7 +1460,8 @@
                                         <i class="fas fa-users"></i>
                                     </div>
                                     <h3>Growing Community</h3>
-                                    <p>Our congregation has grown steadily over the years, becoming a center for worship, fellowship, and community service.</p>
+                                    <p>Our congregation has grown steadily over the years, becoming a center for
+                                        worship, fellowship, and community service.</p>
                                 </div>
                             </div>
                             <div class="overview-card">
@@ -1419,64 +1470,21 @@
                                         <i class="fas fa-hands-helping"></i>
                                     </div>
                                     <h3>Ministry Operations</h3>
-                                    <p>We invite you to experience the warm fellowship and powerful presence of God at our services.</p>
+                                    <p>We invite you to experience the warm fellowship and powerful presence of God at
+                                        our services.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="overview-image">
-                        <img src="https://source.unsplash.com/random/600x400/?church,worship" alt="Kapkangani Branch" class="img-fluid">
-                        <div class="image-overlay"></div>
-                        <div class="branch-badge">
-                            <span>Kapkangani Branch</span>
-                            <small>Since 2008</small>
-                        </div>
-                    </div>
-                </div>
+
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
-    <!-- Branch Leadership -->
-    <section class="section leadership-section">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">Our Pastoral Team</h2>
-                <p class="lead">Meet the dedicated team serving at our Kapkangani branch</p>
-            </div>
-            
-            <div class="owl-carousel leadership-carousel">
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?pastor,man" alt="Pastor David Kemboi" class="team-img">
-                    </div>
-                    <h3 class="team-name">Pastor David Kemboi</h3>
-                    <p class="team-role">Branch Pastor</p>
-                    <p class="team-bio">Pastor David has faithfully led our Kapkangani branch since 2013 with wisdom and dedication, focusing on building a Christ-centered community of believers.</p>
-                </div>
 
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?man,african" alt="Joseph Rotich" class="team-img">
-                    </div>
-                    <h3 class="team-name">Joseph Rotich</h3>
-                    <p class="team-role">Youth Ministry Coordinator</p>
-                    <p class="team-bio">Joseph leads our dynamic youth ministry, mentoring young people and creating programs that help them grow in their faith while developing leadership skills.</p>
-                </div>
-
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?woman,worship" alt="Grace Chepng'eno" class="team-img">
-                    </div>
-                    <h3 class="team-name">Grace Chepng'eno</h3>
-                    <p class="team-role">Worship Director</p>
-                    <p class="team-bio">Grace oversees our worship ministry with exceptional talent and spiritual sensitivity, leading the congregation into meaningful worship experiences.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact and Location -->
     <section class="section contact-location-section">
@@ -1496,7 +1504,7 @@
                             <div class="contact-info">
                                 <div class="info-item">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <p>Kapkangani Center, Near Kapkangani High School</p>
+                                    <p>Kapkangani Center, Near Kapkangani Shopping Center</p>
                                 </div>
                                 <div class="info-item">
                                     <i class="fas fa-phone"></i>
@@ -1504,7 +1512,9 @@
                                 </div>
                                 <div class="info-item">
                                     <i class="fas fa-envelope"></i>
-                                    <p><a href="mailto:kapkangani@noblepentecostal.org">kapkangani@noblepentecostal.org</a></p>
+                                    <p><a
+                                            href="mailto:noblepentecostalchurch@gmail.com">noblepentecostalchurch@gmail.com</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1534,7 +1544,8 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo" style="height: 50px; margin-right: 15px;">
+                        <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo"
+                            style="height: 50px; margin-right: 15px;">
                         <h3 class="footer-title mb-0">Noble Pentecostal Church</h3>
                     </div>
                     <p>Evangelizing Kenya and the rest of the world.</p>
@@ -1556,7 +1567,7 @@
                         <p><i class="fas fa-map-marker-alt me-2"></i>Chepsonoi, Nandi, Kenya</p>
                         <p><i class="fas fa-phone me-2"></i> <a href="tel:+254712345678">+254 712 345 678</a></p>
                         <p><i class="fas fa-envelope me-2"></i> <a
-                                href="mailto:info@noblepentecostal.org">info@noblepentecostal.org</a></p>
+                                href="mailto:noblepentecostalchurch@gmail.com">noblepentecostalchurch@gmail.com</a></p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -1606,23 +1617,8 @@
                     behavior: 'smooth'
                 });
             });
-        }); document.addEventListener("DOMContentLoaded", function () {
-            const preloader = document.getElementById("preloader");
-            const body = document.body;
-
-            // Simulate loading time
-            window.addEventListener("load", function () {
-                setTimeout(function () {
-                    preloader.classList.add("fade-out");
-
-                    // Fully remove preloader after transition
-                    setTimeout(function () {
-                        preloader.style.display = "none";
-                        body.style.overflow = "auto";
-                    }, 500);
-                }, 1500);
-            });
         });
+
         // Initialize AOS animations
         AOS.init();
 
@@ -1636,7 +1632,7 @@
             }
         });
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.leadership-carousel').owlCarousel({
                 loop: true,
                 margin: 30,
@@ -1684,19 +1680,19 @@
                 }
             });
         });
-                // Mobile menu functionality
-                document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function () {
             // Mobile Dropdown Toggle
             const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-            
+
             mobileDropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
+                toggle.addEventListener('click', function (e) {
                     e.preventDefault();
                     const parent = this.parentElement;
                     const dropdownMenu = this.nextElementSibling;
-                    
+
                     parent.classList.toggle('open');
-                    
+
                     if (dropdownMenu.classList.contains('show')) {
                         dropdownMenu.classList.remove('show');
                     } else {
@@ -1708,14 +1704,63 @@
             // Close offcanvas when clicking on links
             const mobileLinks = document.querySelectorAll('.mobile-nav-link:not(.mobile-dropdown-toggle), .mobile-dropdown-item');
             const offcanvas = document.getElementById('mobileMenu');
-            
+
             mobileLinks.forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
                     if (bsOffcanvas) {
                         bsOffcanvas.hide();
                     }
                 });
+            });
+        });
+
+        // Initialize AOS animations
+        AOS.init();
+
+        // Navbar Scroll Effect
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.querySelector('.navbar');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const fullscreenMenu = document.querySelector('.fullscreen-menu');
+
+            function updateNavbar() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            }
+
+            // Initial check
+            updateNavbar();
+
+            // Update on scroll
+            window.addEventListener('scroll', updateNavbar);
+
+            // Mobile menu functionality
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                fullscreenMenu.classList.toggle('active');
+                document.body.style.overflow = fullscreenMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Close menu when clicking a link
+            document.querySelectorAll('.menu-items a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    fullscreenMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!menuToggle.contains(e.target) && !fullscreenMenu.contains(e.target) && fullscreenMenu.classList.contains('active')) {
+                    menuToggle.classList.remove('active');
+                    fullscreenMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
             });
         });
     </script>

@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marurui Branch - Noble Pentecostal Church</title>
+    <link rel="icon" href="assets/logo5.png" type="image/png">
+    <!-- Google Fonts - Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        :root {
+            --primary-color: #160560;
+            --secondary-color: #f8f8f8;
+            --accent-color: #e3b04b;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            transition: all 0.5s ease;
+            padding: 15px 0;
+        }
+
+        .navbar-scrolled {
+            background-color: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-brand {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .navbar-brand span {
+            display: none;
+        }
+
+        .navbar-scrolled .navbar-brand,
+        .navbar-scrolled .nav-link {
+            color: #333;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-scrolled .nav-link {
+            color: #333 !important;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        .navbar-nav {
+            margin: 0 auto;
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 992px) {
+            .navbar {
+                background-color: transparent;
+                box-shadow: none;
+            }
+
+            .navbar-brand {
+                color: white !important;
+                font-size: 1rem !important;
+            }
+
+            .navbar-brand img {
+                height: 25px !important;
+                margin-right: 5px !important;
+            }
+
+            .navbar-toggler {
+                padding: 4px 8px;
+                margin-left: 10px;
+                border: none;
+            }
+
+            .navbar-toggler i {
+                font-size: 1.1rem;
+                color: white;
+                transition: all 0.3s ease;
+            }
+
+            /* When navbar is scrolled */
+            .navbar-scrolled .navbar-toggler i {
+                color: var(--primary-color);
+                /* Changes to blue (#160560) when scrolled */
+            }
+
+            .navbar-scrolled .navbar-brand {
+                color: var(--primary-color);
+                /* Ensures blue color on mobile too */
+            }
+
+            .navbar-toggler:focus {
+                box-shadow: none;
+            }
+        }
+
+        /* Page Header */
+        .page-header {
+            height: 70vh;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-light {
+            background-color: var(--secondary-color);
+        }
+
+        .section-dark {
+            background-color: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--accent-color);
+            bottom: -10px;
+            left: 0;
+        }
+
+        /* Team Section */
+        .team-card {
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .team-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent-color);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Features Section */
+        .feature-card {
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Service Schedule Table */
+        .schedule-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .schedule-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .schedule-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .schedule-table tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        /* Map Container */
+        .map-container {
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            color: white;
+            padding: 3rem 0 0 0;
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background: var(--accent-color);
+            bottom: -10px;
+            left: 0;
+        }
+
+        .footer-contact a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-contact a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top-btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .scroll-to-top-btn i {
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 576px) {
+            .scroll-to-top-btn {
+                bottom: 80px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .navbar-nav .nav-link.active {
+            color: var(--accent-color) !important;
+        }
+
+        .dropdown-item.active,
+        .dropdown-item:active {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Leadership Section */
+        .leadership-section {
+            padding: 80px 0;
+            background: linear-gradient(145deg, #f8f9fa 60%, #e9ecef 40%);
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-img-container {
+            position: relative;
+            width: 190px;
+            height: 190px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+            padding: 5px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover .team-img {
+            transform: scale(1.1);
+            border-color: var(--primary-color);
+        }
+
+        .team-img-container::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Overview Section */
+        .overview-section {
+            padding: 80px 0;
+            background: linear-gradient(145deg, #f8f9fa 60%, #e9ecef 40%);
+            overflow: hidden;
+        }
+
+        .section-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .section-icon i {
+            font-size: 35px;
+            color: white;
+        }
+
+        .overview-content {
+            padding-right: 30px;
+        }
+
+        .overview-cards {
+            margin-top: 30px;
+        }
+
+        .overview-card {
+            padding: 15px;
+        }
+
+        .card-inner {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-inner:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-inner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .card-inner:hover::before {
+            width: 100%;
+            opacity: 0.1;
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .icon-box i {
+            font-size: 24px;
+            color: white;
+        }
+
+        .card-inner:hover .icon-box {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        /* Contact and Location Section */
+        .contact-location-section {
+            padding: 80px 0;
+            background: linear-gradient(145deg, #f8f9fa 60%, #e9ecef 40%);
+        }
+
+        .contact-card,
+        .map-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card:hover,
+        .map-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .card-icon i {
+            font-size: 30px;
+            color: white;
+        }
+
+        .contact-card:hover .card-icon,
+        .map-card:hover .card-icon {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .info-item:hover {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateX(10px);
+        }
+
+        .info-item i {
+            color: var(--accent-color);
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+
+        .info-item a {
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .info-item a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Overview Image */
+        .overview-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .overview-image img {
+            width: 100%;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(22, 5, 96, 0.8), rgba(227, 176, 75, 0.4));
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .overview-image:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .overview-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            position: relative;
+            overflow: hidden;
+            height: 65vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 0;
+            padding-top: 76px;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>') repeat;
+            opacity: 0.1;
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .branch-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .branch-badge span {
+            display: block;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .branch-badge small {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* Carousel Navigation */
+        .owl-nav button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px !important;
+            height: 45px !important;
+            border-radius: 50% !important;
+            background: var(--primary-color) !important;
+            color: white !important;
+            font-size: 24px !important;
+            transition: all 0.3s ease;
+        }
+
+        .owl-nav button:hover {
+            background: var(--accent-color) !important;
+        }
+
+        .owl-prev {
+            left: -60px;
+        }
+
+        .owl-next {
+            right: -60px;
+        }
+
+        .owl-dots {
+            margin-top: 30px;
+        }
+
+        .owl-dot span {
+            background: #ddd !important;
+            transition: all 0.3s ease;
+        }
+
+        .owl-dot.active span {
+            background: var(--accent-color) !important;
+            width: 30px !important;
+        }
+
+        @media (max-width: 768px) {
+            .owl-nav {
+                display: none;
+            }
+        }
+
+        /* Off-Canvas Mobile Menu Styling - Updated with white theme */
+        .offcanvas {
+            width: 300px;
+            background: white;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .offcanvas-header {
+            color: var(--primary-color);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1.5rem 1rem;
+        }
+
+        .offcanvas-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+        .btn-close {
+            filter: none;
+        }
+
+        .offcanvas-body {
+            padding: 1.5rem 0;
+        }
+
+        /* Mobile Navigation Menu */
+        .mobile-nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .mobile-nav-link i {
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            min-width: 20px;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: var(--accent-color);
+            background-color: rgba(227, 176, 75, 0.1);
+            border-left-color: var(--accent-color);
+        }
+
+        .mobile-nav-link:hover i,
+        .mobile-nav-link.active i {
+            color: var(--accent-color);
+        }
+
+        /* Mobile Dropdown */
+        .mobile-dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .mobile-dropdown-toggle .fa-chevron-down {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+            color: #999;
+        }
+
+        .mobile-nav-dropdown.open .fa-chevron-down {
+            transform: rotate(180deg);
+            color: var(--accent-color);
+        }
+
+        .mobile-dropdown-menu {
+            display: none;
+            list-style: none;
+            padding: 0.5rem 0;
+            margin: 0;
+            background-color: #f8f9fa;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-dropdown-menu.show {
+            display: block;
+            max-height: 300px;
+            /* Height ya kutosha kuonyesha vipengee vyote */
+            transition: max-height 0.3s ease-in;
+        }
+
+        .mobile-dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.5rem 1rem 3.5rem;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-dropdown-item i {
+            font-size: 1rem;
+            margin-right: 1rem;
+            color: var(--primary-color);
+        }
+
+        .mobile-dropdown-item div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-dropdown-item small {
+            font-size: 0.75rem;
+            color: #6c757d;
+        }
+
+        .mobile-dropdown-item:hover {
+            background-color: rgba(227, 176, 75, 0.1);
+            color: var(--accent-color);
+        }
+
+        .mobile-dropdown-item:hover i {
+            color: var(--accent-color);
+        }
+
+        .mobile-dropdown-item:hover small {
+            color: #555;
+        }
+
+        /* Mobile Contact Info */
+        .mobile-contact-info {
+            padding: 0 1.5rem;
+            color: #333;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 1.5rem;
+        }
+
+        .mobile-contact-title {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .mobile-contact-title:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .mobile-contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .mobile-contact-item i {
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+
+        .mobile-contact-item a {
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-contact-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .mobile-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-social a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Marekebisho ya msingi ya mobile responsiveness */
+        @media (max-width: 768px) {
+            .page-header {
+                height: 65vh;
+                min-height: 600px;
+                padding: 120px 0 70px;
+            }
+
+            .page-title {
+                font-size: 2.8rem;
+                padding: 0 20px;
+                margin-bottom: 1.5rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+                overflow-x: hidden;
+            }
+
+            .overview-image {
+                margin: 0 15px;
+            }
+
+            .team-card {
+                margin: 15px 0;
+            }
+
+            .contact-card,
+            .map-card {
+                margin: 0 15px 30px;
+            }
+        }
+
+        /* Marekebisho ya navigation */
+        @media (max-width: 992px) {
+            .navbar-collapse {
+                max-width: 100%;
+                width: 100%;
+                right: 0;
+                left: 0;
+                top: 100%;
+            }
+        }
+
+        /* Mobile Navigation Menu - Active States */
+        .mobile-dropdown-item.active {
+            background-color: rgba(227, 176, 75, 0.1);
+            color: var(--accent-color);
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .mobile-dropdown-item.active i {
+            color: var(--accent-color);
+        }
+
+        .mobile-dropdown-item.active small {
+            color: var(--accent-color);
+        }
+
+        .mobile-nav-dropdown.open .mobile-nav-link.active {
+            background-color: rgba(227, 176, 75, 0.1);
+            color: var(--accent-color);
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .mobile-nav-dropdown.open .mobile-nav-link.active i {
+            color: var(--accent-color);
+        }
+
+        /* Add fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            animation: fadeIn 1s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 1s ease-out 0.4s forwards;
+            opacity: 0;
+        }
+
+        .fade-in-delay-3 {
+            animation: fadeIn 1s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+
+        /* Menu Toggle Button */
+        .menu-toggle {
+            display: none;
+            border: none;
+            background: none;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            position: relative;
+            z-index: 1002;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 6px auto;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .menu-toggle.active span {
+            background-color: #ffffff;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        .navbar-scrolled .menu-toggle span {
+            background-color: var(--primary-color);
+            box-shadow: none;
+        }
+
+        /* Fullscreen Menu */
+        .fullscreen-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            z-index: 1001;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fullscreen-menu.active {
+            opacity: 1;
+        }
+
+        .menu-content {
+            text-align: center;
+        }
+
+        .menu-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-items li {
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.5s ease;
+        }
+
+        .fullscreen-menu.active .menu-items li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .menu-items li a {
+            color: white;
+            text-decoration: none;
+            font-size: 34px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 10px 20px;
+        }
+
+        .menu-items li a.active {
+            color: white;
+            position: relative;
+        }
+
+        .menu-items li a.active::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 70%;
+            height: 2px;
+            background-color: white;
+            border-radius: 1px;
+        }
+
+        .menu-items li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .menu-items li a:hover::after {
+            width: 70%;
+        }
+
+        /* Add animation delays for menu items */
+        .menu-items li:nth-child(1) { transition-delay: 0.1s; }
+        .menu-items li:nth-child(2) { transition-delay: 0.2s; }
+        .menu-items li:nth-child(3) { transition-delay: 0.3s; }
+        .menu-items li:nth-child(4) { transition-delay: 0.4s; }
+        .menu-items li:nth-child(5) { transition-delay: 0.5s; }
+        .menu-items li:nth-child(6) { transition-delay: 0.6s; }
+
+        @media (max-width: 991.98px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .fullscreen-menu {
+                display: flex;
+            }
+
+            .navbar-collapse {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .menu-items li a {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top fade-in" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo" style="height: 40px;">
+            </a>
+
+            <!-- Desktop menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ourbranches.html">Our Branches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="give.html">Give</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mobile menu toggle button -->
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Fullscreen Mobile Menu -->
+        <div class="fullscreen-menu" role="navigation" aria-label="Mobile menu">
+            <div class="menu-content">
+                <ul class="menu-items">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="ourbranches.html" class="active">Our Branches</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="give.html">Give</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-up">Marurui Branch</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">Welcome to Noble Pentecostal Church - Marurui Branch
+            </p>
+        </div>
+    </header>
+
+    <!-- Branch Overview -->
+    <section class="section overview-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="overview-content">
+                        <div class="section-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h2 class="section-title">About Marurui Branch</h2>
+                        <div class="overview-cards owl-carousel">
+                            <div class="overview-card">
+                                <div class="card-inner">
+                                    <div class="icon-box">
+                                        <i class="fas fa-history"></i>
+                                    </div>
+                                    <h3>Established 2024</h3>
+                                    <p>The Marurui branch of Noble Pentecostal Church has been serving the local
+                                        community since 2012.</p>
+                                </div>
+                            </div>
+                            <div class="overview-card">
+                                <div class="card-inner">
+                                    <div class="icon-box">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h3>Growing Community</h3>
+                                    <p>What started as a small gathering of believers has grown into a vibrant
+                                        congregation dedicated to spreading God's word.</p>
+                                </div>
+                            </div>
+                            <div class="overview-card">
+                                <div class="card-inner">
+                                    <div class="icon-box">
+                                        <i class="fas fa-hands-helping"></i>
+                                    </div>
+                                    <h3>Ministry Operations</h3>
+                                    <p>We welcome everyone to join us for worship and fellowship, regardless of
+                                        background or experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact and Location -->
+    <section class="section contact-location-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Contact & Location</h2>
+                <p class="lead">Find us and reach out to our team</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="contact-card">
+                        <div class="card-icon">
+                            <i class="fas fa-phone-volume"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Contact Information</h3>
+                            <div class="contact-info">
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Marurui, Kasarani-Sub County</p>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <p><a href="tel:+254711222333" class="text-decoration-none text-dark">+254 711 222
+                                            333</a></p>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <p><a href="mailto:noblepentecostalchurch@gmail.com"
+                                            class="text-decoration-none text-dark">noblepentecostalchurch@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="map-card">
+                        <div class="card-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16121.927133770489!2d36.862697!3d-1.20878775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3de3565ad1d1%3A0x971e1c0d589037af!2sMarurui%2C%20Nairobi!5e1!3m2!1sen!2ske!4v1749556977031!5m2!1sen!2ske"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo"
+                            style="height: 50px; margin-right: 15px;">
+                        <h3 class="footer-title mb-0">Noble Pentecostal Church</h3>
+                    </div>
+                    <p>Evangelizing Kenya and the rest of the world.</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.facebook.com/profile.php?id=100080132673377" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCu5i7w7w20bGltZqXkc4bXw" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Marurui Area, Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone me-2"></i> <a href="tel:+254700000001">+254 700 000 001</a></p>
+                        <p><i class="fas fa-envelope me-2"></i> <a
+                                href="mailto:marurui@noblepentecostal.org">marurui@noblepentecostal.org</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="events.html" class="text-white text-decoration-none">Events</a></li>
+                        <li class="mb-2"><a href="give.html" class="text-white text-decoration-none">Give</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <div class="container">
+                <p class="mb-0">&copy; 2025 Noble Pentecostal Church. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        // Scroll to Top Button Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            // Show button when user scrolls down 300px from the top
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+
+            // Smooth scroll to top when button is clicked
+            scrollToTopBtn.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Initialize AOS animations
+        AOS.init();
+
+        // Navbar Scroll Effect
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.querySelector('.navbar');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const fullscreenMenu = document.querySelector('.fullscreen-menu');
+
+            function updateNavbar() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            }
+
+            // Initial check
+            updateNavbar();
+
+            // Update on scroll
+            window.addEventListener('scroll', updateNavbar);
+
+            // Mobile menu functionality
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                fullscreenMenu.classList.toggle('active');
+                document.body.style.overflow = fullscreenMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Close menu when clicking a link
+            document.querySelectorAll('.menu-items a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    fullscreenMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!menuToggle.contains(e.target) && !fullscreenMenu.contains(e.target) && fullscreenMenu.classList.contains('active')) {
+                    menuToggle.classList.remove('active');
+                    fullscreenMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</body>
+
+</html>

@@ -14,7 +14,8 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <!-- Add Owl Carousel CSS files after existing CSS links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="owl.css">
     <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="jquery-ui.css">
@@ -22,6 +23,8 @@
     <link rel="stylesheet" href="custom-animate.css">
     <link rel="stylesheet" href="flaticon_kidscamp-icons.css">
     <link rel="stylesheet" href="odometer-theme-default.css">
+    <!-- Add Raleway font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -31,29 +34,37 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Raleway', sans-serif;
             overflow-x: hidden;
         }
 
         .navbar {
-    transition: all 0.5s ease;
-    padding: 15px 0;
-}
+            transition: all 0.5s ease;
+            padding: 15px 0;
+        }
 
-.navbar-scrolled {
-    background-color: white;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-}
+        .navbar-scrolled {
+            background-color: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
 
-.navbar-brand {
-    font-weight: 500;
-    font-size: 1.5rem;
-    color: white;
-    transition: all 0.3s ease;
-}
+        .navbar-brand {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: white;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
 
         .navbar-scrolled .navbar-brand {
-            color: var(--primary-color); /* Changes to blue (#160560) when scrolled */
+            color: var(--primary-color);
         }
 
         .navbar-scrolled .nav-link {
@@ -63,13 +74,24 @@
         .nav-link {
             color: white !important;
             font-weight: 500;
-            margin: 0 10px;
+            padding: 0.5rem 1rem !important;
+            margin: 0 0.2rem;
             position: relative;
             transition: all 0.3s ease;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            font-family: 'Raleway', sans-serif;
         }
 
         .navbar-scrolled .nav-link {
             color: #333 !important;
+        }
+
+        .navbar-nav {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .navbar-nav .nav-link.active {
@@ -111,7 +133,7 @@
                 padding: 10px 15px;
             }
 
-            .navbar > .container {
+            .navbar>.container {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -132,15 +154,15 @@
             .navbar-toggler {
                 padding: 2px 6px;
                 margin-left: 15px;
-            border: none;
-            display: flex;
-            align-items: center;
+                border: none;
+                display: flex;
+                align-items: center;
             }
 
             .navbar-toggler i {
                 font-size: 0.9rem;
-            color: white;
-            transition: all 0.3s ease;
+                color: white;
+                transition: all 0.3s ease;
             }
 
             /* When navbar is scrolled */
@@ -149,21 +171,23 @@
             }
 
             .navbar-scrolled .navbar-brand {
-                color: var(--primary-color); /* Ensures blue color on mobile too */
+                color: var(--primary-color);
+                /* Ensures blue color on mobile too */
             }
 
             .navbar-scrolled .navbar-brand {
-                color: var(--primary-color); /* Ensures blue color on mobile too */
+                color: var(--primary-color);
+                /* Ensures blue color on mobile too */
             }
 
-            .navbar > .container {
+            .navbar>.container {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
             }
 
             .page-header {
-                min-height: 100vh;
+                min-height: 65vh;
                 padding-top: 80px;
                 padding-bottom: 40px;
                 width: 100%;
@@ -192,7 +216,8 @@
                 padding: 50px 0;
             }
 
-            .vision-box, .mission-box {
+            .vision-box,
+            .mission-box {
                 padding: 25px;
                 margin-bottom: 30px;
             }
@@ -252,7 +277,7 @@
         }
 
         .page-header {
-            background: linear-gradient(145deg, #160560 70%, #FFC107 30%);
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             position: relative;
             overflow: hidden;
             height: 65vh;
@@ -278,14 +303,19 @@
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Page Header */
         .page-header {
-            height: 65vh;
-            background: linear-gradient(145deg, #160560 70%, #FFC107 30%);
+            height: 70vh;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             color: white;
             display: flex;
             align-items: center;
@@ -318,6 +348,24 @@
             margin-bottom: 1.5rem;
             position: relative;
             display: inline-block;
+        }
+
+        .section-subtitle {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-subtitle:after {
+            content: '';
+            position: absolute;
+            width: 30%;
+            height: 2px;
+            background: var(--accent-color);
+            bottom: -10px;
+            left: 35%;
         }
 
         .section-title:after {
@@ -458,7 +506,7 @@
 
         /* Footer */
         footer {
-            background-color: #160560;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             color: white;
             padding: 3rem 0 0 0;
         }
@@ -494,7 +542,7 @@
             display: inline-block;
             width: 40px;
             height: 40px;
-            background-color: #160560;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             color: white;
             border-radius: 50%;
             margin-right: 10px;
@@ -509,68 +557,12 @@
         }
 
         .copyright {
-            background-color: #160560;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             padding: 1rem 0;
             margin-top: 1rem;
         }
 
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
 
-        #preloader.fade-out {
-            opacity: 0;
-        }
-
-        #preloader .text {
-            margin-top: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .spinner-container {
-            width: 80px;
-            height: 80px;
-            position: relative;
-        }
-
-        .spinner {
-            width: 60px;
-            height: 60px;
-            border: 6px solid rgba(0, 0, 0, 0.1);
-            border-radius: 50%;
-            border-top: 6px solid #000080;
-            /* Dark blue */
-            border-bottom: 6px solid #FFD700;
-            /* Yellow */
-            animation: spin 1.5s linear infinite;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        @keyframes spin {
-            0% {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
 
         /* Responsive Timeline */
         @media screen and (max-width: 768px) {
@@ -638,159 +630,6 @@
             }
         }
 
-        .leadership-carousel .owl-nav button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            border-radius: 50% !important;
-            background: var(--primary-color) !important;
-            color: white !important;
-        }
-
-        .leadership-carousel .owl-nav button:hover {
-            background: var(--accent-color) !important;
-        }
-
-        .leadership-carousel .owl-prev {
-            left: -50px;
-        }
-
-        .leadership-carousel .owl-next {
-            right: -50px;
-        }
-
-        .leadership-carousel .owl-dots {
-            margin-top: 20px;
-        }
-
-        .leadership-carousel .owl-dot span {
-            background: #ddd !important;
-        }
-
-        .leadership-carousel .owl-dot.active span {
-            background: var(--accent-color) !important;
-        }
-
-        @media (max-width: 768px) {
-            .leadership-carousel .owl-nav button {
-                display: none;
-            }
-        }
-
-        /* Add these new styles */
-        .leadership-section {
-            padding: 80px 0;
-            background: linear-gradient(145deg, #f8f9fa 60%, #e9ecef 40%);
-        }
-
-        .team-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .team-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .team-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 0 auto 25px;
-            border: 5px solid var(--accent-color);
-            transition: all 0.3s ease;
-        }
-
-        .team-card:hover .team-img {
-            transform: scale(1.05);
-            border-color: var(--primary-color);
-        }
-
-        .team-name {
-            color: var(--primary-color);
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .team-role {
-            color: var(--accent-color);
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        .team-social {
-            margin-top: 20px;
-        }
-
-        .team-social a {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            line-height: 35px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            margin: 0 5px;
-            transition: all 0.3s ease;
-        }
-
-        .team-social a:hover {
-            background: var(--accent-color);
-            transform: translateY(-3px);
-        }
-
-        .owl-nav button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 45px !important;
-            height: 45px !important;
-            border-radius: 50% !important;
-            background: var(--primary-color) !important;
-            color: white !important;
-            font-size: 24px !important;
-            transition: all 0.3s ease;
-        }
-
-        .owl-nav button:hover {
-            background: var(--accent-color) !important;
-        }
-
-        .owl-prev {
-            left: -60px;
-        }
-
-        .owl-next {
-            right: -60px;
-        }
-
-        .owl-dots {
-            margin-top: 30px;
-        }
-
-        .owl-dot span {
-            background: #ddd !important;
-            transition: all 0.3s ease;
-        }
-
-        .owl-dot.active span {
-            background: var(--accent-color) !important;
-            width: 30px !important;
-        }
-
-        @media (max-width: 768px) {
-            .owl-nav {
-                display: none;
-            }
-        }
-
         /* Updated styles for circular images */
         .team-img-container {
             position: relative;
@@ -834,10 +673,12 @@
                 transform: scale(1);
                 opacity: 1;
             }
+
             50% {
                 transform: scale(1.05);
                 opacity: 0.5;
             }
+
             100% {
                 transform: scale(1);
                 opacity: 1;
@@ -872,7 +713,8 @@
         .team-bio {
             color: #666;
             font-size: 0.95rem;
-            margin-bottom: 0; /* Adjusted since we removed social icons */
+            margin-bottom: 0;
+            /* Adjusted since we removed social icons */
             line-height: 1.6;
         }
 
@@ -884,7 +726,8 @@
             background: linear-gradient(145deg, #f8f9fa 60%, #e9ecef 40%);
         }
 
-        .vision-box, .mission-box {
+        .vision-box,
+        .mission-box {
             background: white;
             border-radius: 15px;
             padding: 40px;
@@ -893,7 +736,8 @@
             transition: all 0.3s ease;
         }
 
-        .vision-box:hover, .mission-box:hover {
+        .vision-box:hover,
+        .mission-box:hover {
             transform: translateY(-10px);
         }
 
@@ -919,19 +763,22 @@
             margin: 20px 0;
         }
 
-        .vision-list ul, .mission-list ul {
+        .vision-list ul,
+        .mission-list ul {
             list-style: none;
             padding: 0;
         }
 
-        .vision-list li, .mission-list li {
+        .vision-list li,
+        .mission-list li {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
             font-size: 1.1rem;
         }
 
-        .vision-list i, .mission-list i {
+        .vision-list i,
+        .mission-list i {
             color: var(--accent-color);
             margin-right: 10px;
         }
@@ -970,8 +817,9 @@
             font-size: 1rem;
             line-height: 1.6;
         }
-                /* Off-Canvas Mobile Menu Styling - Updated with white theme */
-                .offcanvas {
+
+        /* Off-Canvas Mobile Menu Styling - Updated with white theme */
+        .offcanvas {
             width: 300px;
             background: white;
             box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
@@ -998,210 +846,701 @@
             padding: 1.5rem 0;
         }
 
-        /* Mobile Navigation Menu */
-        .mobile-nav-menu {
+        /* Add fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            animation: fadeIn 1s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 1s ease-out 0.4s forwards;
+            opacity: 0;
+        }
+
+        .fade-in-delay-3 {
+            animation: fadeIn 1s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Updated Navbar Styles */
+        .navbar {
+            transition: all 0.3s ease;
+            padding: 1.2rem 0;
+            background-color: transparent;
+        }
+
+        .navbar-scrolled {
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: white;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+
+        .navbar-scrolled .navbar-brand {
+            color: var(--primary-color);
+        }
+
+        .navbar-nav {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            margin: 0 0.2rem;
+            position: relative;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* Update active state styles */
+        .nav-link.active {
+            color: var(--accent-color) !important;
+            position: relative;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-scrolled .nav-link {
+            color: var(--primary-color) !important;
+        }
+
+        .navbar-scrolled .nav-link.active {
+            color: var(--accent-color) !important;
+        }
+
+        .navbar-scrolled .nav-link.active::after {
+            background-color: var(--accent-color);
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 2px 6px;
+            font-size: 0.9rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-scrolled .navbar-toggler {
+            color: var(--primary-color);
+        }
+
+        /* Dropdown Styling */
+        .dropdown-menu {
+            border: none;
+            border-radius: 10px;
+            padding: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            min-width: 250px;
+        }
+
+        .dropdown-item {
+            padding: 0.8rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            white-space: normal;
+        }
+
+        .dropdown-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(22, 5, 96, 0.1);
+            transform: translateX(5px);
+        }
+
+        .dropdown-item:hover i {
+            color: var(--accent-color);
+        }
+
+        .dropdown-divider {
+            margin: 0.3rem 0;
+            opacity: 0.1;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 991.98px) {
+            .navbar {
+                background-color: transparent;
+                padding: 1rem 0;
+            }
+
+            .navbar-scrolled {
+                background-color: white;
+            }
+
+            .navbar-scrolled .navbar-brand {
+                color: var(--primary-color);
+            }
+
+            .navbar-scrolled .navbar-toggler {
+                color: var(--primary-color);
+            }
+
+            .navbar-scrolled .nav-link {
+                color: #000000 !important;
+            }
+
+            .navbar-collapse {
+                background-color: white;
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 0.5rem;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-link {
+                color: var(--primary-color) !important;
+                padding: 0.8rem 1rem !important;
+                border-radius: 5px;
+            }
+
+            .nav-link:hover,
+            .nav-link.active {
+                background-color: rgba(227, 176, 75, 0.1);
+                color: var(--accent-color) !important;
+                border-left: 3px solid var(--accent-color);
+            }
+
+            /* Dropdown menu styling */
+            .dropdown-menu {
+                background-color: rgba(22, 5, 96, 0.05);
+                box-shadow: none;
+                margin: 0.5rem 0;
+                padding: 0.5rem;
+            }
+
+            .dropdown-item {
+                color: var(--primary-color);
+                padding: 1rem;
+            }
+
+            .dropdown-item small {
+                color: #6c757d;
+            }
+
+            .dropdown-divider {
+                background-color: rgba(22, 5, 96, 0.1);
+                margin: 0.5rem 0;
+            }
+
+            .nav-item.dropdown {
+                position: relative;
+            }
+
+            .dropdown-toggle::after {
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .dropdown-menu.show {
+                animation: slideDown 0.3s ease forwards;
+            }
+
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .nav-link.active {
+                background-color: rgba(227, 176, 75, 0.1);
+                border-left: 3px solid var(--accent-color);
+            }
+        }
+
+        /* Additional styles for better mobile experience */
+        @media (max-width: 400px) {
+            .navbar-brand {
+                font-size: 1rem;
+            }
+        }
+
+        /* Updated Leadership Section Styles */
+        .leadership-section {
+            padding: 80px 0;
+            background: linear-gradient(145deg, #f8f9fa 60%, #e9ecef 40%);
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-img-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+            border-color: var(--primary-color);
+        }
+
+        .team-name {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .team-role {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .team-bio {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .section-subtitle {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-subtitle:after {
+            content: '';
+            position: absolute;
+            width: 30%;
+            height: 2px;
+            background: var(--accent-color);
+            bottom: -10px;
+            left: 35%;
+        }
+
+        @media (max-width: 768px) {
+            .team-img-container {
+                width: 180px;
+                height: 180px;
+            }
+
+            .team-name {
+                font-size: 1.3rem;
+            }
+
+            .team-role {
+                font-size: 1rem;
+            }
+
+            .team-bio {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Leadership Carousel Styles */
+        .leadership-carousel .owl-nav button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px !important;
+            height: 45px !important;
+            border-radius: 50% !important;
+            background: var(--primary-color) !important;
+            color: white !important;
+            font-size: 24px !important;
+            transition: all 0.3s ease;
+        }
+
+        .leadership-carousel .owl-nav button:hover {
+            background: var(--accent-color) !important;
+        }
+
+        .leadership-carousel .owl-prev {
+            left: -60px;
+        }
+
+        .leadership-carousel .owl-next {
+            right: -60px;
+        }
+
+        .leadership-carousel .owl-dots {
+            margin-top: 30px;
+        }
+
+        .leadership-carousel .owl-dot span {
+            background: #ddd !important;
+            transition: all 0.3s ease;
+        }
+
+        .leadership-carousel .owl-dot.active span {
+            background: var(--accent-color) !important;
+            width: 30px !important;
+        }
+
+        @media (max-width: 768px) {
+            .leadership-carousel .owl-nav button {
+                display: none;
+            }
+        }
+
+        /* Team Card Styles */
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-img-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+            border-color: var(--primary-color);
+        }
+
+        .team-name {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .team-role {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .team-bio {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .section-subtitle {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-subtitle:after {
+            content: '';
+            position: absolute;
+            width: 30%;
+            height: 2px;
+            background: var(--accent-color);
+            bottom: -10px;
+            left: 35%;
+        }
+
+        @media (max-width: 768px) {
+            .team-img-container {
+                width: 180px;
+                height: 180px;
+            }
+
+            .team-name {
+                font-size: 1.3rem;
+            }
+
+            .team-role {
+                font-size: 1rem;
+            }
+
+            .team-bio {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Menu Toggle Button */
+        .menu-toggle {
+            display: none;
+            border: none;
+            background: none;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            position: relative;
+            z-index: 1002;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 6px auto;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .menu-toggle.active span {
+            background-color: #ffffff;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        .navbar-scrolled .menu-toggle span {
+            background-color: var(--primary-color);
+            box-shadow: none;
+        }
+
+        /* Fullscreen Menu */
+        .fullscreen-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            z-index: 1001;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fullscreen-menu.active {
+            opacity: 1;
+        }
+
+        .menu-content {
+            text-align: center;
+        }
+
+        .menu-items {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        .mobile-nav-item {
-            margin-bottom: 0.5rem;
+        .menu-items li {
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.5s ease;
         }
 
-        .mobile-nav-link {
-            display: flex;
-            align-items: center;
-            padding: 0.8rem 1.5rem;
-            color: #333;
+        .fullscreen-menu.active .menu-items li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .menu-items li a {
+            color: white;
             text-decoration: none;
-            transition: all 0.3s ease;
-            border-left: 3px solid transparent;
-        }
-
-        .mobile-nav-link i {
-            font-size: 1.2rem;
-            margin-right: 1rem;
-            min-width: 20px;
-            text-align: center;
-            color: var(--primary-color);
-        }
-
-        .mobile-nav-link:hover, 
-        .mobile-nav-link.active {
-            color: var(--accent-color);
-            background-color: rgba(227, 176, 75, 0.1);
-            border-left-color: var(--accent-color);
-        }
-
-        .mobile-nav-link:hover i,
-        .mobile-nav-link.active i {
-            color: var(--accent-color);
-        }
-
-        /* Mobile Dropdown */
-        .mobile-dropdown-toggle {
-            cursor: pointer;
-        }
-
-        .mobile-dropdown-toggle .fa-chevron-down {
-            font-size: 0.8rem;
-            transition: transform 0.3s ease;
-            color: #999;
-        }
-
-        .mobile-nav-dropdown.open .fa-chevron-down {
-            transform: rotate(180deg);
-            color: var(--accent-color);
-        }
-
-        .mobile-dropdown-menu {
-            display: none;
-            list-style: none;
-            padding: 0.5rem 0;
-            margin: 0;
-            background-color: #f8f9fa;
-        }
-
-        .mobile-dropdown-menu.show {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .mobile-dropdown-item {
-            display: flex;
-            align-items: center;
-            padding: 1rem 1.5rem 1rem 3.5rem;
-            color: #333;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-dropdown-item i {
-            font-size: 1rem;
-            margin-right: 1rem;
-            color: var(--primary-color);
-        }
-
-        .mobile-dropdown-item div {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .mobile-dropdown-item small {
-            font-size: 0.75rem;
-            color: #6c757d;
-        }
-
-        .mobile-dropdown-item:hover {
-            background-color: rgba(227, 176, 75, 0.1);
-            color: var(--accent-color);
-        }
-
-        .mobile-dropdown-item:hover i {
-            color: var(--accent-color);
-        }
-
-        .mobile-dropdown-item:hover small {
-            color: #555;
-        }
-
-        /* Mobile Contact Info */
-        .mobile-contact-info {
-            padding: 0 1.5rem;
-            color: #333;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            padding-top: 1.5rem;
-        }
-
-        .mobile-contact-title {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-            position: relative;
-            display: inline-block;
+            font-size: 34px;
             font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 10px 20px;
         }
 
-        .mobile-contact-title:after {
+        .menu-items li a.active {
+            color: white;
+            position: relative;
+        }
+
+        .menu-items li a.active::before {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 70%;
             height: 2px;
-            background-color: var(--accent-color);
+            background-color: white;
+            border-radius: 1px;
         }
 
-        .mobile-contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.8rem;
-        }
-
-        .mobile-contact-item i {
-            color: var(--primary-color);
-            margin-right: 1rem;
-        }
-
-        .mobile-contact-item a {
-            color: #555;
-            text-decoration: none;
+        .menu-items li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: white;
             transition: all 0.3s ease;
+            transform: translateX(-50%);
         }
 
-        .mobile-contact-item a:hover {
-            color: var(--accent-color);
+        .menu-items li a:hover::after {
+            width: 70%;
         }
 
-        .mobile-social {
-            display: flex;
-            gap: 1rem;
+        /* Add animation delays for menu items */
+        .menu-items li:nth-child(1) {
+            transition-delay: 0.1s;
         }
 
-        .mobile-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: white;
-            transition: all 0.3s ease;
+        .menu-items li:nth-child(2) {
+            transition-delay: 0.2s;
         }
 
-        .mobile-social a:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-3px);
+        .menu-items li:nth-child(3) {
+            transition-delay: 0.3s;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
+        .menu-items li:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .menu-items li:nth-child(5) {
+            transition-delay: 0.5s;
+        }
+
+        .menu-items li:nth-child(6) {
+            transition-delay: 0.6s;
+        }
+
+        @media (max-width: 991.98px) {
+            .menu-toggle {
+                display: block;
             }
-            to {
-                opacity: 1;
+
+            .fullscreen-menu {
+                display: flex;
+            }
+
+            .navbar-collapse {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .menu-items li a {
+                font-size: 32px;
             }
         }
     </style>
 </head>
 
 <body>
-    <div id="preloader">
-        <div class="spinner-container">
-            <div class="spinner"></div>
-        </div>
-        <div class="text"></div>
-    </div>
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top fade-in">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo" style="height: 40px; margin-right: 10px;">
-                Noble Pentecostal Church
+                <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo" style="height: 40px;">
             </a>
-            
+
             <!-- Desktop menu - visible on lg screens and up -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -1211,15 +1550,8 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="about.html">About Us</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
-                            Our Branches
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="chepsonoi.html">Chepsonoi</a></li>
-                            <li><a class="dropdown-item" href="kitagwa.html">Kitagwa</a></li>
-                            <li><a class="dropdown-item" href="kapkangani.html">Kapkangani</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ourbranches.html">Our Branches</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="gallery.html">Gallery</a>
@@ -1228,114 +1560,37 @@
                         <a class="nav-link" href="events.html">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="give.html">Give</a>
+                        <a class="nav-link" href="give.html">Give</a>
                     </li>
                 </ul>
             </div>
-            
+
             <!-- Mobile menu toggle button -->
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-                <i class="fas fa-bars"></i>
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+        </div>
+
+        <!-- Fullscreen Mobile Menu -->
+        <div class="fullscreen-menu" role="navigation" aria-label="Mobile menu">
+            <div class="menu-content">
+                <ul class="menu-items">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="ourbranches.html">Our Branches</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="give.html">Give</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Mobile Off-Canvas Menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Noble Pentecostal Church</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="mobile-nav-menu">
-                <li class="mobile-nav-item">
-                    <a href="index.html" class="mobile-nav-link">
-                        <i class="fas fa-home"></i>
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="about.html" class="mobile-nav-link active">
-                        <i class="fas fa-info-circle"></i>
-                        <span>About Us</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item mobile-nav-dropdown">
-                    <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
-                        <i class="fas fa-church"></i>
-                        <span>Our Branches</span>
-                        <i class="fas fa-chevron-down ms-auto"></i>
-                    </a>
-                    <ul class="mobile-dropdown-menu">
-                        <li>
-                            <a href="chepsonoi.html" class="mobile-dropdown-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>Chepsonoi</span>
-                                    <small>Main Branch</small>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="kitagwa.html" class="mobile-dropdown-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>Kitagwa</span>
-                                    <small>Branch Church</small>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="kapkangani.html" class="mobile-dropdown-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>Kapkangani</span>
-                                    <small>Branch Church</small>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="gallery.html" class="mobile-nav-link">
-                        <i class="fas fa-images"></i>
-                        <span>Gallery</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="events.html" class="mobile-nav-link">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Events</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="give.html" class="mobile-nav-link ">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <span>Give</span>
-                    </a>
-                </li>
-            </ul>
-            
-            <div class="mobile-contact-info mt-5">
-                <h6 class="mobile-contact-title">Contact Us</h6>
-                <div class="mobile-contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+254712345678">+254 712 345 678</a>
-                </div>
-                <div class="mobile-contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:info@noblepentecostal.org">info@noblepentecostal.org</a>
-                </div>
-                <div class="mobile-social mt-3">
-                    <a href="https://www.facebook.com/profile.php?id=100080132673377" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCu5i7w7w20bGltZqXkc4bXw" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+    </div>
+    </div>
+    </div>
     </div>
 
     <!-- Page Header -->
@@ -1360,23 +1615,11 @@
                             </div>
                             <h2 class="section-title">Our Vision</h2>
                             <div class="text animated-text">
-                                <p>Committed to fulfilling the great commission by Evangelizing Kenya and the rest of the world.</p>
+                                <p>Committed to fulfilling the great commission by Evangelizing Kenya and the rest of
+                                    the world.</p>
+                                <p>"Matthew 28:19"</p>
                             </div>
-                            <div class="vision-list">
-                                <ul>
-                                    <li class="wow fadeInUp" data-wow-delay="200ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Spreading the Gospel</span>
-                                    </li>
-                                    <li class="wow fadeInUp" data-wow-delay="400ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Building Communities</span>
-                                    </li>
-                                    <li class="wow fadeInUp" data-wow-delay="600ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Global Impact</span>
-                                    </li>
-                                </ul>
+                            <div class="">
                             </div>
                         </div>
                     </div>
@@ -1393,21 +1636,8 @@
                             <div class="text animated-text">
                                 <p>Teaching and disciplining people in the true doctrine of the word of God.</p>
                             </div>
-                            <div class="mission-list">
-                                <ul>
-                                    <li class="wow fadeInUp" data-wow-delay="200ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Biblical Teaching</span>
-                                    </li>
-                                    <li class="wow fadeInUp" data-wow-delay="400ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Discipleship</span>
-                                    </li>
-                                    <li class="wow fadeInUp" data-wow-delay="600ms">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Spiritual Growth</span>
-                                    </li>
-                                </ul>
+                            <div class="">
+
                             </div>
                         </div>
                     </div>
@@ -1427,46 +1657,65 @@
             <div class="timeline" data-aos="fade-up">
                 <div class="timeline-item timeline-left">
                     <div class="timeline-content" data-aos="fade-right">
-                        <h3 class="timeline-year">1993</h3>
+                        <h3 class="timeline-year">1999</h3>
                         <h4>Our Humble Beginnings</h4>
-                        <p>Noble Pentecostal Church began as a small prayer group of 10 families meeting in the home of
-                            Pastor Jonathan Kimutai.</p>
+                        <p>We began as a fellowship at a shop in chepsonoi.</p>
                     </div>
                 </div>
                 <div class="timeline-item timeline-right">
                     <div class="timeline-content" data-aos="fade-left">
-                        <h3 class="timeline-year">1998</h3>
-                        <h4>First Church Building</h4>
-                        <p>As the congregation grew, we acquired our first permanent location in Eldoret town,
-                            establishing our presence in the community.</p>
+                        <h3 class="timeline-year">2000</h3>
+                        <h4>Plot Acquisition & Registration</h4>
+                        <p>Moved to a temporary church after acquiring a plot and registered the fellowship into Nandi
+                            Pentecostal Church.</p>
                     </div>
                 </div>
                 <div class="timeline-item timeline-left">
                     <div class="timeline-content" data-aos="fade-right">
-                        <h3 class="timeline-year">2005</h3>
-                        <h4>Community Outreach Begins</h4>
-                        <p>We launched our first major outreach programs, including food distribution, medical camps,
-                            and educational support for underprivileged children.</p>
+                        <h3 class="timeline-year">2006</h3>
+                        <h4>Sanctuary Construction</h4>
+                        <p>Construction of the main sanctuary that took 3 years.</p>
                     </div>
                 </div>
                 <div class="timeline-item timeline-right">
                     <div class="timeline-content" data-aos="fade-left">
-                        <h3 class="timeline-year">2012</h3>
-                        <h4>Expansion to Multiple Branches</h4>
-                        <p>The church expanded with new branches in Kitagwa, Chepsonoi, and Kapkangani, extending our
-                            ministry to reach more communities.</p>
+                        <h3 class="timeline-year">2009</h3>
+                        <h4>Sanctuary Dedication</h4>
+                        <p> The main sanctuary was dedicated on 29th August 2009 by
+                            Bishop Boniface Adoyo of Citam. The occasion was graced by the then Deputy Prime Minister,
+                            Hon. Musalia Mudavadi.</p>
                     </div>
                 </div>
                 <div class="timeline-item timeline-left">
                     <div class="timeline-content" data-aos="fade-right">
-                        <h3 class="timeline-year">2019</h3>
-                        <h4>New Main Sanctuary</h4>
-                        <p>We dedicated our new main sanctuary in Eldoret, a modern facility to accommodate our growing
-                            congregation and expand our ministries.</p>
+                        <h3 class="timeline-year">2016</h3>
+                        <h4>Kapkangani Branch Establishment</h4>
+                        <p>Opened the second branch at kapkangani.</p>
                     </div>
                 </div>
                 <div class="timeline-item timeline-right">
                     <div class="timeline-content" data-aos="fade-left">
+                        <h3 class="timeline-year">2018</h3>
+                        <h4>Kitagwa Branch Establishment</h4>
+                        <p>Opened the third branch in Kitagwa</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content" data-aos="fade-right">
+                        <h3 class="timeline-year">?</h3>
+                        <h4>Njathaini Branch Establishment</h4>
+                        <p>Opened the fourth branch in Njathaini</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content" data-aos="fade-left">
+                        <h3 class="timeline-year">2024</h3>
+                        <h4>Marurui Branch Establishment</h4>
+                        <p>Opened the fifth branch in Marurui</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content" data-aos="fade-right">
                         <h3 class="timeline-year">Present Day</h3>
                         <h4>Continuing Our Mission</h4>
                         <p>Today, Noble Pentecostal Church continues to grow spiritually and numerically, focusing on
@@ -1484,66 +1733,138 @@
                 <h2 class="section-title">Our Leadership</h2>
                 <p class="lead">Meet the dedicated servants guiding our church</p>
             </div>
-            
-            <div class="owl-carousel leadership-carousel" data-aos="fade-up">
+
+            <!-- Bishop Section -->
+            <div class="row justify-content-center mb-5" data-aos="fade-up">
+                <div class="col-md-6 col-lg-4">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="assetS/Committee Members & Pastors/beatricembaya.JPG" alt="Bishop Beatrice Mbaya"
+                                class="team-img">
+                        </div>
+                        <h3 class="team-name">Bishop Beatrice Mbaya</h3>
+                        <p class="team-role">Bishop</p>
+                        <p class="team-bio">Leading our church with vision and spiritual guidance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pastors Section -->
+            <div class="text-center mb-4" data-aos="fade-up">
+                <h3 class="section-subtitle">Church Pastors</h3>
+            </div>
+            <div class="owl-carousel leadership-carousel mb-5" data-aos="fade-up">
+                <!-- Central Pastor -->
+                <div class="team-card">
+                    <div class="team-img-container">
+                        <img src="assets/Committee Members & Pastors/simonkamar.JPG" alt="Rev Simon Kamar"
+                            class="team-img">
+                    </div>
+                    <h3 class="team-name">Rev. Simon Kamar</h3>
+                    <p class="team-role">Central Pastor</p>
+                    <p class="team-bio">Overseeing the Central branch with dedication and wisdom.</p>
+                </div>
+
+                <!-- Kapkangani Pastor -->
+                <div class="team-card">
+                    <div class="team-img-container">
+                        <img src="assets/Committee Members & Pastors/tomaluvasa.jpeg" alt="Rev Tom Alumasa"
+                            class="team-img">
+                    </div>
+                    <h3 class="team-name">Rev. Tom Alumasa</h3>
+                    <p class="team-role">Kapkangani Pastor</p>
+                    <p class="team-bio">Leading the Kapkangani branch with passion and commitment.</p>
+                </div>
+
+                <!-- Kitagwa Pastor -->
+                <div class="team-card">
+                    <div class="team-img-container">
+                        <img src="assets/Committee Members & Pastors/silassilingi.PNG" alt="Rev Silas Silingi"
+                            class="team-img">
+                    </div>
+                    <h3 class="team-name">Rev. Silas Silingi</h3>
+                    <p class="team-role">Kitagwa Pastor</p>
+                    <p class="team-bio">Guiding the Kitagwa branch with spiritual insight and care.</p>
+                </div>
+
+                <!-- Njethaini Pastor -->
+                <div class="team-card">
+                    <div class="team-img-container">
+                        <img src="assets/Committee Members & Pastors/enockambwere.jpeg" alt="Rev Enoch Ambwere"
+                            class="team-img">
+                    </div>
+                    <h3 class="team-name">Rev. Enoch Ambwere</h3>
+                    <p class="team-role">Njethaini Pastor</p>
+                    <p class="team-bio">Serving the Njethaini branch with dedication and love.</p>
+                </div>
+
+                <!-- Marurui Pastor -->
+                <div class="team-card">
+                    <div class="team-img-container">
+                        <img src="assets/Committee Members & Pastors/hudsonluseno.JPG" alt="Pst Hudson Luseno"
+                            class="team-img">
+                    </div>
+                    <h3 class="team-name">Pst. Hudson Luseno</h3>
+                    <p class="team-role">Marurui Pastor</p>
+                    <p class="team-bio">Leading the Marurui branch with vision and commitment.</p>
+                </div>
+            </div>
+
+            <!-- Committee Section -->
+            <div class="text-center mb-4" data-aos="fade-up">
+                <h3 class="section-subtitle">National Committee</h3>
+            </div>
+            <div class="row g-4" data-aos="fade-up">
+                <!-- Chairman -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="assets/Committee Members & Pastors/hebronadoli.png" alt="Adoli Hebron"
+                                class="team-img">
+                        </div>
+                        <h3 class="team-name">Adoli Hebron</h3>
+                        <p class="team-role">Chairman</p>
+                        <p class="team-bio">Providing leadership and direction for the church.</p>
+                    </div>
+                </div>
+
+                <!-- Vice Chairman -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="assets/Committee Members & Pastors/paulamalemba.png" alt="Paul Amalemba"
+                                class="team-img">
+                        </div>
+                        <h3 class="team-name">Paul Amalemba</h3>
+                        <p class="team-role">Vice Chairman</p>
+                        <p class="team-bio">Supporting the church's leadership and vision.</p>
+                    </div>
+                </div>
+
+                <!-- Secretary -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="assets/Committee Members & Pastors/johnchegenye.JPG" alt="John Chegenye"
+                                class="team-img">
+                        </div>
+                        <h3 class="team-name">John Chegenye</h3>
+                        <p class="team-role">Secretary</p>
+                        <p class="team-bio">Managing church records and communications.</p>
+                    </div>
+                </div>
+
                 <!-- Treasurer -->
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?pastor,man" alt="Darlene Mise" class="team-img">
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="assets/Committee Members & Pastors/darlenemise.jpeg" alt="Darlene Mise"
+                                class="team-img">
+                        </div>
+                        <h3 class="team-name">Darlene Mise</h3>
+                        <p class="team-role">Treasurer</p>
+                        <p class="team-bio">Overseeing church finances with integrity and wisdom.</p>
                     </div>
-                    <h3 class="team-name">Darlene Mise</h3>
-                    <p class="team-role">Treasurer</p>
-                    <p class="team-bio">Dedicated to managing church resources with integrity and wisdom.</p>
-                </div>
-
-                <!-- Bishop -->
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="assets/bishop.jpg" alt="Beatrice Mbaya" class="team-img">
-                    </div>
-                    <h3 class="team-name">Beatrice Mbaya</h3>
-                    <p class="team-role">Bishop</p>
-                    <p class="team-bio">Leading our congregation with vision and spiritual guidance.</p>
-                </div>
-
-                <!-- Youth Pastor -->
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?youth,pastor" alt="Pastor David Kiprono" class="team-img">
-                    </div>
-                    <h3 class="team-name">Pastor David Kiprono</h3>
-                    <p class="team-role">Youth Pastor</p>
-                    <p class="team-bio">Passionate about nurturing and guiding our youth ministry.</p>
-                </div>
-
-                <!-- Head Elder -->
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?elder,man" alt="Elder Stephen Kiprop" class="team-img">
-                    </div>
-                    <h3 class="team-name">Elder Stephen Kiprop</h3>
-                    <p class="team-role">Head Elder</p>
-                    <p class="team-bio">Providing wisdom and guidance to our church community.</p>
-                </div>
-
-                <!-- Worship Director -->
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?worship,leader" alt="Grace Jepchirchir" class="team-img">
-                    </div>
-                    <h3 class="team-name">Grace Jepchirchir</h3>
-                    <p class="team-role">Worship Director</p>
-                    <p class="team-bio">Leading our congregation in spirit-filled worship.</p>
-                </div>
-
-                <!-- Outreach Coordinator -->
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="https://source.unsplash.com/random/400x400/?community,service" alt="James Kiptoo" class="team-img">
-                    </div>
-                    <h3 class="team-name">James Kiptoo</h3>
-                    <p class="team-role">Outreach Coordinator</p>
-                    <p class="team-bio">Coordinating our community outreach and mission programs.</p>
                 </div>
             </div>
         </div>
@@ -1554,7 +1875,8 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo" style="height: 50px; margin-right: 15px;">
+                        <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo"
+                            style="height: 50px; margin-right: 15px;">
                         <h3 class="footer-title mb-0">Noble Pentecostal Church</h3>
                     </div>
                     <p>Evangelizing Kenya and the rest of the world.</p>
@@ -1573,7 +1895,7 @@
                         <p><i class="fas fa-map-marker-alt me-2"></i>Chepsonoi, Nandi, Kenya</p>
                         <p><i class="fas fa-phone me-2"></i> <a href="tel:+254712345678">+254 712 345 678</a></p>
                         <p><i class="fas fa-envelope me-2"></i> <a
-                                href="mailto:info@noblepentecostal.org">info@noblepentecostal.org</a></p>
+                                href="mailto:noblepentecostalchurch@gmail.com">noblepentecostalchurch@gmail.com</a></p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -1623,22 +1945,6 @@
                     behavior: 'smooth'
                 });
             });
-        }); document.addEventListener("DOMContentLoaded", function () {
-            const preloader = document.getElementById("preloader");
-            const body = document.body;
-
-            // Simulate loading time
-            window.addEventListener("load", function () {
-                setTimeout(function () {
-                    preloader.classList.add("fade-out");
-
-                    // Fully remove preloader after transition
-                    setTimeout(function () {
-                        preloader.style.display = "none";
-                        body.style.overflow = "auto";
-                    }, 500);
-                }, 1500);
-            });
         });
         // Initialize AOS animations
         AOS.init();
@@ -1653,7 +1959,43 @@
             }
         });
 
-        $(document).ready(function(){
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const fullscreenMenu = document.querySelector('.fullscreen-menu');
+            const menuItems = document.querySelectorAll('.menu-items li a');
+
+            function closeMenu() {
+                menuToggle.classList.remove('active');
+                fullscreenMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // Toggle menu
+            menuToggle.addEventListener('click', function () {
+                this.classList.toggle('active');
+                fullscreenMenu.style.display = 'flex';
+                fullscreenMenu.classList.toggle('active');
+                document.body.style.overflow = fullscreenMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Close menu when clicking a link
+            menuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    closeMenu();
+                });
+            });
+
+            // Close menu when clicking outside
+            fullscreenMenu.addEventListener('click', function (e) {
+                if (e.target === fullscreenMenu) {
+                    closeMenu();
+                }
+            });
+        });
+
+        // Leadership carousel initialization
+        $(document).ready(function () {
             $('.leadership-carousel').owlCarousel({
                 loop: true,
                 margin: 30,
@@ -1677,40 +2019,6 @@
                         items: 3
                     }
                 }
-            });
-        });
-                // Mobile menu functionality
-                document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Dropdown Toggle
-            const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-            
-            mobileDropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const parent = this.parentElement;
-                    const dropdownMenu = this.nextElementSibling;
-                    
-                    parent.classList.toggle('open');
-                    
-                    if (dropdownMenu.classList.contains('show')) {
-                        dropdownMenu.classList.remove('show');
-                    } else {
-                        dropdownMenu.classList.add('show');
-                    }
-                });
-            });
-
-            // Close offcanvas when clicking on links
-            const mobileLinks = document.querySelectorAll('.mobile-nav-link:not(.mobile-dropdown-toggle), .mobile-dropdown-item');
-            const offcanvas = document.getElementById('mobileMenu');
-            
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
-                    if (bsOffcanvas) {
-                        bsOffcanvas.hide();
-                    }
-                });
             });
         });
     </script>
