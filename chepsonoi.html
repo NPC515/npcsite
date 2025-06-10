@@ -393,49 +393,7 @@
             margin-top: 1rem;
         }
 
-        .scroll-to-top-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
 
-        .scroll-to-top-btn.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .scroll-to-top-btn:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-5px);
-        }
-
-        .scroll-to-top-btn i {
-            font-size: 1.25rem;
-        }
-
-        @media (max-width: 576px) {
-            .scroll-to-top-btn {
-                bottom: 80px;
-                right: 20px;
-                width: 40px;
-                height: 40px;
-            }
-        }
 
         /* Leadership Section */
         .leadership-section {
@@ -1406,6 +1364,7 @@
             position: relative;
             z-index: 1002;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .menu-toggle span {
@@ -1414,18 +1373,36 @@
             height: 2px;
             background-color: #ffffff;
             margin: 6px auto;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+            position: relative;
         }
 
-        .menu-toggle.active span {
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
             background-color: #ffffff;
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: #ffffff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
         }
 
         .navbar-scrolled .menu-toggle span {
             background-color: var(--primary-color);
-            box-shadow: none;
+            box-shadow: 0 0 8px rgba(22, 5, 96, 0.3);
+        }
+
+        .navbar-scrolled .menu-toggle.active span {
+            background-color: #ffffff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
         }
 
         /* Fullscreen Menu */
@@ -1439,13 +1416,16 @@
             background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             z-index: 1001;
             opacity: 0;
-            transition: opacity 0.5s ease;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
             align-items: center;
             justify-content: center;
+            backdrop-filter: blur(10px);
         }
 
         .fullscreen-menu.active {
             opacity: 1;
+            visibility: visible;
         }
 
         .menu-content {
@@ -1478,6 +1458,12 @@
             transition: all 0.3s ease;
             position: relative;
             padding: 10px 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .menu-items li a:hover {
+            color: var(--accent-color);
+            text-shadow: 0 0 15px rgba(227, 176, 75, 0.5);
         }
 
         .menu-items li a.active {
@@ -1873,11 +1859,6 @@
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" class="scroll-to-top-btn">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS Animation Library -->
@@ -1886,25 +1867,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="assets/js/main.js?v=1.1"></script>
     <script>
-        // Scroll to Top Button Functionality
+        // Initialize Owl Carousel for overview cards
         document.addEventListener('DOMContentLoaded', function () {
-            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-            // Show button when user scrolls down 300px from the top
-            window.addEventListener('scroll', function () {
-                if (window.pageYOffset > 300) {
-                    scrollToTopBtn.classList.add('visible');
-                } else {
-                    scrollToTopBtn.classList.remove('visible');
-                }
-            });
-
-            // Smooth scroll to top when button is clicked
-            scrollToTopBtn.addEventListener('click', function () {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+            $('.overview-cards').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                },
+                navText: [
+                    '<i class="fas fa-chevron-left"></i>',
+                    '<i class="fas fa-chevron-right"></i>'
+                ]
             });
         });
 

@@ -825,10 +825,7 @@
 
         @media (max-width: 576px) {
             .scroll-to-top-btn {
-                bottom: 80px;
-                right: 20px;
-                width: 40px;
-                height: 40px;
+                display: none;
             }
         }
 
@@ -1395,9 +1392,16 @@
             box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         }
 
-        .menu-toggle.active span {
-            background-color: #ffffff;
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
         }
 
         .navbar-scrolled .menu-toggle span {
@@ -1419,10 +1423,12 @@
             transition: opacity 0.5s ease;
             align-items: center;
             justify-content: center;
+            visibility: hidden;
         }
 
         .fullscreen-menu.active {
             opacity: 1;
+            visibility: visible;
         }
 
         .menu-content {
@@ -2110,8 +2116,21 @@
             // Toggle menu
             menuToggle.addEventListener('click', function () {
                 this.classList.toggle('active');
-                fullscreenMenu.style.display = 'flex';
-                fullscreenMenu.classList.toggle('active');
+                if (!fullscreenMenu.classList.contains('active')) {
+                    fullscreenMenu.style.display = 'flex';
+                    // Small delay to ensure display:flex is applied before adding active class
+                    setTimeout(() => {
+                        fullscreenMenu.classList.add('active');
+                    }, 10);
+                } else {
+                    fullscreenMenu.classList.remove('active');
+                    // Wait for transition to complete before hiding
+                    setTimeout(() => {
+                        if (!fullscreenMenu.classList.contains('active')) {
+                            fullscreenMenu.style.display = 'none';
+                        }
+                    }, 500);
+                }
                 document.body.style.overflow = fullscreenMenu.classList.contains('active') ? 'hidden' : '';
             });
 

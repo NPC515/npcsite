@@ -111,6 +111,7 @@
             .navbar {
                 background-color: transparent;
                 box-shadow: none;
+                padding: 12px 0;
             }
 
             .navbar-brand {
@@ -119,8 +120,18 @@
             }
 
             .navbar-brand img {
-                height: 25px !important;
+                height: 35px !important;
                 margin-right: 5px !important;
+                transition: all 0.3s ease;
+            }
+
+            .navbar-scrolled {
+                background-color: white !important;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            }
+
+            .navbar-scrolled .navbar-brand img {
+                height: 32px !important;
             }
 
             .navbar-toggler {
@@ -138,12 +149,10 @@
             /* When navbar is scrolled */
             .navbar-scrolled .navbar-toggler i {
                 color: var(--primary-color);
-                /* Changes to blue (#160560) when scrolled */
             }
 
             .navbar-scrolled .navbar-brand {
-                color: var(--primary-color);
-                /* Ensures blue color on mobile too */
+                color: var(--primary-color) !important;
             }
 
             .navbar-toggler:focus {
@@ -1114,6 +1123,7 @@
             position: relative;
             z-index: 1002;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .menu-toggle span {
@@ -1122,18 +1132,36 @@
             height: 2px;
             background-color: #ffffff;
             margin: 6px auto;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+            position: relative;
         }
 
-        .menu-toggle.active span {
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
             background-color: #ffffff;
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: #ffffff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
         }
 
         .navbar-scrolled .menu-toggle span {
             background-color: var(--primary-color);
-            box-shadow: none;
+            box-shadow: 0 0 8px rgba(22, 5, 96, 0.3);
+        }
+
+        .navbar-scrolled .menu-toggle.active span {
+            background-color: #ffffff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
         }
 
         /* Fullscreen Menu */
@@ -1147,13 +1175,16 @@
             background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             z-index: 1001;
             opacity: 0;
-            transition: opacity 0.5s ease;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
             align-items: center;
             justify-content: center;
+            backdrop-filter: blur(10px);
         }
 
         .fullscreen-menu.active {
             opacity: 1;
+            visibility: visible;
         }
 
         .menu-content {
@@ -1186,39 +1217,24 @@
             transition: all 0.3s ease;
             position: relative;
             padding: 10px 20px;
-        }
-
-        .menu-items li a.active {
-            color: white;
-            position: relative;
-        }
-
-        .menu-items li a.active::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 70%;
-            height: 2px;
-            background-color: white;
-            border-radius: 1px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
 
         .menu-items li a::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: white;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
+            bottom: -5px;
+            left: 20px;
+            right: 20px;
+            height: 3px;
+            background-color: white;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
         }
 
-        .menu-items li a:hover::after {
-            width: 70%;
+        .menu-items li a:hover::after,
+        .menu-items li a.active::after {
+            transform: scaleX(1);
         }
 
         /* Add animation delays for menu items */
@@ -1246,6 +1262,13 @@
         @media (max-width: 767.98px) {
             .menu-items li a {
                 font-size: 32px;
+            }
+        }
+
+        /* Scroll to Top Button - Hide on Mobile */
+        @media (max-width: 768px) {
+            .scroll-to-top-btn {
+                display: none !important;
             }
         }
     </style>
@@ -1495,6 +1518,32 @@
                     top: 0,
                     behavior: 'smooth'
                 });
+            });
+
+            // Initialize Owl Carousel for overview cards
+            $('.overview-cards').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                },
+                navText: [
+                    '<i class="fas fa-chevron-left"></i>',
+                    '<i class="fas fa-chevron-right"></i>'
+                ]
             });
         });
 

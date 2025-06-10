@@ -44,6 +44,16 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
         }
 
+        .navbar-scrolled .navbar-brand,
+        .navbar-scrolled .nav-link {
+            color: #333;
+        }
+
+        .navbar-scrolled .menu-toggle span {
+            background-color: var(--primary-color);
+            box-shadow: none;
+        }
+
         .navbar-brand {
             font-weight: 500;
             font-size: 1.5rem;
@@ -117,41 +127,54 @@
         }
 
         /* Mobile Navigation */
-        @media (max-width: 992px) {
+        @media (max-width: 991.98px) {
             .navbar {
                 background-color: transparent;
-                padding: 15px 0;
-            }
-
-            .navbar-brand {
-                color: white !important;
-                font-size: 1.2rem;
-                margin-right: auto;
+                padding: 1rem 0;
             }
 
             .navbar-scrolled {
                 background-color: white !important;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
             }
 
-            .navbar-scrolled .navbar-brand {
-                color: var(--primary-color) !important;
-            }
-
-            .menu-toggle {
-                margin-left: 15px;
-                padding: 0;
-                width: 30px;
-                height: 30px;
-            }
-
-            .menu-toggle span {
-                width: 25px;
-                height: 2px;
-                margin: 5px auto;
+            .navbar-scrolled .navbar-brand img {
+                filter: brightness(0.8);
             }
 
             .navbar-scrolled .menu-toggle span {
                 background-color: var(--primary-color);
+                box-shadow: none;
+            }
+
+            .navbar-collapse {
+                background-color: white;
+                padding: 1rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                margin-top: 1rem;
+            }
+
+            .nav-link {
+                color: var(--primary-color) !important;
+                padding: 0.8rem 1rem !important;
+                border-radius: 5px;
+                margin: 0.2rem 0;
+            }
+
+            .nav-link.active {
+                background-color: rgba(22, 5, 96, 0.1);
+            }
+
+            /* Prevent unwanted redirects */
+            .nav-link, .dropdown-item {
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            /* Add active state for mobile */
+            .nav-link:active {
+                background-color: rgba(22, 5, 96, 0.1);
             }
         }
 
@@ -490,6 +513,13 @@
 
         .scroll-to-top-btn i {
             font-size: 1.25rem;
+        }
+
+        /* Hide scroll to top button on mobile */
+        @media (max-width: 768px) {
+            .scroll-to-top-btn {
+                display: none !important;
+            }
         }
 
         /* Responsive Adjustments */
@@ -1267,6 +1297,7 @@
             position: relative;
             z-index: 1002;
             cursor: pointer;
+            margin-left: auto;
         }
 
         .menu-toggle span {
@@ -1279,14 +1310,67 @@
             box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         }
 
-        .menu-toggle.active span {
-            background-color: #ffffff;
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
         }
 
         .navbar-scrolled .menu-toggle span {
             background-color: var(--primary-color);
             box-shadow: none;
+        }
+
+        /* Mobile Calendar Adjustments */
+        @media (max-width: 768px) {
+            .calendar-container {
+                padding: 15px !important;
+            }
+
+            .calendar-grid {
+                gap: 2px !important;
+            }
+
+            .calendar-day-header {
+                padding: 5px !important;
+                font-size: 0.8rem !important;
+            }
+
+            .calendar-day {
+                font-size: 0.9rem !important;
+            }
+
+            .calendar-header h3 {
+                font-size: 1.2rem !important;
+            }
+
+            .calendar-header button {
+                padding: 0.25rem 0.5rem !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar .container {
+                padding: 0 15px;
+            }
+
+            .navbar-brand {
+                margin-right: auto;
+            }
+
+            .menu-toggle {
+                margin-left: 15px;
+            }
+
+            .calendar-container {
+                margin: 0 10px;
+            }
         }
 
         /* Fullscreen Menu */
@@ -2004,6 +2088,35 @@
                     top: 0,
                     behavior: 'smooth'
                 });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Prevent unwanted redirects on mobile
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Only prevent default if it's a touch event
+                    if (e.type === 'touchstart') {
+                        e.preventDefault();
+                        // Add a small delay before navigation
+                        setTimeout(() => {
+                            window.location.href = this.href;
+                        }, 100);
+                    }
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                
+                if (navbarCollapse && navbarCollapse.classList.contains('show') && 
+                    !navbarCollapse.contains(e.target) && 
+                    !navbarToggler.contains(e.target)) {
+                    navbarCollapse.classList.remove('show');
+                }
             });
         });
     </script>

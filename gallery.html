@@ -447,92 +447,47 @@
         }
 
         /* Mobile Navigation */
-        @media (max-width: 992px) {
+        @media (max-width: 991.98px) {
             .navbar {
                 background-color: transparent;
-                padding: 15px 0;
-            }
-
-            .navbar-brand {
-                color: white !important;
-                font-size: 1.2rem;
-                margin-right: auto;
+                padding: 1rem 0;
             }
 
             .navbar-scrolled {
-                background-color: white !important;
+                background-color: white;
             }
 
             .navbar-scrolled .navbar-brand {
+                color: var(--primary-color);
+            }
+
+            .navbar-scrolled .navbar-toggler {
+                color: var(--primary-color);
+            }
+
+            .navbar-scrolled .nav-link {
                 color: var(--primary-color) !important;
             }
 
-            .menu-toggle {
-                margin-left: 15px;
-                padding: 0;
-                width: 30px;
-                height: 30px;
+            .navbar-collapse {
+                background-color: white;
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 0.5rem;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             }
 
-            .menu-toggle span {
-                width: 25px;
-                height: 2px;
-                margin: 5px auto;
+            .nav-link {
+                color: var(--primary-color) !important;
+                padding: 0.8rem 1rem !important;
+                border-radius: 5px;
+                transition: all 0.3s ease;
             }
 
-            .navbar-scrolled .menu-toggle span {
-                background-color: var(--primary-color);
+            .nav-link:hover {
+                background-color: rgba(22, 5, 96, 0.1);
+                color: var(--accent-color) !important;
             }
-        }
-
-        @media (max-width: 400px) {
-            .navbar-brand {
-                font-size: 1rem;
-            }
-
-            .navbar-brand img {
-                height: 35px !important;
-                margin-right: 8px !important;
-            }
-
-            .menu-toggle {
-                width: 25px;
-                height: 25px;
-            }
-
-            .menu-toggle span {
-                width: 20px;
-                height: 2px;
-                margin: 4px auto;
-            }
-        }
-
-        /* Menu Toggle Button */
-        .menu-toggle {
-            display: none;
-            border: none;
-            background: none;
-            width: 40px;
-            height: 40px;
-            padding: 0;
-            position: relative;
-            z-index: 1002;
-            cursor: pointer;
-        }
-
-        .menu-toggle span {
-            display: block;
-            width: 30px;
-            height: 2px;
-            background-color: #ffffff;
-            margin: 6px auto;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-        }
-
-        .menu-toggle.active span {
-            background-color: #ffffff;
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
         }
 
         /* Fullscreen Menu */
@@ -642,11 +597,35 @@
             .navbar-collapse {
                 display: none !important;
             }
+
+            .navbar-brand {
+                color: white !important;
+                font-size: 1.2rem;
+            }
         }
 
         @media (max-width: 767.98px) {
             .menu-items li a {
                 font-size: 32px;
+            }
+
+            .menu-toggle {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .navbar-brand {
+                font-size: 1rem;
+            }
+
+            .menu-toggle {
+                width: 35px;
+                height: 35px;
+            }
+
+            .menu-toggle span {
+                width: 25px;
             }
         }
 
@@ -1544,6 +1523,239 @@
             animation: fadeIn 1s ease-out 0.6s forwards;
             opacity: 0;
         }
+
+        /* Menu Toggle Button */
+        .menu-toggle {
+            display: none;
+            border: none;
+            background: none;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            position: relative;
+            z-index: 1002;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 6px auto;
+            transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+            position: relative;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background-color: #ffffff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: #ffffff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Add hover effect */
+        .menu-toggle:hover span {
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+
+        .navbar-scrolled .menu-toggle:hover span {
+            box-shadow: 0 0 12px rgba(22, 5, 96, 0.5);
+        }
+
+        /* Add active state glow */
+        .menu-toggle:active span {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+        }
+
+        .navbar-scrolled .menu-toggle:active span {
+            box-shadow: 0 0 15px rgba(22, 5, 96, 0.7);
+        }
+
+        .navbar-scrolled .menu-toggle span {
+            background-color: var(--primary-color);
+            box-shadow: none;
+        }
+
+        @media (max-width: 991.98px) {
+            .menu-toggle {
+                display: block !important;
+            }
+
+            .fullscreen-menu {
+                display: flex;
+            }
+
+            .navbar-collapse {
+                display: none !important;
+            }
+
+            .navbar-brand {
+                color: white !important;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .menu-items li a {
+                font-size: 32px;
+            }
+
+            .menu-toggle {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .navbar-brand {
+                font-size: 1rem;
+            }
+
+            .menu-toggle {
+                width: 35px;
+                height: 35px;
+            }
+
+            .menu-toggle span {
+                width: 25px;
+            }
+        }
+
+        /* Add fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            animation: fadeIn 1s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 1s ease-out 0.4s forwards;
+            opacity: 0;
+        }
+
+        .fade-in-delay-3 {
+            animation: fadeIn 1s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+
+        /* Menu Toggle Button */
+        .menu-toggle {
+            display: none;
+            border: none;
+            background: none;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            position: relative;
+            z-index: 1002;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 6px auto;
+            transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+            position: relative;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background-color: #ffffff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: #ffffff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Add hover effect */
+        .menu-toggle:hover span {
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Fullscreen Menu */
+        .fullscreen-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            z-index: 1001;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+        }
+
+        .fullscreen-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-content {
+            text-align: center;
+        }
+
+        .menu-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-items li {
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.5s ease;
+        }
+
+        .fullscreen-menu.active .menu-items li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
     </style>
 </head>
 
@@ -1555,7 +1767,7 @@
         <div class="text"></div>
     </div>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top fade-in" aria-label="Main navigation">
+    <nav class="navbar navbar-expand-lg fixed-top fade-in">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="assets/logo5.png" alt="Noble Pentecostal Church Logo" style="height: 40px;">
@@ -1586,7 +1798,7 @@
             </div>
 
             <!-- Mobile menu toggle button -->
-            <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <button class="menu-toggle d-lg-none" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -1607,6 +1819,126 @@
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Off-Canvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Noble Pentecostal Church</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="mobile-nav-menu">
+                <li class="mobile-nav-item">
+                    <a href="index.html" class="mobile-nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="about.html" class="mobile-nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item mobile-nav-dropdown">
+                    <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                        <i class="fas fa-church"></i>
+                        <span>Our Branches</span>
+                        <i class="fas fa-chevron-down ms-auto"></i>
+                    </a>
+                    <ul class="mobile-dropdown-menu">
+                        <li>
+                            <a href="chepsonoi.html" class="mobile-dropdown-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span>Chepsonoi</span>
+                                    <small>Main Church</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kitagwa.html" class="mobile-dropdown-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span>Kitagwa</span>
+                                    <small>Branch Church</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kapkangani.html" class="mobile-dropdown-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span>Kapkangani</span>
+                                    <small>Branch Church</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="marurui.html" class="mobile-dropdown-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span>Marurui</span>
+                                    <small>Branch Church</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="njathaini.html" class="mobile-dropdown-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span>Njathaini</span>
+                                    <small>Branch Church</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="gallery.html" class="mobile-nav-link active">
+                        <i class="fas fa-images"></i>
+                        <span>Gallery</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="events.html" class="mobile-nav-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="give.html" class="mobile-nav-link">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span>Give</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mobile-contact-info">
+                <h6 class="mobile-contact-title">Contact Us</h6>
+                <div class="mobile-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="#">Chepsonoi, Nandi, Kenya</a>
+                </div>
+                <div class="mobile-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+254712345678">+254 712 345 678</a>
+                </div>
+                <div class="mobile-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:noblepentecostalchurch@gmail.com">noblepentecostalchurch@gmail.com</a>
+                </div>
+                <div class="mobile-social mt-3">
+                    <a href="https://www.facebook.com/profile.php?id=100080132673377" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCu5i7w7w20bGltZqXkc4bXw" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Page Header -->
     <header class="page-header">
@@ -1904,25 +2236,71 @@
 
     <!-- Custom JavaScript for Gallery Filtering -->
     <script>
-        // Scroll to Top Button Functionality
+        // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function () {
-            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const fullscreenMenu = document.querySelector('.fullscreen-menu');
+            const menuItems = document.querySelectorAll('.menu-items li a');
 
-            // Show button when user scrolls down 300px from the top
-            window.addEventListener('scroll', function () {
-                if (window.pageYOffset > 300) {
-                    scrollToTopBtn.classList.add('visible');
+            function closeMenu() {
+                menuToggle.classList.remove('active');
+                fullscreenMenu.classList.remove('active');
+                document.body.style.overflow = '';
+                setTimeout(() => {
+                    if (!fullscreenMenu.classList.contains('active')) {
+                        fullscreenMenu.style.display = 'none';
+                    }
+                }, 500);
+            }
+
+            // Toggle menu
+            menuToggle.addEventListener('click', function () {
+                this.classList.toggle('active');
+                if (!fullscreenMenu.classList.contains('active')) {
+                    fullscreenMenu.style.display = 'flex';
+                    // Small delay to ensure display:flex is applied before adding active class
+                    setTimeout(() => {
+                        fullscreenMenu.classList.add('active');
+                    }, 10);
                 } else {
-                    scrollToTopBtn.classList.remove('visible');
+                    fullscreenMenu.classList.remove('active');
+                    // Wait for transition to complete before hiding
+                    setTimeout(() => {
+                        if (!fullscreenMenu.classList.contains('active')) {
+                            fullscreenMenu.style.display = 'none';
+                        }
+                    }, 500);
+                }
+                document.body.style.overflow = fullscreenMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Close menu when clicking a link
+            menuItems.forEach(item => {
+                item.addEventListener('click', closeMenu);
+            });
+
+            // Close menu when clicking outside
+            fullscreenMenu.addEventListener('click', function(e) {
+                if (e.target === fullscreenMenu) {
+                    closeMenu();
                 }
             });
 
-            // Smooth scroll to top when button is clicked
-            scrollToTopBtn.addEventListener('click', function () {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+            // Close menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && fullscreenMenu.classList.contains('active')) {
+                    closeMenu();
+                }
+            });
+
+            // Update menu toggle on scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
             });
         });
 
@@ -2335,31 +2713,37 @@
             const fullscreenMenu = document.querySelector('.fullscreen-menu');
             const menuItems = document.querySelectorAll('.menu-items li a');
 
-            function closeMenu() {
-                menuToggle.classList.remove('active');
-                fullscreenMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-
-            // Toggle menu
-            menuToggle.addEventListener('click', function () {
-                this.classList.toggle('active');
-                fullscreenMenu.style.display = 'flex';
+            function toggleMenu() {
+                menuToggle.classList.toggle('active');
                 fullscreenMenu.classList.toggle('active');
                 document.body.style.overflow = fullscreenMenu.classList.contains('active') ? 'hidden' : '';
+            }
+
+            // Toggle menu on button click
+            menuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleMenu();
             });
 
             // Close menu when clicking a link
             menuItems.forEach(item => {
-                item.addEventListener('click', function () {
-                    closeMenu();
+                item.addEventListener('click', function() {
+                    toggleMenu();
                 });
             });
 
             // Close menu when clicking outside
-            fullscreenMenu.addEventListener('click', function (e) {
+            fullscreenMenu.addEventListener('click', function(e) {
                 if (e.target === fullscreenMenu) {
-                    closeMenu();
+                    toggleMenu();
+                }
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && fullscreenMenu.classList.contains('active')) {
+                    toggleMenu();
                 }
             });
         });

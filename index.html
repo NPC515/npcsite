@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noble Pentecostal Church | Christian Church in Chepsonoi, Nandi, Kenya</title>
     <meta name="description"
         content="Noble Pentecostal Church in Chepsonoi, Nandi, Kenya. Join us for worship services, Bible study, and prayer meetings. Experience God's love and build your faith.">
@@ -269,21 +269,30 @@
                 background-color: white;
                 padding: 1rem;
                 border-radius: 10px;
-                margin-top: 0.5rem;
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                margin-top: 1rem;
             }
 
             .nav-link {
                 color: var(--primary-color) !important;
                 padding: 0.8rem 1rem !important;
                 border-radius: 5px;
+                margin: 0.2rem 0;
             }
 
-            .nav-link:hover,
             .nav-link.active {
-                background-color: rgba(227, 176, 75, 0.1);
-                color: var(--accent-color) !important;
-                border-left: 3px solid var(--accent-color);
+                background-color: rgba(22, 5, 96, 0.1);
+            }
+
+            /* Prevent unwanted redirects */
+            .nav-link, .dropdown-item {
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            /* Add active state for mobile */
+            .nav-link:active {
+                background-color: rgba(22, 5, 96, 0.1);
             }
 
             /* Dropdown menu styling */
@@ -974,12 +983,9 @@
             font-size: 1.25rem;
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
             .scroll-to-top-btn {
-                bottom: 80px;
-                right: 20px;
-                width: 40px;
-                height: 40px;
+                display: none !important;
             }
         }
 
@@ -1537,6 +1543,7 @@
             position: relative;
             z-index: 1002;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .menu-toggle span {
@@ -1545,18 +1552,56 @@
             height: 2px;
             background-color: #ffffff;
             margin: 6px auto;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+            position: relative;
         }
 
         .menu-toggle.active span {
             background-color: #ffffff;
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
         }
 
         .navbar-scrolled .menu-toggle span {
             background-color: var(--primary-color);
-            box-shadow: none;
+            box-shadow: 0 0 8px rgba(22, 5, 96, 0.3);
+        }
+
+        .navbar-scrolled .menu-toggle.active span {
+            background-color: var(--primary-color);
+            box-shadow: 0 0 12px rgba(22, 5, 96, 0.5);
+        }
+
+        /* Hamburger to X Animation */
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Add hover effect */
+        .menu-toggle:hover span {
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+
+        .navbar-scrolled .menu-toggle:hover span {
+            box-shadow: 0 0 12px rgba(22, 5, 96, 0.5);
+        }
+
+        /* Add active state glow */
+        .menu-toggle:active span {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+        }
+
+        .navbar-scrolled .menu-toggle:active span {
+            box-shadow: 0 0 15px rgba(22, 5, 96, 0.7);
         }
 
         /* Fullscreen Menu */
@@ -1573,14 +1618,24 @@
             transition: opacity 0.5s ease;
             align-items: center;
             justify-content: center;
+            visibility: hidden;
         }
 
         .fullscreen-menu.active {
             opacity: 1;
+            visibility: visible;
         }
 
         .menu-content {
             text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .fullscreen-menu.active .menu-content {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .menu-items {
@@ -2097,6 +2152,10 @@
         </div>
     </footer>
 
+    <button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Bootstrap JS and Popper.js -->
     <!-- AOS Animation Library -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -2108,24 +2167,28 @@
 
     <script>
         // Scroll to Top Button Functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-            // Show button when user scrolls down 300px from the top
-            window.addEventListener('scroll', function () {
-                if (window.pageYOffset > 300) {
-                    scrollToTopBtn.classList.add('visible');
+        $(document).ready(function() {
+            var scrollToTopBtn = $('#scrollToTopBtn');
+            
+            // Show/hide button based on scroll position
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    scrollToTopBtn.addClass('visible');
                 } else {
-                    scrollToTopBtn.classList.remove('visible');
+                    scrollToTopBtn.removeClass('visible');
                 }
             });
 
-            // Smooth scroll to top when button is clicked
-            scrollToTopBtn.addEventListener('click', function () {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+            // Handle both click and touch events
+            scrollToTopBtn.on('click touchstart', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 800);
+                
+                return false;
             });
         });
 
@@ -2386,19 +2449,43 @@
                 menuToggle.classList.remove('active');
                 fullscreenMenu.classList.remove('active');
                 document.body.classList.remove('menu-open');
+                // Ensure menu is hidden after animation
+                setTimeout(() => {
+                    fullscreenMenu.style.display = 'none';
+                }, 500);
+            }
+
+            function openMenu() {
+                fullscreenMenu.style.display = 'flex';
+                // Trigger reflow
+                fullscreenMenu.offsetHeight;
+                menuToggle.classList.add('active');
+                fullscreenMenu.classList.add('active');
+                document.body.classList.add('menu-open');
             }
 
             menuToggle.addEventListener('click', function () {
-                this.classList.toggle('active');
-                fullscreenMenu.style.display = 'flex';
-                fullscreenMenu.classList.toggle('active');
-                document.body.classList.toggle('menu-open');
+                if (fullscreenMenu.classList.contains('active')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+
+            // Add touch feedback
+            menuToggle.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.95)';
+            });
+
+            menuToggle.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
             });
 
             // Navigate directly when clicking menu items
             const menuItems = document.querySelectorAll('.menu-items a');
             menuItems.forEach(item => {
                 item.addEventListener('click', (e) => {
+                    closeMenu();
                     window.location.href = item.getAttribute('href');
                 });
             });
@@ -2409,11 +2496,44 @@
                     closeMenu();
                 }
             });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && fullscreenMenu.classList.contains('active')) {
+                    closeMenu();
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Prevent unwanted redirects on mobile
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Only prevent default if it's a touch event
+                    if (e.type === 'touchstart') {
+                        e.preventDefault();
+                        // Add a small delay before navigation
+                        setTimeout(() => {
+                            window.location.href = this.href;
+                        }, 100);
+                    }
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                
+                if (navbarCollapse && navbarCollapse.classList.contains('show') && 
+                    !navbarCollapse.contains(e.target) && 
+                    !navbarToggler.contains(e.target)) {
+                    navbarCollapse.classList.remove('show');
+                }
+            });
         });
     </script>
-    <button id="scrollToTopBtn" class="scroll-to-top-btn">
-        <i class="fas fa-arrow-up"></i>
-    </button>
 </body>
 
 </html>
