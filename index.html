@@ -1743,6 +1743,54 @@
                 font-size: 32px;
             }
         }
+
+        /* Base Styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        footer {
+            flex-shrink: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            color: white;
+            padding: 3rem 0 0 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden !important;
+                position: relative;
+                width: 100%;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            body {
+                min-height: 100vh;
+                min-height: -webkit-fill-available;
+            }
+            
+            main {
+                min-height: calc(100vh - 100px); /* Adjust based on your footer height */
+            }
+        }
     </style>
 </head>
 
@@ -1801,308 +1849,309 @@
         </div>
     </nav>
 
+    <main>
+        <!-- Hero Section -->
+        <section class="hero fade-in" aria-label="Church introduction">
+            <div class="owl-carousel hero-carousel">
+                <!-- Slide 1 -->
+                <div class="hero-slide"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/hero.png');">
+                    <div class="container">
+                        <div class="hero-content" data-aos="fade-up">
+                            <h1 class="hero-title">Noble Pentecostal Church</h1>
+                            <p class="hero-description">Evangelizing Kenya and the rest of the world.</p>
+                            <div class="hero-buttons">
 
-    <!-- Hero Section -->
-    <section class="hero fade-in" aria-label="Church introduction">
-        <div class="owl-carousel hero-carousel">
-            <!-- Slide 1 -->
-            <div class="hero-slide"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/hero.png');">
-                <div class="container">
-                    <div class="hero-content" data-aos="fade-up">
-                        <h1 class="hero-title">Noble Pentecostal Church</h1>
-                        <p class="hero-description">Evangelizing Kenya and the rest of the world.</p>
-                        <div class="hero-buttons">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="hero-slide"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/hero.png');">
-                <div class="container">
-                    <div class="hero-content" data-aos="fade-up">
-                        <span class="hero-subtitle">JOIN US IN WORSHIP</span>
-                        <h1 class="hero-title">Experience God's Love</h1>
-                        <p class="hero-description">Where faith meets fellowship in the heart of Kenya.</p>
-                        <div class="hero-buttons">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="hero-slide"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/hero.png');">
-                <div class="container">
-                    <div class="hero-content" data-aos="fade-up">
-                        <span class="hero-subtitle">SPREADING THE GOSPEL</span>
-                        <h1 class="hero-title">Building God's Kingdom</h1>
-                        <p class="hero-description">Together we can reach the world for Christ.</p>
-                        <div class="hero-buttons">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Welcome Section -->
-    <section class="welcome fade-in-delay-1" aria-label="Welcome message">
-        <div class="container">
-            <div class="welcome-wrapper" data-aos="fade-up">
-                <div class="welcome-content">
-                    <div class="welcome-header text-center mb-5">
-                        <span class="welcome-subtitle">WELCOME TO</span>
-                        <h2 class="section-title">Noble Pentecostal Church</h2>
-                        <div class="divider">
-                            <span class="divider-line"></span>
-                            <i class="fas fa-cross"></i>
-                            <span class="divider-line"></span>
-                        </div>
-                    </div>
-
-                    <div class="welcome-stats row g-4 mt-5">
-                        <div class="col-md-4 col-6">
-                            <div class="stat-card">
-                                <div class="stat-number" data-count="25+">0</div>
-                                <div class="stat-label">Years of Service</div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-6">
-                            <div class="stat-card">
-                                <div class="stat-number" data-count="5">0</div>
-                                <div class="stat-label">Church Branches</div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hero-slide"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/hero.png');">
+                    <div class="container">
+                        <div class="hero-content" data-aos="fade-up">
+                            <span class="hero-subtitle">JOIN US IN WORSHIP</span>
+                            <h1 class="hero-title">Experience God's Love</h1>
+                            <p class="hero-description">Where faith meets fellowship in the heart of Kenya.</p>
+                            <div class="hero-buttons">
+
                             </div>
                         </div>
-                        <div class="col-md-4 col-6">
-                            <div class="stat-card">
-                                <div class="stat-number" data-count="500+">0</div>
-                                <div class="stat-label">Community Members</div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="hero-slide"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/hero.png');">
+                    <div class="container">
+                        <div class="hero-content" data-aos="fade-up">
+                            <span class="hero-subtitle">SPREADING THE GOSPEL</span>
+                            <h1 class="hero-title">Building God's Kingdom</h1>
+                            <p class="hero-description">Together we can reach the world for Christ.</p>
+                            <div class="hero-buttons">
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Service Times -->
-    <section class="service-times fade-in-delay-2" id="service-times" aria-label="Service schedule">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <span class="service-subtitle">JOIN US IN WORSHIP</span>
-                <h2 class="section-title">Our Services</h2>
-                <div class="title-divider">
-                    <span></span>
-                    <i class="fas fa-cross"></i>
-                    <span></span>
+        <!-- Welcome Section -->
+        <section class="welcome fade-in-delay-1" aria-label="Welcome message">
+            <div class="container">
+                <div class="welcome-wrapper" data-aos="fade-up">
+                    <div class="welcome-content">
+                        <div class="welcome-header text-center mb-5">
+                            <span class="welcome-subtitle">WELCOME TO</span>
+                            <h2 class="section-title">Noble Pentecostal Church</h2>
+                            <div class="divider">
+                                <span class="divider-line"></span>
+                                <i class="fas fa-cross"></i>
+                                <span class="divider-line"></span>
+                            </div>
+                        </div>
+
+                        <div class="welcome-stats row g-4 mt-5">
+                            <div class="col-md-4 col-6">
+                                <div class="stat-card">
+                                    <div class="stat-number" data-count="25+">0</div>
+                                    <div class="stat-label">Years of Service</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="stat-card">
+                                    <div class="stat-number" data-count="5">0</div>
+                                    <div class="stat-label">Church Branches</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="stat-card">
+                                    <div class="stat-number" data-count="500+">0</div>
+                                    <div class="stat-label">Community Members</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="services-list">
-                <!-- Sunday Service -->
-                <div class="service-item" data-aos="fade-up">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-sun"></i>
-                        </div>
-                        <div class="service-info">
-                            <h3>Sunday Service</h3>
-                            <p class="service-time"><i class="far fa-clock"></i> 8:00 AM - 12:30 PM</p>
-                        </div>
+        <!-- Service Times -->
+        <section class="service-times fade-in-delay-2" id="service-times" aria-label="Service schedule">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="service-subtitle">JOIN US IN WORSHIP</span>
+                    <h2 class="section-title">Our Services</h2>
+                    <div class="title-divider">
+                        <span></span>
+                        <i class="fas fa-cross"></i>
+                        <span></span>
                     </div>
-                    <ul class="service-schedule">
-                        <li>
-                            <i class="fas fa-pray"></i>
-                            <div>
-                                <span>8:00 AM - 9:00 AM</span>
-                                <p>Intercessory Prayers</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-book-open"></i>
-                            <div>
-                                <span>9:00 AM - 10:00 AM</span>
-                                <p>Bible Study & Sunday School</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-music"></i>
-                            <div>
-                                <span>10:00 AM - 11:00 AM</span>
-                                <p>Praise & Worship</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-bullhorn"></i>
-                            <div>
-                                <span>11:00 AM - 11:45 AM</span>
-                                <p>Announcements, Offering and Testimonies</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-cross"></i>
-                            <div>
-                                <span>11:45 AM - 12:30 PM</span>
-                                <p>Preaching</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <span>12:30 PM</span>
-                                <p>Service Ends</p>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
 
-                <!-- Tuesday Service -->
-                <div class="service-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <div class="service-info">
-                            <h3>Home Church</h3>
-                            <p class="service-time"><i class="far fa-clock"></i> Tuesdays, 4:00 PM - 5:00 PM</p>
-                        </div>
-                    </div>
-                    <ul class="service-schedule">
-                        <li>
-                            <i class="fas fa-hands-helping"></i>
-                            <div>
-                                <span>4:00 PM - 5:00 PM</span>
-                                <p>Home Ministry</p>
+                <div class="services-list">
+                    <!-- Sunday Service -->
+                    <div class="service-item" data-aos="fade-up">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-sun"></i>
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                            <div class="service-info">
+                                <h3>Sunday Service</h3>
+                                <p class="service-time"><i class="far fa-clock"></i> 8:00 AM - 12:30 PM</p>
+                            </div>
+                        </div>
+                        <ul class="service-schedule">
+                            <li>
+                                <i class="fas fa-pray"></i>
+                                <div>
+                                    <span>8:00 AM - 9:00 AM</span>
+                                    <p>Intercessory Prayers</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-book-open"></i>
+                                <div>
+                                    <span>9:00 AM - 10:00 AM</span>
+                                    <p>Bible Study & Sunday School</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-music"></i>
+                                <div>
+                                    <span>10:00 AM - 11:00 AM</span>
+                                    <p>Praise & Worship</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-bullhorn"></i>
+                                <div>
+                                    <span>11:00 AM - 11:45 AM</span>
+                                    <p>Announcements, Offering and Testimonies</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-cross"></i>
+                                <div>
+                                    <span>11:45 AM - 12:30 PM</span>
+                                    <p>Preaching</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span>12:30 PM</span>
+                                    <p>Service Ends</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-                <!-- Wednesday Service -->
-                <div class="service-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-bible"></i>
+                    <!-- Tuesday Service -->
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="service-info">
+                                <h3>Home Church</h3>
+                                <p class="service-time"><i class="far fa-clock"></i> Tuesdays, 4:00 PM - 5:00 PM</p>
+                            </div>
                         </div>
-                        <div class="service-info">
-                            <h3>Mid-Week Service</h3>
-                            <p class="service-time"><i class="far fa-clock"></i> Wednesdays, 4:00 PM - 5:00 PM</p>
-                        </div>
+                        <ul class="service-schedule">
+                            <li>
+                                <i class="fas fa-hands-helping"></i>
+                                <div>
+                                    <span>4:00 PM - 5:00 PM</span>
+                                    <p>Home Ministry</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="service-schedule">
-                        <li>
-                            <i class="fas fa-music"></i>
-                            <div>
-                                <span>4:00 PM - 4:05 PM</span>
-                                <p>Praise and Worship</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-cross"></i>
-                            <div>
-                                <span>4:05 PM - 4:20 PM</span>
-                                <p>Preaching</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-pray"></i>
-                            <div>
-                                <span>4:20 PM - 5:00 PM</span>
-                                <p>Prayers</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
 
-                <!-- Thursday Service -->
-                <div class="service-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-female"></i>
-                        </div>
-                        <div class="service-info">
-                            <h3>Women's Ministry</h3>
-                            <p class="service-time"><i class="far fa-clock"></i> Thursdays, 10:00 AM - 11:30 AM</p>
-                        </div>
-                    </div>
-                    <ul class="service-schedule">
-                        <li>
-                            <i class="fas fa-users"></i>
-                            <div>
-                                <span>10:00 AM - 11:30 AM</span>
-                                <p>Women's Ministry Meeting</p>
+                    <!-- Wednesday Service -->
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-bible"></i>
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                            <div class="service-info">
+                                <h3>Mid-Week Service</h3>
+                                <p class="service-time"><i class="far fa-clock"></i> Wednesdays, 4:00 PM - 5:00 PM</p>
+                            </div>
+                        </div>
+                        <ul class="service-schedule">
+                            <li>
+                                <i class="fas fa-music"></i>
+                                <div>
+                                    <span>4:00 PM - 4:05 PM</span>
+                                    <p>Praise and Worship</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-cross"></i>
+                                <div>
+                                    <span>4:05 PM - 4:20 PM</span>
+                                    <p>Preaching</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-pray"></i>
+                                <div>
+                                    <span>4:20 PM - 5:00 PM</span>
+                                    <p>Prayers</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-                <!-- Friday Service -->
-                <div class="service-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-moon"></i>
-                        </div>
-                        <div class="service-info">
-                            <h3>Kesha</h3>
-                            <p class="service-time"><i class="far fa-clock"></i> 9:00 PM - 4:00 AM (After Every
-                                Fortnight)</p>
-                        </div>
-                    </div>
-                    <ul class="service-schedule">
-                        <li>
-                            <i class="fas fa-pray"></i>
-                            <div>
-                                <span>9:00 PM - 4:00 AM</span>
-                                <p>Night Prayer</p>
+                    <!-- Thursday Service -->
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-female"></i>
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                            <div class="service-info">
+                                <h3>Women's Ministry</h3>
+                                <p class="service-time"><i class="far fa-clock"></i> Thursdays, 10:00 AM - 11:30 AM</p>
+                            </div>
+                        </div>
+                        <ul class="service-schedule">
+                            <li>
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span>10:00 AM - 11:30 AM</span>
+                                    <p>Women's Ministry Meeting</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-                <!-- Saturday Service -->
-                <div class="service-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-male"></i>
+                    <!-- Friday Service -->
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                            <div class="service-info">
+                                <h3>Kesha</h3>
+                                <p class="service-time"><i class="far fa-clock"></i> 9:00 PM - 4:00 AM (After Every
+                                    Fortnight)</p>
+                            </div>
                         </div>
-                        <div class="service-info">
-                            <h3>Men's & Youth Ministry</h3>
-                            <p class="service-time"><i class="far fa-clock"></i> Monthly (Last Saturday)</p>
-                        </div>
+                        <ul class="service-schedule">
+                            <li>
+                                <i class="fas fa-pray"></i>
+                                <div>
+                                    <span>9:00 PM - 4:00 AM</span>
+                                    <p>Night Prayer</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="service-schedule">
-                        <li>
-                            <i class="fas fa-utensils"></i>
-                            <div>
-                                <span>7:30 AM - 8:30 AM</span>
-                                <p>Breakfast</p>
+
+                    <!-- Saturday Service -->
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-male"></i>
                             </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-users"></i>
-                            <div>
-                                <span>8:30 AM - 11:00 AM</span>
-                                <p>Men's Ministry Meeting</p>
+                            <div class="service-info">
+                                <h3>Men's & Youth Ministry</h3>
+                                <p class="service-time"><i class="far fa-clock"></i> Monthly (Last Saturday)</p>
                             </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-child"></i>
-                            <div>
-                                <span>2:00 PM - 4:00 PM</span>
-                                <p>Youth Ministry Meeting</p>
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <ul class="service-schedule">
+                            <li>
+                                <i class="fas fa-utensils"></i>
+                                <div>
+                                    <span>7:30 AM - 8:30 AM</span>
+                                    <p>Breakfast</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span>8:30 AM - 11:00 AM</span>
+                                    <p>Men's Ministry Meeting</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-child"></i>
+                                <div>
+                                    <span>2:00 PM - 4:00 PM</span>
+                                    <p>Youth Ministry Meeting</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="fade-in-delay-3" role="contentinfo">

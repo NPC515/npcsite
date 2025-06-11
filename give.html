@@ -1523,6 +1523,52 @@
                 font-size: 32px;
             }
         }
+
+        /* Base Styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        footer {
+            flex-shrink: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            color: white;
+            padding: 3rem 0 0 0;
+        }
+
+        @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden !important;
+                position: relative;
+                width: 100%;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            body {
+                min-height: 100vh;
+                min-height: -webkit-fill-available;
+            }
+            
+            main {
+                min-height: calc(100vh - 100px); /* Adjust based on your footer height */
+            }
+        }
     </style>
 </head>
 

@@ -27,8 +27,57 @@
             --accent-color: #e3b04b;
         }
 
+        /* Base Styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
         body {
             font-family: 'Raleway', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        footer {
+            flex-shrink: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+            color: white;
+            padding: 3rem 0 0 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden !important;
+                position: relative;
+                width: 100%;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            body {
+                min-height: 100vh;
+                min-height: -webkit-fill-available;
+            }
+            
+            main {
+                min-height: calc(100vh - 100px); /* Adjust based on your footer height */
+            }
+        }
+
+        body {
             overflow-x: hidden;
         }
 
@@ -1597,13 +1646,14 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <h1 class="page-title" data-aos="fade-up">Church Events</h1>
-            <p class="lead" data-aos="fade-up" data-aos-delay="200">Join us in our upcoming events and celebrations</p>
-        </div>
-    </header>
+    <main>
+        <!-- Page Header -->
+        <header class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Church Events</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200">Join us in our upcoming events and celebrations</p>
+            </div>
+        </header>
 
     <!-- Annual Events Section -->
     <section class="section event-calendar-section">
@@ -1694,6 +1744,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer (same as give.html) -->
     <footer>

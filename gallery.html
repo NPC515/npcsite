@@ -22,9 +22,26 @@
             --accent-color: #e3b04b;
         }
 
+        /* Base Styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
         body {
             font-family: 'Raleway', sans-serif;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1 0 auto;
         }
 
         /* Navbar Styling */
@@ -811,9 +828,25 @@
 
         /* Footer */
         footer {
+            flex-shrink: 0;
+            width: 100%;
             background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
             color: white;
             padding: 3rem 0 0 0;
+            position: relative;
+            z-index: 1;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            
+            .copyright {
+                margin-bottom: 0;
+            }
         }
 
         .footer-title {
@@ -1820,327 +1853,209 @@
         </div>
     </nav>
 
-    <!-- Mobile Off-Canvas Menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Noble Pentecostal Church</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="mobile-nav-menu">
-                <li class="mobile-nav-item">
-                    <a href="index.html" class="mobile-nav-link">
-                        <i class="fas fa-home"></i>
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="about.html" class="mobile-nav-link">
-                        <i class="fas fa-info-circle"></i>
-                        <span>About Us</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item mobile-nav-dropdown">
-                    <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
-                        <i class="fas fa-church"></i>
-                        <span>Our Branches</span>
-                        <i class="fas fa-chevron-down ms-auto"></i>
-                    </a>
-                    <ul class="mobile-dropdown-menu">
-                        <li>
-                            <a href="chepsonoi.html" class="mobile-dropdown-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>Chepsonoi</span>
-                                    <small>Main Church</small>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="kitagwa.html" class="mobile-dropdown-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>Kitagwa</span>
-                                    <small>Branch Church</small>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="kapkangani.html" class="mobile-dropdown-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>Kapkangani</span>
-                                    <small>Branch Church</small>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="marurui.html" class="mobile-dropdown-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>Marurui</span>
-                                    <small>Branch Church</small>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="njathaini.html" class="mobile-dropdown-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>Njathaini</span>
-                                    <small>Branch Church</small>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="gallery.html" class="mobile-nav-link active">
-                        <i class="fas fa-images"></i>
-                        <span>Gallery</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="events.html" class="mobile-nav-link">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Events</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="give.html" class="mobile-nav-link">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <span>Give</span>
-                    </a>
-                </li>
-            </ul>
-
-            <div class="mobile-contact-info">
-                <h6 class="mobile-contact-title">Contact Us</h6>
-                <div class="mobile-contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <a href="#">Chepsonoi, Nandi, Kenya</a>
-                </div>
-                <div class="mobile-contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+254712345678">+254 712 345 678</a>
-                </div>
-                <div class="mobile-contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:noblepentecostalchurch@gmail.com">noblepentecostalchurch@gmail.com</a>
-                </div>
-                <div class="mobile-social mt-3">
-                    <a href="https://www.facebook.com/profile.php?id=100080132673377" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCu5i7w7w20bGltZqXkc4bXw" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Our Gallery</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200">Capturing moments of worship, fellowship, and
+                    service</p>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <h1 class="page-title" data-aos="fade-up">Our Gallery</h1>
-            <p class="lead" data-aos="fade-up" data-aos-delay="200">Capturing moments of worship, fellowship, and
-                service</p>
-        </div>
-    </header>
-
-    <!-- Gallery Section -->
-    <section class="gallery-section">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">Photo Gallery</h2>
-                <p class="lead">Browse through our collection of memorable moments</p>
-            </div>
-
-            <!-- Filter Buttons -->
-            <div class="text-center filter-buttons" data-aos="fade-up">
-                <button type="button" class="filter-btn active" data-filter="all">All</button>
-                <button type="button" class="filter-btn" data-filter="crusade">Church Crusade</button>
-                <button type="button" class="filter-btn" data-filter="services">Church Services</button>
-                <button type="button" class="filter-btn" data-filter="youth">Youth</button>
-            </div>
-
-            <!-- Gallery Items Container -->
-            <div class="row gallery-container">
-                <!-- Church Crusade Images -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="crusade">
-                    <div class="gallery-card">
-                        <img src="assets/crusadefive.jpg" alt="Church Crusade" class="img-fluid">
-                        <div class="card-overlay">
-                            <h5>Church Crusade</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="crusade">
-                    <div class="gallery-card">
-                        <img src="assets/crusadetwo.jpg" alt="Church Crusade" class="img-fluid">
-                        <div class="card-overlay">
-                            <h5>Church Crusade</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="crusade">
-                    <div class="gallery-card">
-                        <img src="assets/crusadethree.jpg" alt="Church Crusade" class="img-fluid">
-                        <div class="card-overlay">
-                            <h5>Church Crusade</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="crusade">
-                    <div class="gallery-card">
-                        <img src="assets/crusadeone.jpg" alt="Church Crusade" class="img-fluid">
-                        <div class="card-overlay">
-                            <h5>Church Crusade</h5>
-                        </div>
-                    </div>
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Photo Gallery</h2>
+                    <p class="lead">Browse through our collection of memorable moments</p>
                 </div>
 
-                <!-- Church Services Images -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="services">
-                    <div class="gallery-card">
-                        <img src="assets/serviceone.jpg" alt="Church Service" class="img-fluid">
-                        <div class="card-overlay">
-                            <h5>Church Service</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="services">
-                    <div class="gallery-card">
-                        <img src="assets/servicetwo.jpg" alt="Church Service" class="img-fluid">
-                        <div class="card-overlay">
-                            <h5>Church Service</h5>
-                        </div>
-                    </div>
+                <!-- Filter Buttons -->
+                <div class="text-center filter-buttons" data-aos="fade-up">
+                    <button type="button" class="filter-btn active" data-filter="all">All</button>
+                    <button type="button" class="filter-btn" data-filter="crusade">Church Crusade</button>
+                    <button type="button" class="filter-btn" data-filter="services">Church Services</button>
+                    <button type="button" class="filter-btn" data-filter="youth">Youth</button>
                 </div>
 
-                <!-- Youth Images -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="youth">
-                    <div class="gallery-card">
-                        <img src="assets/youthone.jpg" alt="Youth Event" class="img-fluid">
-                        <div class="card-overlay">
-                            <h5>Youth Event</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="youth">
-                    <div class="gallery-card">
-                        <img src="assets/youthtwo.jpg" alt="Youth Event" class="img-fluid">
-                        <div class="card-overlay">
-                            <h5>Youth Event</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="youth">
-                    <div class="gallery-card">
-                        <img src="assets/youthfour.jpg" alt="Youth Event" class="img-fluid">
-                        <div class="card-overlay">
-                            <h5>Youth Event</h5>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Photo Submission CTA Section -->
-    <section class="cta-section py-5" id="ctaSection">
-        <div class="container">
-            <div class="row align-items-center p-4 bg-white rounded-4 shadow-lg owl-cta-container">
-                <div class="col-lg-7 mb-4 mb-lg-0">
-                    <span class="badge rounded-pill owl-badge mb-3">Share Your Photos</span>
-                    <h2 class="display-5 fw-bold mb-3 custom-heading owl-heading">Be Part of Our Visual Story</h2>
-                    <p class="lead mb-4 owl-text">Have photos from our church events? Share them with our community and
-                        help us document our journey of faith together.</p>
-
-                    <div class="d-flex flex-wrap gap-3 mb-4 owl-features">
-                        <div class="feature-item owl-feature text-center">
-                            <div class="mb-3 feature-icon-wrapper">
-                                <i class="fas fa-church fs-3"></i>
+                <!-- Gallery Items Container -->
+                <div class="row gallery-container">
+                    <!-- Church Crusade Images -->
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="crusade">
+                        <div class="gallery-card">
+                            <img src="assets/crusadefive.jpg" alt="Church Crusade" class="img-fluid">
+                            <div class="card-overlay">
+                                <h5>Church Crusade</h5>
                             </div>
-                            <h6 class="fw-bold">Church Events</h6>
-                            <p class="small mb-0 text-muted">Special services and celebrations</p>
-                        </div>
-
-                        <div class="feature-item owl-feature text-center">
-                            <div class="mb-3 feature-icon-wrapper">
-                                <i class="fas fa-hands-praying fs-3"></i>
-                            </div>
-                            <h6 class="fw-bold">Worship Moments</h6>
-                            <p class="small mb-0 text-muted">Times of praise and prayer</p>
-                        </div>
-
-                        <div class="feature-item owl-feature text-center">
-                            <div class="mb-3 feature-icon-wrapper">
-                                <i class="fas fa-users fs-3"></i>
-                            </div>
-                            <h6 class="fw-bold">Community</h6>
-                            <p class="small mb-0 text-muted">Fellowship and outreach activities</p>
                         </div>
                     </div>
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="crusade">
+                        <div class="gallery-card">
+                            <img src="assets/crusadetwo.jpg" alt="Church Crusade" class="img-fluid">
+                            <div class="card-overlay">
+                                <h5>Church Crusade</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="crusade">
+                        <div class="gallery-card">
+                            <img src="assets/crusadethree.jpg" alt="Church Crusade" class="img-fluid">
+                            <div class="card-overlay">
+                                <h5>Church Crusade</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="crusade">
+                        <div class="gallery-card">
+                            <img src="assets/crusadeone.jpg" alt="Church Crusade" class="img-fluid">
+                            <div class="card-overlay">
+                                <h5>Church Crusade</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Church Services Images -->
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="services">
+                        <div class="gallery-card">
+                            <img src="assets/serviceone.jpg" alt="Church Service" class="img-fluid">
+                            <div class="card-overlay">
+                                <h5>Church Service</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="services">
+                        <div class="gallery-card">
+                            <img src="assets/servicetwo.jpg" alt="Church Service" class="img-fluid">
+                            <div class="card-overlay">
+                                <h5>Church Service</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Youth Images -->
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="youth">
+                        <div class="gallery-card">
+                            <img src="assets/youthone.jpg" alt="Youth Event" class="img-fluid">
+                            <div class="card-overlay">
+                                <h5>Youth Event</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="youth">
+                        <div class="gallery-card">
+                            <img src="assets/youthtwo.jpg" alt="Youth Event" class="img-fluid">
+                            <div class="card-overlay">
+                                <h5>Youth Event</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="youth">
+                        <div class="gallery-card">
+                            <img src="assets/youthfour.jpg" alt="Youth Event" class="img-fluid">
+                            <div class="card-overlay">
+                                <h5>Youth Event</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
+            </div>
+        </section>
 
-                <div class="col-lg-5">
-                    <div class="card border-0 owl-form-card">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold mb-4 text-center owl-form-title">Submit Your Photos</h5>
+        <!-- Photo Submission CTA Section -->
+        <section class="cta-section py-5" id="ctaSection">
+            <div class="container">
+                <div class="row align-items-center p-4 bg-white rounded-4 shadow-lg owl-cta-container">
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                        <span class="badge rounded-pill owl-badge mb-3">Share Your Photos</span>
+                        <h2 class="display-5 fw-bold mb-3 custom-heading owl-heading">Be Part of Our Visual Story</h2>
+                        <p class="lead mb-4 owl-text">Have photos from our church events? Share them with our community and
+                            help us document our journey of faith together.</p>
 
-                            <form id="photoSubmissionForm" class="photo-form needs-validation" novalidate>
-                                <div class="mb-3 floating-label">
-                                    <input type="text" class="form-control owl-input" id="name" placeholder=" "
-                                        required>
-                                    <label for="name">Your Name</label>
-                                    <div class="valid-feedback">Looks good!</div>
-                                    <div class="invalid-feedback">Please provide your name.</div>
+                        <div class="d-flex flex-wrap gap-3 mb-4 owl-features">
+                            <div class="feature-item owl-feature text-center">
+                                <div class="mb-3 feature-icon-wrapper">
+                                    <i class="fas fa-church fs-3"></i>
                                 </div>
+                                <h6 class="fw-bold">Church Events</h6>
+                                <p class="small mb-0 text-muted">Special services and celebrations</p>
+                            </div>
 
-                                <div class="mb-3 floating-label">
-                                    <input type="email" class="form-control owl-input" id="email" placeholder=" "
-                                        required>
-                                    <label for="email">Your Email</label>
-                                    <div class="invalid-feedback">Please provide a valid email.</div>
+                            <div class="feature-item owl-feature text-center">
+                                <div class="mb-3 feature-icon-wrapper">
+                                    <i class="fas fa-hands-praying fs-3"></i>
                                 </div>
+                                <h6 class="fw-bold">Worship Moments</h6>
+                                <p class="small mb-0 text-muted">Times of praise and prayer</p>
+                            </div>
 
-                                <div class="mb-3">
-                                    <select class="form-select owl-select" id="event" required>
-                                        <option value="" selected disabled>Select event category</option>
-                                        <option value="crusade">Church Crusade</option>
-                                        <option value="services">Church Services</option>
-                                        <option value="youth">Youth Events</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                    <div class="invalid-feedback">Please select an event type.</div>
+                            <div class="feature-item owl-feature text-center">
+                                <div class="mb-3 feature-icon-wrapper">
+                                    <i class="fas fa-users fs-3"></i>
                                 </div>
+                                <h6 class="fw-bold">Community</h6>
+                                <p class="small mb-0 text-muted">Fellowship and outreach activities</p>
+                            </div>
+                        </div>
+                    </div>
 
-                                <div class="mb-4">
-                                    <textarea class="form-control owl-textarea" id="message" rows="3"
-                                        placeholder="Tell us about your photos..."></textarea>
-                                </div>
+                    <div class="col-lg-5">
+                        <div class="card border-0 owl-form-card">
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold mb-4 text-center owl-form-title">Submit Your Photos</h5>
 
-                                <button type="button" id="submitPhotoBtn" class="btn btn-lg w-100 owl-submit-btn">
-                                    <span class="btn-text"><i class="fas fa-paper-plane me-2"></i>Send Photos via
-                                        Email</span>
-                                    <span class="btn-hover-text"><i class="fas fa-heart me-2"></i>Share Your
-                                        Memories</span>
-                                </button>
+                                <form id="photoSubmissionForm" class="photo-form needs-validation" novalidate>
+                                    <div class="mb-3 floating-label">
+                                        <input type="text" class="form-control owl-input" id="name" placeholder=" "
+                                            required>
+                                        <label for="name">Your Name</label>
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">Please provide your name.</div>
+                                    </div>
 
-                                <div class="mt-3 text-center">
-                                    <p id="formMessage" class="mb-0 small"></p>
-                                </div>
-                            </form>
+                                    <div class="mb-3 floating-label">
+                                        <input type="email" class="form-control owl-input" id="email" placeholder=" "
+                                            required>
+                                        <label for="email">Your Email</label>
+                                        <div class="invalid-feedback">Please provide a valid email.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <select class="form-select owl-select" id="event" required>
+                                            <option value="" selected disabled>Select event category</option>
+                                            <option value="crusade">Church Crusade</option>
+                                            <option value="services">Church Services</option>
+                                            <option value="youth">Youth Events</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select an event type.</div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <textarea class="form-control owl-textarea" id="message" rows="3"
+                                            placeholder="Tell us about your photos..."></textarea>
+                                    </div>
+
+                                    <button type="button" id="submitPhotoBtn" class="btn btn-lg w-100 owl-submit-btn">
+                                        <span class="btn-text"><i class="fas fa-paper-plane me-2"></i>Send Photos via
+                                            Email</span>
+                                        <span class="btn-hover-text"><i class="fas fa-heart me-2"></i>Share Your
+                                            Memories</span>
+                                    </button>
+
+                                    <div class="mt-3 text-center">
+                                        <p id="formMessage" class="mb-0 small"></p>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
