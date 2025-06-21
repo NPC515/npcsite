@@ -34,7 +34,8 @@
         }
 
         /* Base Styles */
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             min-height: 100%;
@@ -66,20 +67,23 @@
         }
 
         @media (max-width: 768px) {
-            html, body {
+
+            html,
+            body {
                 overflow-x: hidden !important;
                 position: relative;
                 width: 100%;
                 -webkit-overflow-scrolling: touch;
             }
-            
+
             body {
                 min-height: 100vh;
                 min-height: -webkit-fill-available;
             }
-            
+
             main {
-                min-height: calc(100vh - 100px); /* Adjust based on your footer height */
+                min-height: calc(100vh - 100px);
+                /* Adjust based on your footer height */
             }
         }
 
@@ -1248,12 +1252,29 @@
             }
 
             /* Add animation delays for menu items */
-            .menu-items li:nth-child(1) { transition-delay: 0.1s; }
-            .menu-items li:nth-child(2) { transition-delay: 0.2s; }
-            .menu-items li:nth-child(3) { transition-delay: 0.3s; }
-            .menu-items li:nth-child(4) { transition-delay: 0.4s; }
-            .menu-items li:nth-child(5) { transition-delay: 0.5s; }
-            .menu-items li:nth-child(6) { transition-delay: 0.6s; }
+            .menu-items li:nth-child(1) {
+                transition-delay: 0.1s;
+            }
+
+            .menu-items li:nth-child(2) {
+                transition-delay: 0.2s;
+            }
+
+            .menu-items li:nth-child(3) {
+                transition-delay: 0.3s;
+            }
+
+            .menu-items li:nth-child(4) {
+                transition-delay: 0.4s;
+            }
+
+            .menu-items li:nth-child(5) {
+                transition-delay: 0.5s;
+            }
+
+            .menu-items li:nth-child(6) {
+                transition-delay: 0.6s;
+            }
         }
 
         /* Desktop Navigation */
@@ -1927,7 +1948,8 @@
                     <h3 class="footer-title">Contact Us</h3>
                     <div class="footer-contact">
                         <p><i class="fas fa-map-marker-alt me-2"></i>Chepsonoi, Nandi, Kenya</p>
-                        <p><i class="fas fa-phone me-2"></i> <a href="tel:+254712345678">+254 712 345 678</a></p>
+                        <p><i class="fas fa-phone me-2"></i> <a href="tel:+254722804271">+254 
+722 804 271</a></p>
                         <p><i class="fas fa-envelope me-2"></i> <a
                                 href="mailto:noblepentecostalchurch@gmail.com">noblepentecostalchurch@gmail.com</a></p>
                     </div>
@@ -2010,7 +2032,7 @@
                     e.preventDefault();
                     e.stopPropagation();
                     this.classList.toggle('active');
-                    
+
                     if (fullscreenMenu) {
                         if (this.classList.contains('active')) {
                             fullscreenMenu.style.display = 'flex';
@@ -2062,7 +2084,7 @@
                 const target = e.target;
                 const isMenuToggle = target.closest('.menu-toggle');
                 const isFullscreenMenu = target.closest('.fullscreen-menu');
-                
+
                 if (isFullscreenMenu && !fullscreenMenu.classList.contains('active') && !isMenuToggle) {
                     e.preventDefault();
                 }

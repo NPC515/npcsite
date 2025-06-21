@@ -1014,6 +1014,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1095,6 +1096,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1246,12 +1248,29 @@
         }
 
         /* Add animation delays for menu items */
-        .menu-items li:nth-child(1) { transition-delay: 0.1s; }
-        .menu-items li:nth-child(2) { transition-delay: 0.2s; }
-        .menu-items li:nth-child(3) { transition-delay: 0.3s; }
-        .menu-items li:nth-child(4) { transition-delay: 0.4s; }
-        .menu-items li:nth-child(5) { transition-delay: 0.5s; }
-        .menu-items li:nth-child(6) { transition-delay: 0.6s; }
+        .menu-items li:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .menu-items li:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .menu-items li:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .menu-items li:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .menu-items li:nth-child(5) {
+            transition-delay: 0.5s;
+        }
+
+        .menu-items li:nth-child(6) {
+            transition-delay: 0.6s;
+        }
 
         @media (max-width: 991.98px) {
             .menu-toggle {
@@ -1281,7 +1300,8 @@
         }
 
         /* Base Styles */
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             min-height: 100%;
@@ -1311,20 +1331,23 @@
         }
 
         @media (max-width: 768px) {
-            html, body {
+
+            html,
+            body {
                 overflow-x: hidden !important;
                 position: relative;
                 width: 100%;
                 -webkit-overflow-scrolling: touch;
             }
-            
+
             body {
                 min-height: 100vh;
                 min-height: -webkit-fill-available;
             }
-            
+
             main {
-                min-height: calc(100vh - 100px); /* Adjust based on your footer height */
+                min-height: calc(100vh - 100px);
+                /* Adjust based on your footer height */
             }
         }
     </style>
@@ -1398,7 +1421,7 @@
     <section class="section overview-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                <div class="col-lg-30" data-aos="fade-right" data-aos-duration="1000">
                     <div class="overview-content">
                         <div class="section-icon">
                             <i class="fas fa-church"></i>
@@ -1439,9 +1462,9 @@
                     </div>
                 </div>
 
-                    </div>
-                </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -1467,8 +1490,8 @@
                                 </div>
                                 <div class="info-item">
                                     <i class="fas fa-phone"></i>
-                                    <p><a href="tel:+254711222333" class="text-decoration-none text-dark">+254 711 222
-                                            333</a></p>
+                                    <p><a href="tel:+254757951855" class="text-decoration-none text-dark">+254 757 951
+                                            855 ~ Rev. Enock Ambwere</a></p>
                                 </div>
                                 <div class="info-item">
                                     <i class="fas fa-envelope"></i>
@@ -1487,7 +1510,7 @@
                         </div>
                         <div class="map-container">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32243.940829123614!2d36.87627465!3d-1.20147595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3e0d299a9fd1%3A0x688fe52a35a24639!2sNjathaini!5e1!3m2!1sen!2ske!4v1749555916577!5m2!1sen!2ske"
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3988.9378099543337!2d36.88584177496541!3d-1.2037499987847602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwMTInMTMuNSJTIDM2wrA1MycxOC4zIkU!5e0!3m2!1sen!2ske!4v1750489891062!5m2!1sen!2ske"
                                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
@@ -1521,7 +1544,8 @@
                     <h3 class="footer-title">Contact Us</h3>
                     <div class="footer-contact">
                         <p><i class="fas fa-map-marker-alt me-2"></i>Chepsonoi, Nandi, Kenya</p>
-                        <p><i class="fas fa-phone me-2"></i> <a href="tel:+254712345678">+254 712 345 678</a></p>
+                        <p><i class="fas fa-phone me-2"></i> <a href="tel:+254722804271">+254 
+722 804 271</a></p>
                         <p><i class="fas fa-envelope me-2"></i> <a
                                 href="mailto:noblepentecostalchurch@gmail.com">noblepentecostalchurch@gmail.com</a></p>
                     </div>
@@ -1624,7 +1648,7 @@
             window.addEventListener('scroll', updateNavbar);
 
             // Mobile menu functionality
-            menuToggle.addEventListener('click', function() {
+            menuToggle.addEventListener('click', function () {
                 this.classList.toggle('active');
                 fullscreenMenu.classList.toggle('active');
                 document.body.style.overflow = fullscreenMenu.classList.contains('active') ? 'hidden' : '';
@@ -1640,7 +1664,7 @@
             });
 
             // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (!menuToggle.contains(e.target) && !fullscreenMenu.contains(e.target) && fullscreenMenu.classList.contains('active')) {
                     menuToggle.classList.remove('active');
                     fullscreenMenu.classList.remove('active');

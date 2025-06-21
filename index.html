@@ -53,7 +53,7 @@
             "addressLocality": "Nandi",
             "addressCountry": "Kenya"
         },
-        "telephone": "+254712345678",
+        "telephone": "+254722804271",
         "email": "noblepentecostalchurch@gmail.com",
         "SundayService Hours": [
         8:00-12:30",
@@ -285,7 +285,8 @@
             }
 
             /* Prevent unwanted redirects */
-            .nav-link, .dropdown-item {
+            .nav-link,
+            .dropdown-item {
                 touch-action: manipulation;
                 -webkit-tap-highlight-color: transparent;
             }
@@ -1745,7 +1746,8 @@
         }
 
         /* Base Styles */
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             min-height: 100%;
@@ -1775,20 +1777,23 @@
         }
 
         @media (max-width: 768px) {
-            html, body {
+
+            html,
+            body {
                 overflow-x: hidden !important;
                 position: relative;
                 width: 100%;
                 -webkit-overflow-scrolling: touch;
             }
-            
+
             body {
                 min-height: 100vh;
                 min-height: -webkit-fill-available;
             }
-            
+
             main {
-                min-height: calc(100vh - 100px); /* Adjust based on your footer height */
+                min-height: calc(100vh - 100px);
+                /* Adjust based on your footer height */
             }
         }
     </style>
@@ -2177,7 +2182,8 @@
                     <h3 class="footer-title">Contact Us</h3>
                     <div class="footer-contact">
                         <p><i class="fas fa-map-marker-alt me-2"></i>Chepsonoi, Nandi, Kenya</p>
-                        <p><i class="fas fa-phone me-2"></i> <a href="tel:+254712345678">+254 712 345 678</a></p>
+                        <p><i class="fas fa-phone me-2"></i> <a href="tel:+254722804271">+254 
+722 804 271</a></p>
                         <p><i class="fas fa-envelope me-2"></i> <a
                                 href="mailto:noblepentecostalchurch@gmail.com">noblepentecostalchurch@gmail.com</a></p>
                     </div>
@@ -2216,11 +2222,11 @@
 
     <script>
         // Scroll to Top Button Functionality
-        $(document).ready(function() {
+        $(document).ready(function () {
             var scrollToTopBtn = $('#scrollToTopBtn');
-            
+
             // Show/hide button based on scroll position
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 if ($(this).scrollTop() > 300) {
                     scrollToTopBtn.addClass('visible');
                 } else {
@@ -2229,14 +2235,14 @@
             });
 
             // Handle both click and touch events
-            scrollToTopBtn.on('click touchstart', function(e) {
+            scrollToTopBtn.on('click touchstart', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
-                
+
                 $('html, body').animate({
                     scrollTop: 0
                 }, 800);
-                
+
                 return false;
             });
         });
@@ -2522,11 +2528,11 @@
             });
 
             // Add touch feedback
-            menuToggle.addEventListener('touchstart', function() {
+            menuToggle.addEventListener('touchstart', function () {
                 this.style.transform = 'scale(0.95)';
             });
 
-            menuToggle.addEventListener('touchend', function() {
+            menuToggle.addEventListener('touchend', function () {
                 this.style.transform = 'scale(1)';
             });
 
@@ -2554,11 +2560,11 @@
             });
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Prevent unwanted redirects on mobile
             const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
             navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     // Only prevent default if it's a touch event
                     if (e.type === 'touchstart') {
                         e.preventDefault();
@@ -2571,12 +2577,12 @@
             });
 
             // Close mobile menu when clicking outside
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 const navbarCollapse = document.querySelector('.navbar-collapse');
                 const navbarToggler = document.querySelector('.navbar-toggler');
-                
-                if (navbarCollapse && navbarCollapse.classList.contains('show') && 
-                    !navbarCollapse.contains(e.target) && 
+
+                if (navbarCollapse && navbarCollapse.classList.contains('show') &&
+                    !navbarCollapse.contains(e.target) &&
                     !navbarToggler.contains(e.target)) {
                     navbarCollapse.classList.remove('show');
                 }

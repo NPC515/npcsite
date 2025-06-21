@@ -28,7 +28,8 @@
         }
 
         /* Base Styles */
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             min-height: 100%;
@@ -60,20 +61,23 @@
         }
 
         @media (max-width: 768px) {
-            html, body {
+
+            html,
+            body {
                 overflow-x: hidden !important;
                 position: relative;
                 width: 100%;
                 -webkit-overflow-scrolling: touch;
             }
-            
+
             body {
                 min-height: 100vh;
                 min-height: -webkit-fill-available;
             }
-            
+
             main {
-                min-height: calc(100vh - 100px); /* Adjust based on your footer height */
+                min-height: calc(100vh - 100px);
+                /* Adjust based on your footer height */
             }
         }
 
@@ -216,7 +220,8 @@
             }
 
             /* Prevent unwanted redirects */
-            .nav-link, .dropdown-item {
+            .nav-link,
+            .dropdown-item {
                 touch-action: manipulation;
                 -webkit-tap-highlight-color: transparent;
             }
@@ -587,21 +592,21 @@
         }
 
         @media (max-width: 768px) {
-        .page-header {
-            height: 70vh;
-            background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+            .page-header {
+                height: 70vh;
+                background: linear-gradient(135deg, #0f0c29 0%, #160560 50%, #24243e 100%);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
 
-        .page-title {
-            font-size: 3.5rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
+            .page-title {
+                font-size: 3.5rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
 
             .section-title {
                 font-size: 2rem;
@@ -1651,99 +1656,100 @@
         <header class="page-header">
             <div class="container">
                 <h1 class="page-title" data-aos="fade-up">Church Events</h1>
-                <p class="lead" data-aos="fade-up" data-aos-delay="200">Join us in our upcoming events and celebrations</p>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200">Join us in our upcoming events and celebrations
+                </p>
             </div>
         </header>
 
-    <!-- Annual Events Section -->
-    <section class="section event-calendar-section">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">Annual Events</h2>
-                <p class="lead">Mark your calendars for these special occasions</p>
-            </div>
+        <!-- Annual Events Section -->
+        <section class="section event-calendar-section">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Annual Events</h2>
+                    <p class="lead">Mark your calendars for these special occasions</p>
+                </div>
 
-            <div class="row g-4">
-                <!-- Events Row -->
-                <div class="col-md-3" data-aos="fade-up">
-                    <div class="event-item position-relative overflow-hidden rounded-4">
-                        <img src="assets/serviceone.jpg" alt="Baptism" class="img-fluid w-100 event-image">
-                        <div class="event-overlay p-4">
-                            <div class="event-overlay-content">
-                                <h3 class="text-white mb-2">Baptism</h3>
-                                <p class="text-white mb-0">June & December</p>
+                <div class="row g-4">
+                    <!-- Events Row -->
+                    <div class="col-md-3" data-aos="fade-up">
+                        <div class="event-item position-relative overflow-hidden rounded-4">
+                            <img src="assets/serviceone.jpg" alt="Baptism" class="img-fluid w-100 event-image">
+                            <div class="event-overlay p-4">
+                                <div class="event-overlay-content">
+                                    <h3 class="text-white mb-2">Baptism</h3>
+                                    <p class="text-white mb-0">June & December</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="event-item position-relative overflow-hidden rounded-4">
+                            <img src="assets/DVBS.png" alt="Vocational Bible Study" class="img-fluid w-100 event-image">
+                            <div class="event-overlay p-4">
+                                <div class="event-overlay-content">
+                                    <h3 class="text-white mb-2">Vocational Bible Study</h3>
+                                    <p class="text-white mb-0">2nd week of December</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="event-item position-relative overflow-hidden rounded-4">
+                            <img src="assets/youthfellowship.jpg" alt="Church Conference"
+                                class="img-fluid w-100 event-image">
+                            <div class="event-overlay p-4">
+                                <div class="event-overlay-content">
+                                    <h3 class="text-white mb-2">Church Conference</h3>
+                                    <p class="text-white mb-0">3rd week of August</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="event-item position-relative overflow-hidden rounded-4">
+                            <img src="assets/crusadethree.jpg" alt="Crusades & Open Air Meetings"
+                                class="img-fluid w-100 event-image">
+                            <div class="event-overlay p-4">
+                                <div class="event-overlay-content">
+                                    <h3 class="text-white mb-2">Crusades & Open Air Meetings</h3>
+                                    <p class="text-white mb-0">Quarterly Events</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="event-item position-relative overflow-hidden rounded-4">
-                        <img src="assets/DVBS.png" alt="Vocational Bible Study" class="img-fluid w-100 event-image">
-                        <div class="event-overlay p-4">
-                            <div class="event-overlay-content">
-                                <h3 class="text-white mb-2">Vocational Bible Study</h3>
-                                <p class="text-white mb-0">2nd week of December</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Modern Calendar Section -->
+        <section class="section section-light">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Church Calendar</h2>
+                    <p class="lead">Stay updated with our church events and activities</p>
                 </div>
 
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="event-item position-relative overflow-hidden rounded-4">
-                        <img src="assets/youthfellowship.jpg" alt="Church Conference"
-                            class="img-fluid w-100 event-image">
-                        <div class="event-overlay p-4">
-                            <div class="event-overlay-content">
-                                <h3 class="text-white mb-2">Church Conference</h3>
-                                <p class="text-white mb-0">3rd week of August</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="calendar-container bg-white rounded-4 shadow-lg p-4" data-aos="fade-up">
+                            <div class="calendar-header d-flex justify-content-between align-items-center mb-4">
+                                <button id="prevMonthBtn" class="btn btn-link text-primary">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h3 id="calendar-month-year" class="mb-0"></h3>
+                                <button id="nextMonthBtn" class="btn btn-link text-primary">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="event-item position-relative overflow-hidden rounded-4">
-                        <img src="assets/crusadethree.jpg" alt="Crusades & Open Air Meetings"
-                            class="img-fluid w-100 event-image">
-                        <div class="event-overlay p-4">
-                            <div class="event-overlay-content">
-                                <h3 class="text-white mb-2">Crusades & Open Air Meetings</h3>
-                                <p class="text-white mb-0">Quarterly Events</p>
-                            </div>
+                            <div class="calendar-grid mb-3"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Modern Calendar Section -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">Church Calendar</h2>
-                <p class="lead">Stay updated with our church events and activities</p>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="calendar-container bg-white rounded-4 shadow-lg p-4" data-aos="fade-up">
-                        <div class="calendar-header d-flex justify-content-between align-items-center mb-4">
-                            <button id="prevMonthBtn" class="btn btn-link text-primary">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <h3 id="calendar-month-year" class="mb-0"></h3>
-                            <button id="nextMonthBtn" class="btn btn-link text-primary">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                        <div class="calendar-grid mb-3"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
     </main>
 
     <!-- Footer (same as give.html) -->
@@ -1770,7 +1776,8 @@
                     <h3 class="footer-title">Contact Us</h3>
                     <div class="footer-contact">
                         <p><i class="fas fa-map-marker-alt me-2"></i>Chepsonoi, Nandi, Kenya</p>
-                        <p><i class="fas fa-phone me-2"></i> <a href="tel:+254712345678">+254 712 345 678</a></p>
+                        <p><i class="fas fa-phone me-2"></i> <a href="tel:+254722804271">+254 
+722 804 271</a></p>
                         <p><i class="fas fa-envelope me-2"></i> <a
                                 href="mailto:noblepentecostalchurch@gmail.com">noblepentecostalchurch@gmail.com</a></p>
                     </div>
@@ -1897,7 +1904,8 @@
                 <h6 class="mobile-contact-title">Contact Us</h6>
                 <div class="mobile-contact-item">
                     <i class="fas fa-phone"></i>
-                    <a href="tel:+254712345678">+254 712 345 678</a>
+                    <a href="tel:+254722804271">+254 
+722 804 271</a>
                 </div>
                 <div class="mobile-contact-item">
                     <i class="fas fa-envelope"></i>
@@ -2005,7 +2013,7 @@
             for (let i = 1; i <= daysInMonth; i++) {
                 const dayElement = document.createElement('div');
                 dayElement.className = 'calendar-day';
-                
+
                 // Check if this is today
                 if (i === currentDay && month === currentMonth && year === currentYear) {
                     dayElement.classList.add('today');
@@ -2078,7 +2086,7 @@
         document.head.appendChild(style);
 
         // Navbar scroll effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('navbar-scrolled');
@@ -2088,7 +2096,7 @@
         });
 
         // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.querySelector('.menu-toggle');
             const fullscreenMenu = document.querySelector('.fullscreen-menu');
             const menuItems = document.querySelectorAll('.menu-items li a');
@@ -2100,7 +2108,7 @@
             }
 
             // Toggle menu
-            menuToggle.addEventListener('click', function() {
+            menuToggle.addEventListener('click', function () {
                 this.classList.toggle('active');
                 fullscreenMenu.style.display = 'flex';
                 fullscreenMenu.classList.toggle('active');
@@ -2109,13 +2117,13 @@
 
             // Close menu when clicking a link
             menuItems.forEach(item => {
-                item.addEventListener('click', function() {
+                item.addEventListener('click', function () {
                     closeMenu();
                 });
             });
 
             // Close menu when clicking outside
-            fullscreenMenu.addEventListener('click', function(e) {
+            fullscreenMenu.addEventListener('click', function (e) {
                 if (e.target === fullscreenMenu) {
                     closeMenu();
                 }
@@ -2123,10 +2131,10 @@
         });
 
         // Scroll to Top functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 if (window.pageYOffset > 300) {
                     scrollToTopBtn.classList.add('visible');
                 } else {
@@ -2134,7 +2142,7 @@
                 }
             });
 
-            scrollToTopBtn.addEventListener('click', function() {
+            scrollToTopBtn.addEventListener('click', function () {
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
@@ -2142,11 +2150,11 @@
             });
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Prevent unwanted redirects on mobile
             const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
             navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     // Only prevent default if it's a touch event
                     if (e.type === 'touchstart') {
                         e.preventDefault();
@@ -2159,12 +2167,12 @@
             });
 
             // Close mobile menu when clicking outside
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 const navbarCollapse = document.querySelector('.navbar-collapse');
                 const navbarToggler = document.querySelector('.navbar-toggler');
-                
-                if (navbarCollapse && navbarCollapse.classList.contains('show') && 
-                    !navbarCollapse.contains(e.target) && 
+
+                if (navbarCollapse && navbarCollapse.classList.contains('show') &&
+                    !navbarCollapse.contains(e.target) &&
                     !navbarToggler.contains(e.target)) {
                     navbarCollapse.classList.remove('show');
                 }
